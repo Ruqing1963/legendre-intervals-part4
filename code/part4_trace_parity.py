@@ -46,9 +46,9 @@ def run(k):
         assert len(us) == sum(1 for d in cls if d == 1)
         for u in us:
             stats[(cls, "f_1", F1[cls], "Tr(r)", tr(u))] += 1
-    print(f"\nk={k}, q={q}: traces of the rational roots by class (claim: Tr(r) = f_1 + 1 mod 2)")
+    print(f"\nk={k}, q={q}: traces of the rational roots by class (claim: Tr(r) = k + f_1 mod 2, i.e. f_1 + {k % 2 ^ 1} here)")
     for key, n in sorted(stats.items(), key=str):
-        print("  ", key, "x", n, "  ok" if key[4] == (key[2] + 1) % 2 else "  MISMATCH")
+        print("  ", key, "x", n, "  ok" if key[4] == (key[2] + k) % 2 else "  MISMATCH")
 
 
 if __name__ == "__main__":

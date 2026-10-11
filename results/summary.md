@@ -30,6 +30,11 @@ No exception in any case.
 * ½ q^{(2)}_0(r5) + κ0 = 1 in the class 4 2 (both derivations); Tr(r5) = 0 in the class 4 1².
 * Resolvent criterion of Lemma 3.9 (irreducible quartic cofactor ⇔ unique rational root r of Y³ + a'Y + b' with Tr(c'/(a'+r²)²) = 1, Tr(a'/r²) = 0) holds for all (y, s) at q = 8, 32, 128.
 
+## Even k (remark after Theorem 4.1), `part4_trace_parity.py 2 4 6`, `part4_order4_all.py 2`
+
+* Tr(r) ≡ f1 (mod 2) for every rational root at q = 4, 16, 64 (e.g. q=64: 1024 roots of class 4 1² all trace 1, 819 roots of class 5 1 all trace 0); no exception.
+* q = 4: the four order-4 pairs have s_4 ∈ {0, −4q²} (class 4 1², W' = −2q^7) and {0, +4q²} (class 4 2, W' = +2q^7), on the coset Tr(λ1 τ0) = κ0 (κ0 = 0 for all four); both κ0 formulas agree with the direct Witt value.
+
 ## Moments (Section 2), `moment3_check.py`, `moment3_structure.py`, `part4_moment_system.py`
 
 * Σ N_3 = (q−1)² + q^{−1} Σ_Θ G_H(θ): exact at q = 8, 32, 128 (103, 1951, 32383 = 2q² − 3q − 1).

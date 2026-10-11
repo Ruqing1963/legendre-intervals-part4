@@ -47,6 +47,7 @@
 \newcommand{\todo}[1]{\textcolor{red!70!black}{[#1]}}
 \emergencystretch=2em
 \allowdisplaybreaks
+\raggedbottom
 
 \title[Legendre intervals in even characteristic, IV]{Prime polynomials in Legendre intervals over \texorpdfstring{$\F_{2^k}[t]$}{F(2k)[t]}, IV:\texorpdfstring{\\}{ }point counts on hexad modular curves, Brown invariants of Witt sheaves, and the constant \texorpdfstring{$X$}{X}}
 
@@ -638,7 +639,7 @@ Under (a), (b) and Theorem~\ref{thm:order4} the values of $W'$ on the classes ar
 \end{proof}
 
 \begin{remark}[even $k$]
-For even $k$ Part~III (\S6.11, Table~9) gives $X=-q^6+q^5$ with class counts depending on $k\bmod4$. The hexad formula and Lemma~\ref{lem:gaussbasics} hold verbatim; the trace parity theorem changes by the term $mk$ (even), so rational roots have trace $f_1(C)\bmod2$; in Theorem~\ref{thm:order4} the roles of the two classes are then \emph{exchanged} ($\Tr(r_5)=1$ in $4\,1^2$, $\Tr(w_3)=1$ in $4\,2$), giving $s_4\in\{0,-4q^2\}$ in $4\,1^2$ and $\{0,+4q^2\}$ in $4\,2$, i.e.\ $W'=-2q^7$ and $+2q^7$, in agreement with the sign $(-1)^{k+1}$ in front of $q^6$ observed in Part~II. \todo{verify numerically at $q=4,16$ with \texttt{part4\_order4\_all.py} (even $k$ requires the even-degree primitive polynomials of \texttt{witt\_lpoly.py}).}
+For even $k$ Part~III (\S6.11, Table~9) gives $X=-q^6+q^5$ with class counts depending on $k\bmod4$. The hexad formula and Lemma~\ref{lem:gaussbasics} hold verbatim; the trace parity theorem changes by the term $mk$ (even), so rational roots have trace $f_1(C)\bmod2$; in Theorem~\ref{thm:order4} the roles of the two classes are then \emph{exchanged} ($\Tr(r_5)=1$ in $4\,1^2$, $\Tr(w_3)=1$ in $4\,2$), giving $s_4\in\{0,-4q^2\}$ in $4\,1^2$ and $\{0,+4q^2\}$ in $4\,2$, i.e.\ $W'=-2q^7$ and $+2q^7$, in agreement with the sign $(-1)^{k+1}$ in front of $q^6$ observed in Part~II and with the values $W'=\mp2q^7$ found at $q=4$ in Part~III, \S6.11. At $q=4$ the four pairs of the classes $4\,1^2$, $4\,2$ indeed have $s_4\in\{0,-4q^2\}$, resp.\ $\{0,+4q^2\}$, on the hyperplane $\Tr(\lambda_1\tau_0)=\kappa_0$, with $W'=-2q^7$, resp.\ $+2q^7$ (\texttt{part4\_order4\_all.py 2}). The even-$k$ form of Corollary~\ref{cor:rationalroots}, $\Tr_{q/2}(r)\equiv f_1(C)\pmod2$, is verified for every rational root at $q=4,16,64$ (\texttt{part4\_trace\_parity.py}: e.g.\ all $1024$ rational roots of the class $4\,1^2$ at $q=64$ have trace $1$, all $819$ of the class $5\,1$ have trace $0$).
 \end{remark}
 
 \section{Supersingular abelian surfaces, canonical lifts and the hexad}\label{sec:lifts}

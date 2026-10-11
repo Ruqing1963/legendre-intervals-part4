@@ -17,6 +17,8 @@ Part III reduced the closed form `X = q^6 + q^5` (q = 2^k, k odd) of the second 
 * **The classes of order 4** (Theorem 3.6). `s_4(λ1) = 2q² (i^{q^{(2)}(r5)} − i^{q^{(2)}(w3)})`, with q^{(2)}(r5) = 0 in the class 4 1² and q^{(2)}(w3) = 0 in the class 4 2; hence s_4 ∈ {0, +4q²} resp. {0, −4q²}, `sgn s_4 = (−1)^{Tr(ρ0/τ0²)}`, and `W' = +2q^7` resp. `−2q^7`. This settles the order-4 part of Target Theorem 1.2. The hyperplane parameter κ0 is given in closed form, `κ0 = Tr(z³ + ρ0²/z + (z+1)τ0²/ρ0)`, z = τ0/(λ5 ρ0); it is **not** constant on the class (130 of the 240 pairs at q = 32 have κ0 = 1), which corrects a conjecture of the first draft.
 * **Moments** (Propositions 2.1, 2.6, 2.8). For every m, `Σ N_m = (q−1)² − q[2|m] + q^{2−m} Σ_{Θ_m} G_{H_m}(θ)` with G_{H_m} the Gauss sums of Gold-type forms on the trace-zero hyperplane; m = 1, 2 recover Part III; m = 3 gives 2q² − 3q − 1 (verified q ≤ 128); the elimination system of the six moments (rank 6 in the eleven unknowns) and the Gauss-sum totals predicted by the class counts are tabulated.
 
+Even k: the trace parity law becomes `Tr(r) ≡ f_1 (mod 2)` (verified at q = 4, 16, 64) and the two order-4 signs are exchanged (`W' = −2q^7` for 4 1², `+2q^7` for 4 2; verified at q = 4), in line with the sign (−1)^{k+1} of Part II.
+
 Not proved here (stated with precise status in the paper): the class counts; the signs of s_4 in the classes 1⁶, 2³, 2 1⁴, 2² 1² and of S'' in the classes 3 1³, 3², 3 2 1, 6 — all reduced by the hexad formula to sixteen explicit Witt values on the hexad.
 
 ## Layout
