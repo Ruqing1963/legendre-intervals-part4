@@ -1,0 +1,43 @@
+﻿fixed-point matrix f_C^(m), rows m = 1..6, columns ['1^6', '2 1^4', '2^2 1^2', '2^3', '3 1^3', '3^2', '3 2 1', '4 1^2', '4 2', '5 1', '6']
+⎡6  4  2  0  3  0  1  2  0  1  0⎤
+⎢                               ⎥
+⎢6  6  6  6  3  0  3  2  2  1  0⎥
+⎢                               ⎥
+⎢6  4  2  0  6  6  4  2  0  1  0⎥
+⎢                               ⎥
+⎢6  6  6  6  3  0  3  6  6  1  0⎥
+⎢                               ⎥
+⎢6  4  2  0  3  0  1  2  0  6  0⎥
+⎢                               ⎥
+⎣6  6  6  6  6  6  6  2  2  1  6⎦
+rank over Q: 6  (eleven unknowns: the six moments alone leave 5 degrees of freedom)
+
+predicted moments sum N_m and Gauss-sum totals Sigma_m:
+  m=1:  sum N_m = (q - 1)**2 = q**2 - 2*q + 1;   Sigma_m = 0
+  m=2:  sum N_m = 2*q**2 - 4*q + 1 = 2*q**2 - 4*q + 1;   Sigma_m = q*(q - 1)
+  m=3:  sum N_m = 2*q**2 - 3*q - 1 = 2*q**2 - 3*q - 1;   Sigma_m = q*(q - 2)*(q + 1)
+  m=4:  sum N_m = 3*q**2 - 6*q + 1 = 3*q**2 - 6*q + 1;   Sigma_m = q**3*(2*q - 3)
+  m=5:  sum N_m = 2*(q**2 - q + 1) = 2*q**2 - 2*q + 2;   Sigma_m = q**3*(q**2 + 1)
+  m=6:  sum N_m = 4*q**2 - 4*q - 1 = 4*q**2 - 4*q - 1;   Sigma_m = q**4*(q - 1)*(3*q + 2)
+
+numerical values at q = 8, 32, 128:
+  m=1:  [49, 961, 16129]
+  m=2:  [97, 1921, 32257]
+  m=3:  [103, 1951, 32383]
+  m=4:  [145, 2881, 48385]
+  m=5:  [114, 1986, 32514]
+  m=6:  [223, 3967, 65023]
+
+quadratic interpolation of the per-Gold-type counts of theta in Theta (moment3_structure.py):
+  type (1,4)   : values [54, 540, 8442] -> quadratic through them: (331*q**2 - 280*q + 15616)/640  =  331*q**2/640 - 7*q/16 + 122/5
+  type (2,3)   : values [9, 333, 5337] -> quadratic through them: (103*q**2 + 200*q - 5312)/320  =  103*q**2/320 + 5*q/8 - 83/5
+  type (1,1,1,2): values [0, 150, 2604] -> quadratic through them: (q - 8)*(103*q + 704)/640  =  103*q**2/640 - 3*q/16 - 44/5
+  G_H != 0 (all types): values [27, 495, 8127] -> quadratic through them: (q - 2)*(q + 1)/2  =  q**2/2 - q/2 - 1
+
+quadratic interpolation of the kappa_0 counts (part4_kappa_scan.py):
+  4 1^2, kappa_0 = 0: values [6, 40, 924] -> quadratic through them: (187*q**2 - 3400*q + 32512)/2880  =  187*q**2/2880 - 85*q/72 + 508/45
+  4 1^2, kappa_0 = 1: values [0, 80, 1092] -> quadratic through them: (q - 8)*(173*q + 4064)/2880  =  173*q**2/2880 + 67*q/72 - 508/45
+  4 2,   kappa_0 = 0: values [6, 70, 1106] -> quadratic through them: (13*q**2 - 8*q + 384)/192  =  13*q**2/192 - q/24 + 2
+  4 2,   kappa_0 = 1: values [0, 50, 910] -> quadratic through them: (q - 8)*(11*q + 48)/192  =  11*q**2/192 - 5*q/24 - 2
+  pure 4 1^2, kappa_0 = 0: values [3, 5, 21] -> quadratic through them: (q**2 + 80*q + 3616)/1440  =  q**2/1440 + q/18 + 113/45
+  pure 4 1^2, kappa_0 = 1: values [0, 10, 42] -> quadratic through them: -(q - 632)*(q - 8)/1440  =  -q**2/1440 + 4*q/9 - 158/45

@@ -1,0 +1,10 @@
+__pycache__/
+ai_studio_code*.txt
+*.pyc
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk

@@ -1,0 +1,33 @@
+﻿
+k=3, q=8: (y,s) pairs with irreducible cofactor = pairs of the classes 4 1^2, 4 2
+   check ('Phi has the type of P', True) x 42
+   check ('closed form = eq:q4r1', True) x 12
+   check ('resolvent criterion <=> P irreducible', True) x 42
+   class 4 1^2  mixed kappa0=0: 3
+   class 4 1^2  pure  kappa0=0: 3
+   class 4 2    mixed kappa0=0: 6
+   totals by (class, kappa0): {('4 1^2', 0): 6, ('4 2', 0): 6}
+
+k=5, q=32: (y,s) pairs with irreducible cofactor = pairs of the classes 4 1^2, 4 2
+   check ('Phi has the type of P', True) x 930
+   check ('closed form = eq:q4r1', True) x 240
+   check ('resolvent criterion <=> P irreducible', True) x 930
+   class 4 1^2  mixed kappa0=0: 35
+   class 4 1^2  mixed kappa0=1: 70
+   class 4 1^2  pure  kappa0=0: 5
+   class 4 1^2  pure  kappa0=1: 10
+   class 4 2    mixed kappa0=0: 70
+   class 4 2    mixed kappa0=1: 50
+   totals by (class, kappa0): {('4 1^2', 0): 40, ('4 1^2', 1): 80, ('4 2', 0): 70, ('4 2', 1): 50}
+
+k=7, q=128: (y,s) pairs with irreducible cofactor = pairs of the classes 4 1^2, 4 2
+   check ('Phi has the type of P', True) x 16002
+   check ('closed form = eq:q4r1', True) x 4032
+   check ('resolvent criterion <=> P irreducible', True) x 16002
+   class 4 1^2  mixed kappa0=0: 903
+   class 4 1^2  mixed kappa0=1: 1050
+   class 4 1^2  pure  kappa0=0: 21
+   class 4 1^2  pure  kappa0=1: 42
+   class 4 2    mixed kappa0=0: 1106
+   class 4 2    mixed kappa0=1: 910
+   totals by (class, kappa0): {('4 1^2', 0): 924, ('4 1^2', 1): 1092, ('4 2', 0): 1106, ('4 2', 1): 910}

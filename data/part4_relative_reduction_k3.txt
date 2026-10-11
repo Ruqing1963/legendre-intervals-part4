@@ -1,0 +1,6 @@
+﻿
+k=3, q=8: reduction of s_4 to the affine space A = {c : Tr_(q^4/q^2) T'(c) = 1}
+   ((1, 1, 4), 'dim A', 8, 's4 = sum_A i^q', True, 's4/4q^2', 0, 'q^(4) constant on A', False, 'value', (), 'counts of q^(4)=0,1,2,3 on A', (128, 0, 128, 0)) x 24
+   ((1, 1, 4), 'dim A', 8, 's4 = sum_A i^q', True, 's4/4q^2', 1, 'q^(4) constant on A', True, 'value', (0,), 'counts of q^(4)=0,1,2,3 on A', (256, 0, 0, 0)) x 24
+   ((2, 4), 'dim A', 8, 's4 = sum_A i^q', True, 's4/4q^2', -1, 'q^(4) constant on A', True, 'value', (2,), 'counts of q^(4)=0,1,2,3 on A', (0, 0, 256, 0)) x 24
+   ((2, 4), 'dim A', 8, 's4 = sum_A i^q', True, 's4/4q^2', 0, 'q^(4) constant on A', False, 'value', (), 'counts of q^(4)=0,1,2,3 on A', (128, 0, 128, 0)) x 24

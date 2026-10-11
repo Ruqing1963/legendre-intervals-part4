@@ -1,0 +1,21 @@
+﻿
+k=3, q=8: theta in Theta (|Theta| = q^2-1), Gold parameter c = 1/theta with Tr_(q^3/q) c = 0
+   ('(1,4)', 'dim R', 1, 'dim R_H', 2, 'Q|R_H=0', False, 'G_H', 0, 'Arf', None)  x27
+   ('(1,4)', 'dim R', 1, 'dim R_H', 2, 'Q|R_H=0', True, 'G_H', 16, 'Arf', 0)  x27
+   ('(2,3)', 'dim R', 1, 'dim R_H', 2, 'Q|R_H=0', False, 'G_H', 0, 'Arf', None)  x9
+
+k=5, q=32: theta in Theta (|Theta| = q^2-1), Gold parameter c = 1/theta with Tr_(q^3/q) c = 0
+   ('(1,1,1,2)', 'dim R', 3, 'dim R_H', 2, 'Q|R_H=0', False, 'G_H', 0, 'Arf', None)  x30
+   ('(1,1,1,2)', 'dim R', 3, 'dim R_H', 2, 'Q|R_H=0', True, 'G_H', 64, 'Arf', 0)  x120
+   ('(1,4)', 'dim R', 1, 'dim R_H', 2, 'Q|R_H=0', False, 'G_H', 0, 'Arf', None)  x255
+   ('(1,4)', 'dim R', 1, 'dim R_H', 2, 'Q|R_H=0', True, 'G_H', 64, 'Arf', 0)  x285
+   ('(2,3)', 'dim R', 1, 'dim R_H', 2, 'Q|R_H=0', False, 'G_H', 0, 'Arf', None)  x243
+   ('(2,3)', 'dim R', 1, 'dim R_H', 2, 'Q|R_H=0', True, 'G_H', 64, 'Arf', 0)  x90
+
+k=7, q=128: theta in Theta (|Theta| = q^2-1), Gold parameter c = 1/theta with Tr_(q^3/q) c = 0
+   ('(1,1,1,2)', 'dim R', 3, 'dim R_H', 2, 'Q|R_H=0', False, 'G_H', 0, 'Arf', None)  x1260
+   ('(1,1,1,2)', 'dim R', 3, 'dim R_H', 2, 'Q|R_H=0', True, 'G_H', 256, 'Arf', 0)  x1344
+   ('(1,4)', 'dim R', 1, 'dim R_H', 2, 'Q|R_H=0', False, 'G_H', 0, 'Arf', None)  x4095
+   ('(1,4)', 'dim R', 1, 'dim R_H', 2, 'Q|R_H=0', True, 'G_H', 256, 'Arf', 0)  x4347
+   ('(2,3)', 'dim R', 1, 'dim R_H', 2, 'Q|R_H=0', False, 'G_H', 0, 'Arf', None)  x2901
+   ('(2,3)', 'dim R', 1, 'dim R_H', 2, 'Q|R_H=0', True, 'G_H', 256, 'Arf', 0)  x2436
