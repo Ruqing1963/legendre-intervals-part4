@@ -1,0 +1,10 @@
+﻿
+k=5, q=32: sign rules from the hexad formula (N_0 | 2 with m = 2; N_0 in {3,6} except 3 2 1 with m = 3)
+   ((1, 1, 1, 1, 1, 1), 'm', 2, 'parity ok', True, 'sum phi = 0', True, 'n1', 6, 'pred s_2m/q^m', 4, 'actual', (4+0j), 'rule ok', True) x 32
+   ((1, 1, 1, 1, 2), 'm', 2, 'parity ok', True, 'sum phi = 0', True, 'n1', 0, 'pred s_2m/q^m', -4, 'actual', (-4+0j), 'rule ok', True) x 48
+   ((1, 1, 1, 1, 2), 'm', 2, 'parity ok', True, 'sum phi = 0', True, 'n1', 2, 'pred s_2m/q^m', 4, 'actual', (4+0j), 'rule ok', True) x 48
+   ((1, 1, 2, 2), 'm', 2, 'parity ok', True, 'sum phi = 0', True, 'n1', 2, 'pred s_2m/q^m', 4, 'actual', (4+0j), 'rule ok', True) x 24
+   ((1, 1, 2, 2), 'm', 2, 'parity ok', True, 'sum phi = 0', True, 'n1', 4, 'pred s_2m/q^m', -4, 'actual', (-4+0j), 'rule ok', True) x 48
+   ((1, 1, 2, 2), 'm', 2, 'parity ok', True, 'sum phi = 0', True, 'n1', 6, 'pred s_2m/q^m', 4, 'actual', (4+0j), 'rule ok', True) x 24
+   ((2, 2, 2), 'm', 2, 'parity ok', True, 'sum phi = 0', True, 'n1', 2, 'pred s_2m/q^m', 4, 'actual', (4+0j), 'rule ok', True) x 72
+   ((2, 2, 2), 'm', 2, 'parity ok', True, 'sum phi = 0', True, 'n1', 6, 'pred s_2m/q^m', 4, 'actual', (4+0j), 'rule ok', True) x 24

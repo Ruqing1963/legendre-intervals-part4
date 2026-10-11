@@ -28,6 +28,47 @@ numerical values at q = 8, 32, 128:
   m=5:  [114, 1986, 32514]
   m=6:  [223, 3967, 65023]
 
+11 x 11 matrix (rows ['m=1', 'm=2', 'm=3', 'm=4', 'm=5', 'm=6', 'N1N2', 'N1N3', 'N2^2', 'N1^2N2', 'N1N2N3'] ):
+⎡ 6   4   2   0   3   0  1   2  0  1  0⎤
+⎢                                      ⎥
+⎢ 6   6   6   6   3   0  3   2  2  1  0⎥
+⎢                                      ⎥
+⎢ 6   4   2   0   6   6  4   2  0  1  0⎥
+⎢                                      ⎥
+⎢ 6   6   6   6   3   0  3   6  6  1  0⎥
+⎢                                      ⎥
+⎢ 6   4   2   0   3   0  1   2  0  6  0⎥
+⎢                                      ⎥
+⎢ 6   6   6   6   6   6  6   2  2  1  6⎥
+⎢                                      ⎥
+⎢36   24  12  0   9   0  3   4  0  1  0⎥
+⎢                                      ⎥
+⎢36   16  4   0   18  0  4   4  0  1  0⎥
+⎢                                      ⎥
+⎢36   36  36  36  9   0  9   4  4  1  0⎥
+⎢                                      ⎥
+⎢216  96  24  0   27  0  3   8  0  1  0⎥
+⎢                                      ⎥
+⎣216  96  24  0   54  0  12  8  0  1  0⎦
+rank: 10  det: 0
+a completing set of mixed moments: ['N1^0N2^0N3^2', 'N1^0N2^1N3^1', 'N1^0N2^2N3^0', 'N1^1N2^0N3^1', 'N1^0N2^0N3^3']  rank 11  det 1433272320
+predicted right-hand sides (polynomials in q):
+   row 1 : (q - 1)**2
+   row 2 : 2*q**2 - 4*q + 1
+   row 3 : 2*q**2 - 3*q - 1
+   row 4 : 3*q**2 - 6*q + 1
+   row 5 : 2*(q**2 - q + 1)
+   row 6 : 4*q**2 - 4*q - 1
+   row 7 : 8*q**2 - 12*q - 7
+   row 8 : 5*q**2 - 11*q + 3
+   row 9 : 7*q**2 - 18*q + 9
+   row 10 : 3*q**2 - 7*q + 3
+   row 11 : 38*q**2 - 54*q - 43
+back-substitution recovers the table: True
+   q=8: moments [49, 97, 103, 145, 114, 223, 409, 235, 313, 139, 1957]
+   q=32: moments [961, 1921, 1951, 2881, 1986, 3967, 7801, 4771, 6601, 2851, 37141]
+   q=128: moments [16129, 32257, 32383, 48385, 32514, 65023, 129529, 80515, 112393, 48259, 615637]
+
 quadratic interpolation of the per-Gold-type counts of theta in Theta (moment3_structure.py):
   type (1,4)   : values [54, 540, 8442] -> quadratic through them: (331*q**2 - 280*q + 15616)/640  =  331*q**2/640 - 7*q/16 + 122/5
   type (2,3)   : values [9, 333, 5337] -> quadratic through them: (103*q**2 + 200*q - 5312)/320  =  103*q**2/320 + 5*q/8 - 83/5

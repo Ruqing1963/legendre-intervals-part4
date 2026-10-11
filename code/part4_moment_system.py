@@ -46,6 +46,47 @@ def main():
         tot = sum((MIXED[i] + PURE[i]) * fixed(CYCLES[i], m) for i in range(11))
         print(f"  m={m}: ", [int(tot.subs(q, qq)) for qq in (8, 32, 128)])
 
+    # the 11 x 11 system: pure moments m = 1..6 and the mixed moments M_{1,2}, M_{1,3}, M_{2,2}, M_{1,1,2}, M_{1,2,3}
+    def fx(ct, m):
+        return fixed(ct, m)
+    rows = {"m=1": lambda c: fx(c, 1), "m=2": lambda c: fx(c, 2), "m=3": lambda c: fx(c, 3), "m=4": lambda c: fx(c, 4),
+            "m=5": lambda c: fx(c, 5), "m=6": lambda c: fx(c, 6),
+            "N1N2": lambda c: fx(c, 1) * fx(c, 2), "N1N3": lambda c: fx(c, 1) * fx(c, 3), "N2^2": lambda c: fx(c, 2) ** 2,
+            "N1^2N2": lambda c: fx(c, 1) ** 2 * fx(c, 2), "N1N2N3": lambda c: fx(c, 1) * fx(c, 2) * fx(c, 3)}
+    M11 = sp.Matrix([[rows[r](ct) for ct in CYCLES] for r in rows])
+    print("\n11 x 11 matrix (rows", list(rows), "):")
+    sp.pprint(M11)
+    print("rank:", M11.rank(), " det:", M11.det())
+    if M11.rank() < 11:
+        # which mixed statistics would complete the system?  try the monomials N1^a N2^b N3^c with a+b+c <= 3
+        base = sp.Matrix([[fx(ct, m) for ct in CYCLES] for m in range(1, 7)])
+        cands = {}
+        for deg in (2, 3):
+            for a in range(deg + 1):
+                for b in range(deg + 1 - a):
+                    c = deg - a - b
+                    cands[f"N1^{a}N2^{b}N3^{c}"] = [fx(ct, 1) ** a * fx(ct, 2) ** b * fx(ct, 3) ** c for ct in CYCLES]
+        chosen = []
+        cur = base
+        for name, row in cands.items():
+            test = cur.col_join(sp.Matrix([row]))
+            if test.rank() > cur.rank():
+                chosen.append(name); cur = test
+            if cur.rank() == 11:
+                break
+        print("a completing set of mixed moments:", chosen, " rank", cur.rank(), " det", cur.det())
+        M11 = cur
+    # predicted values of the mixed moments and the unique solution
+    n_true = [sp.expand(MIXED[i] + PURE[i]) for i in range(11)]
+    rhs = M11 * sp.Matrix(n_true)
+    print("predicted right-hand sides (polynomials in q):")
+    for i, r in enumerate(rhs):
+        print("   row", i + 1, ":", sp.factor(r))
+    sol = M11.LUsolve(rhs)
+    print("back-substitution recovers the table:", all(sp.simplify(s - t) == 0 for s, t in zip(sol, n_true)))
+    for qq in (8, 32, 128):
+        print(f"   q={qq}: moments", [int(r.subs(q, qq)) for r in rhs])
+
     def interp(vals, name):
         pts = [(8, vals[0]), (32, vals[1]), (128, vals[2])]
         poly = sp.interpolate(pts, q)

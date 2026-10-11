@@ -54,13 +54,13 @@
 \author{Ruqing Chen}
 \address{GUT Geoservice Inc., Montreal, Canada}
 \email{ruqing@hotmail.com}
-\thanks{Working draft. Part~I: DOI 10.5281/zenodo.23225896; Part~II: DOI 10.5281/zenodo.23252762; Part~III: DOI 10.5281/zenodo.23290724. Code and data for this paper: \url{https://github.com/Ruqing1963/legendre-intervals-part4}.}
+\thanks{DOI 10.5281/zenodo.23299284. Part~I: DOI 10.5281/zenodo.23225896; Part~II: DOI 10.5281/zenodo.23252762; Part~III: DOI 10.5281/zenodo.23290724. Code and data for this paper: \url{https://github.com/Ruqing1963/legendre-intervals-part4}.}
 \date{\today}
 
 \begin{document}
 
 \begin{abstract}
-Let $q=2^k$ with $k$ odd. Part~III reduced the closed form $X=q^6+q^5$ of the second constant of the degree-$6$ Legendre variance to two statements about the sextic family $B_\lambda=\lambda_5^2u^6+\lambda_3^2u^2+\lambda_5u+1$ whose roots form the hexad of $\ker L'_\lambda$: the polynomial frequencies of its eleven factorisation types over $\F_q$, and the signs of the Gauss sums $s_4$, $s_6$ of explicit $\Z/4$-valued quadratic forms on $\F_{q^4}$, $\F_{q^6}$. This paper proves three structural theorems about these Gauss sums and uses them to settle the signs in the two classes of order~$4$. The \emph{hexad formula} expresses $s_{2m}$, a sum over $\F_{q^{2m}}$, as $q^m$ times a signed sum of at most sixteen fourth roots of unity indexed by the $\F_{q^m}$-rational points of the coset $T_\lambda'^{-1}(1)$ (the six roots and the ten synthematic totals), with sign $+$ at roots and $-$ at totals. The \emph{trace parity theorem} determines the absolute trace of every such point: $\Tr_{q^m/2}(w)\equiv mk+\dim(\Kk_\lambda\cap\F_{q^m})\pmod2$; for $m=1$ it says that a rational root of $B_\lambda$ has trace $0$ or $1$ according to the Frobenius class. Together they give, for the classes $4\,1^2$ and $4\,2$: $s_4(\lambda_1)\in\{0,+4q^2\}$, respectively $\{0,-4q^2\}$, nonzero exactly on an explicit affine hyperplane in $\lambda_1$, hence $W'=+2q^7$ and $-2q^7$, as conjectured since Part~II. The hyperplane parameter $\kappa_0$ is given in closed form in the ground-field data of the quartic cofactor; contrary to what the data at $q=8$ suggested, it is not constant on the class. For the factorisation counts, every moment $\sum_\lambda N_m(B_\lambda)$ is expressed through Gauss sums of Gold-type forms on the trace-zero hyperplane of $\F_{q^m}$; the identity is proved for all $m$, the third moment $2q^2-3q-1$ is verified for $q\le128$, and the resulting elimination system for the eleven class counts is written down. The remaining signs ($s_4$ in the classes with $N_0\mid2$, $s_6$ for $N_0\in\{3,6\}$) are reduced to sixteen explicit Witt values on the hexad.
+Let $q=2^k$ with $k$ odd. Part~III reduced the closed form $X=q^6+q^5$ of the second constant of the degree-$6$ Legendre variance to two statements about the sextic family $B_\lambda=\lambda_5^2u^6+\lambda_3^2u^2+\lambda_5u+1$ whose roots form the hexad of $\ker L'_\lambda$: the polynomial frequencies of its eleven factorisation types over $\F_q$, and the signs of the Gauss sums $s_4$, $s_6$ of explicit $\Z/4$-valued quadratic forms on $\F_{q^4}$, $\F_{q^6}$. This paper proves three structural theorems about these Gauss sums and uses them to settle the signs in the two classes of order~$4$. The \emph{hexad formula} expresses $s_{2m}$, a sum over $\F_{q^{2m}}$, as $q^m$ times a signed sum of at most sixteen fourth roots of unity indexed by the $\F_{q^m}$-rational points of the coset $T_\lambda'^{-1}(1)$ (the six roots and the ten synthematic totals), with sign $+$ at roots and $-$ at totals. The \emph{trace parity theorem} determines the absolute trace of every such point: $\Tr_{q^m/2}(w)\equiv mk+\dim(\Kk_\lambda\cap\F_{q^m})\pmod2$; for $m=1$ it says that a rational root of $B_\lambda$ has trace $0$ or $1$ according to the Frobenius class. Together with an elementary count on the sixteen-point configuration of roots and totals they determine the signs in nine of the eleven classes: $s_4=+4q^2$ throughout the classes $1^6$, $2^3$; $s_4=\pm4q^2$ on complementary half-spaces of $\lambda_1$ in the classes $2\,1^4$, $2^21^2$; $s_4\in\{0,+4q^2\}$, respectively $\{0,-4q^2\}$, nonzero exactly on an explicit affine hyperplane, in the classes $4\,1^2$, $4\,2$, hence $W'=+2q^7$ and $-2q^7$ as conjectured since Part~II; and $\Spp=+4q^6$ throughout the classes $3\,1^3$ and $3^2$. The class $6$ is settled under a single Witt identity verified for $q\le32$, and only the class $3\,2\,1$ remains open. The hyperplane parameter $\kappa_0$ of the order-$4$ classes is given in closed form in the ground-field data of the quartic cofactor; contrary to what the data at $q=8$ suggested, it is not constant on the class. For the factorisation counts, every moment $\sum_\lambda N_m(B_\lambda)$ is expressed through Gauss sums of Gold-type forms on the trace-zero hyperplane of $\F_{q^m}$; the identity is proved for all $m$, the third moment $2q^2-3q-1$ is verified for $q\le128$, and an explicit nonsingular $11\times11$ system of pure and mixed moments whose unique solution is the conjectured table of class counts is written down.
 \end{abstract}
 
 \maketitle
@@ -107,7 +107,7 @@ and for $\lambda_3=0$ the classes $2^3$, $4\,1^2$, $6$ occur $(q-2)/6$, $(q-2)/2
 
 \begin{target}[Part~III, Conjecture~6.17]\label{tgt:signs}
 For odd $k$: $s_4(\lambda)=+4q^2$ for all $\lambda_1$ in the classes $1^6$, $2^3$; $s_4(\lambda)=\pm4q^2$ for $q/2$ values of $\lambda_1$ each in the classes $2\,1^4$, $2^21^2$; $s_4(\lambda)\in\{0,+4q^2\}$ in the class $4\,1^2$ and $\in\{0,-4q^2\}$ in the class $4\,2$, nonzero for $q/2$ values of $\lambda_1$; $\Spp(\lambda)=+4q^6$ for all $\lambda_1$ in the classes $3\,1^3$, $3^2$, $6$, and $=\pm4q^6$ in equal numbers in the class $3\,2\,1$.
-\emph{Status: the assertion about the classes $4\,1^2$, $4\,2$ is proved in this paper (Theorem~\ref{thm:order4}); the rest is verified for all $\lambda$ at $q=8$ and through $W'$ for $q\le128$.}
+\emph{Status: proved in this paper for the classes $1^6$, $2\,1^4$, $2^21^2$, $2^3$ (Theorem~\ref{thm:N0div2}), $4\,1^2$, $4\,2$ (Theorem~\ref{thm:order4}), $3\,1^3$, $3^2$ (Theorem~\ref{thm:N0div6}), and for the class $6$ under the hypothesis \textup{(H)} of \eqref{eq:H}, verified at $q=8,32$; the class $3\,2\,1$ remains verified only (all $\lambda$ at $q=8$, and through $W'$ for $q\le128$).}
 \end{target}
 
 \begin{corollary}[Part~III, Corollary~1.5]\label{cor:X}
@@ -138,7 +138,7 @@ and $\qq^{(2)}_\lambda(r_5)=0$ in the class $4\,1^2$, $\qq^{(2)}_\lambda(w_3)=0$
 \kappa_0=\Tr_{q/2}\Bigl(z^3+\frac{\rho_0^2}{z}+\frac{(z+1)\tau_0^2}{\rho_0}\Bigr),\qquad z=\frac{\tau_0}{\lambda_5\rho_0},\quad z^2+z=\tau_0^4 ,
 \]
 and takes both values on each class as soon as $q\ge32$ (Table~\ref{tab:kappa}); the statement $\kappa_0=0$ suggested by the data at $q=8$ is false.
-\item For the classes with $N_0\mid2$ and $N_0\in\{3,6\}$ the hexad formula reduces the remaining signs to sixteen Witt values $\qq^{(m)}_\lambda(w)$ on the hexad coset (Propositions~\ref{prop:N0div2}, \ref{prop:N0div6}); what is still missing is stated precisely there.
+\item \textbf{The other classes} (Theorems~\ref{thm:N0div2}, \ref{thm:N0div6}). On the sixteen-point coset the values $\phi(w)=\frac12(\qq^{(m)}(w)-p)$ are affine-linear in the duads (Lemma~\ref{lem:sixteen}), so the signed sum of the hexad formula is $\pm4$ according to the number $n_1$ of roots with $\phi=1$ modulo $4$; trace parity pins $\phi$ at the rational roots and totals. This gives $s_4=+4q^2$ for all $\lambda_1$ in the classes $1^6$, $2^3$, the half-half law in $2\,1^4$, $2^21^2$, and $\Spp=+4q^6$ for all $\lambda_1$ in $3\,1^3$, $3^2$; for the class $6$ the same holds under one Witt identity (H) verified for $q\le32$. The class $3\,2\,1$ is the only one left.
 \end{enumerate}
 
 \emph{Counts (Section~\ref{sec:moments}).}
@@ -303,7 +303,17 @@ Let $n_C(q)$ be the class counts (mixed and pure pairs together) and $f^{(m)}_C$
 
 \begin{proposition}[\texttt{part4\_moment\_system.py}]\label{prop:elimination}
 \begin{enumerate}[label=\textup{(\roman*)},leftmargin=2em]
-\item The $6\times11$ matrix $(f^{(m)}_C)_{1\le m\le6}$ has rank $6$; the six moments $m\le6$ determine the eleven class counts up to a five-dimensional space, and the mixed moments $\sum N_1N_2$, $\sum N_1N_3$, $\sum N_2^2$, $\sum N_1N_2N_3$, $\sum N_1^2N_2$ (point counts on fibre products of the curves $C_m^{(b)}$) supply the remaining relations.
+\item The $6\times11$ matrix $(f^{(m)}_C)_{1\le m\le6}$ has rank $6$; the six moments $m\le6$ determine the eleven class counts up to a five-dimensional space. Adjoining the five mixed moments $\sum N_1N_2$, $\sum N_1N_3$, $\sum N_2^2$, $\sum N_1^2N_2$ and $\sum N_1N_2N_3$ raises the rank to $10$ only, whereas adjoining the five statistics
+\begin{gather*}
+M_{3,3}=\sum N_3^2,\qquad M_{2,3}=\sum N_2N_3,\qquad M_{2,2}=\sum N_2^2,\\
+M_{1,3}=\sum N_1N_3,\qquad M_{3,3,3}=\sum N_3^3
+\end{gather*}
+gives an $11\times11$ matrix of determinant $1433272320=2^{17}\cdot3^7\cdot5\ne0$. Hence the eleven class counts are the unique solution of the linear system formed by the six pure moments and these five mixed moments, which are point counts on fibre products of the curves $C_m^{(b)}$ over the $a$-line (the two-fold products $C_3\times_{\mathbb A^1}C_3$, $C_2\times_{\mathbb A^1}C_3$, $C_2\times_{\mathbb A^1}C_2$, $C_1\times_{\mathbb A^1}C_3$ and the triple product of $C_3$). If the counts are those of Target Theorem~\ref{tgt:counts}, the five mixed moments are
+\begin{gather*}
+M_{3,3}=8q^2-12q-7,\qquad M_{2,3}=5q^2-11q+3,\qquad M_{2,2}=7q^2-18q+9,\\
+M_{1,3}=3q^2-7q+3,\qquad M_{3,3,3}=38q^2-54q-43 ,
+\end{gather*}
+and back-substitution of these eleven values returns the table. Target Theorem~\ref{tgt:counts} is therefore equivalent to eleven explicit point counts: six on the curves $C_m^{(b)}$ and five on their fibre products.
 \item If the counts are those of Target Theorem~\ref{tgt:counts}, then the moments and the Gauss-sum totals are
 \[
 \begin{array}{c|l|l}
@@ -588,35 +598,82 @@ The lemma describes the locus of the classes of order $4$ inside the $(y,s)$-pla
 \end{remark}
 
 \subsection{The classes with \texorpdfstring{$N_0\mid2$}{N0 | 2}}
-\begin{proposition}\label{prop:N0div2}
-Let $B_\lambda$ have class $1^6$, $2\,1^4$, $2^21^2$ or $2^3$, so that $T'^{-1}(1)=r_1+\Kk_\lambda\subset\F_{q^2}$ and $f_2=4$. Then for every $\lambda_1$ all sixteen values $\qq^{(2)}_\lambda(w)$, $w\in T'^{-1}(1)$, are even, and
+The sixteen-term version of the hexad formula has a combinatorial structure that decides the sign completely. We first isolate it.
+
+\begin{lemma}[the sixteen-point configuration]\label{lem:sixteen}
+Let $m\in\{2,3\}$, suppose $T'^{-1}(1)=r_1+\Kk_\lambda\subset\F_{q^m}$ (all sixteen points rational over $\F_{q^m}$), and suppose all sixteen values $\qq^{(m)}_\lambda(w)$ have the same parity $p\in\{0,1\}$. Put $\phi(w)=(\qq^{(m)}_\lambda(w)-p)/2\in\F_2$ and $\phi_i=\phi(r_i)$. Then
+\begin{enumerate}[label=\textup{(\roman*)},leftmargin=2em]
+\item $\phi(r_i+r_j+r_l)=\phi_i+\phi_j+\phi_l$ for every total, and $\sum_{i=1}^6\phi_i=0$;
+\item with $n_1=\#\{i:\phi_i=1\}$ (an even number),
 \[
-s_4(\lambda_1)=q^2\Bigl(\sum_{i=1}^6(-1)^{\frac12\qq^{(2)}_\lambda(r_i)}-\sum_{w\ \mathrm{total}}(-1)^{\frac12\qq^{(2)}_\lambda(w)}\Bigr)=\pm4q^2 .
+\sum_{i=1}^6(-1)^{\phi_i}-\sum_{w\ \mathrm{total}}(-1)^{\phi(w)}=\begin{cases}+4,& n_1\in\{2,6\},\\ -4,& n_1\in\{0,4\};\end{cases}
 \]
-Target Theorem~\ref{tgt:signs} for these classes is therefore equivalent to: the signed count of roots minus totals with even $\frac12\qq^{(2)}_\lambda$ equals $+4$ for every $\lambda_1$ (classes $1^6$, $2^3$) and $+4$ for exactly $q/2$ values of $\lambda_1$ (classes $2\,1^4$, $2^21^2$).
-\end{proposition}
+\item consequently $s_{2m}(\lambda)=i^{p}\,q^m\cdot(\pm4)$ with the sign of \textup{(ii)}; in particular $s_{2m}\ne0$.
+\end{enumerate}
+\end{lemma}
 \begin{proof}
-Theorem~\ref{thm:hexadformula} with $m=2$; the value $\pm4q^2$ is Part~III, Theorem~6.12 ($s_4\ne0$ for all $\lambda_1$ when $N_0\mid2$). Parity: $s_2(\lambda_1')\ne0$ for some $\lambda_1'$ because $\Kk_\lambda\cap\ker\tau_2$ is spanned by duads $r_i+r_j$ with $\tau_2(r_i+r_j)=0$, on which $\qq^{(2)}_{\lambda,0}$ vanishes: $\tau_2(r_i+r_j)=0$ means that $\{i,j\}$ is a union of $\sigma$-orbits or is swapped with itself, and in both cases $\qq^{(2)}(r_i+r_j)=\qq^{(2)}(r_i)+\qq^{(2)}(r_j)+2\Tr_{q^2/2}(r_i)=2(\qq^{(2)}(r_i)+\Tr_{q^2/2}(r_i))=0$ by Lemma~\ref{lem:gaussbasics}(ii) when $r_j=\sigma r_i$, and $=2\Tr_{q^2/2}(r_i)+2\Tr_{q^2/2}(r_i)=0$ when both are rational and $\Tr_{q/2}(r_i)=\Tr_{q/2}(r_j)$ (pair lemma), the $\lambda$-part being $2\Tr_{q^2/2}(f(r_i)+f(r_j))=0$ for $r_i,r_j\in\F_q$. Hence Theorem~\ref{thm:traceparity} applies with $2k+f_2$ even.
+(i) For $\kappa\in\Kk_\lambda$ and $w\in T'^{-1}(1)$, \eqref{eq:polar} gives $\qq(w+\kappa)=\qq(w)+\qq(\kappa)+2\Tr_{q^m/2}(\kappa)$, where $\qq(\kappa)$ is even ($\kappa$ is a difference of two coset points of equal parity) and $\qq$ is additive on $\Kk_\lambda$ (Lemma~\ref{lem:gaussbasics}(i), $\Kk_\lambda\subset\F_{q^m}$ being the radical). So $\psi(\kappa):=\frac12\qq(\kappa)+\Tr_{q^m/2}(\kappa)$ is an $\F_2$-linear functional on $\Kk_\lambda$ and $\phi(w+\kappa)=\phi(w)+\psi(\kappa)$. For a duad, writing $\qq(r_i)=p+2\phi_i$ and using $T'(r_i)=1$, $\Tr_{q^m/2}(r_j)\equiv\qq(r_j)\equiv p$:
+\[
+\qq(r_i+r_j)=\qq(r_i)+\qq(r_j)+2\Tr_{q^m/2}(r_j)\equiv2p+2\phi_i+2\phi_j+2p\equiv2(\phi_i+\phi_j)\pmod4,
+\]
+so $\psi(r_i+r_j)=\phi_i+\phi_j+\Tr(r_i)+\Tr(r_j)=\phi_i+\phi_j+2p=\phi_i+\phi_j$. Hence $\phi(r_i+r_j+r_l)=\phi_i+\psi(r_j+r_l)=\phi_i+\phi_j+\phi_l$. Computing the same total through the complementary triple gives $\sum_{i=1}^6\phi_i=0$; equivalently, $\qq(\sum r_i)=\qq(0)=0$ expanded by \eqref{eq:polar}.
+(ii) $\sum_i(-1)^{\phi_i}=6-2n_1$. The ten totals correspond to the ten partitions of $\{1,\dots,6\}$ into two triples, and the sign of a total is $(-1)^{t}$ with $t$ the number of indices with $\phi=1$ in either triple ($t$ and $n_1-t$ have the same parity as $n_1$ is even). For $n_1=0$: all totals $+$, total $6-10=-4$. For $n_1=2$: the two indices lie in the same triple for $4$ partitions ($+$) and are separated for $6$ ($-$): $2-(4-6)=+4$. For $n_1=4,6$ replace $\phi$ by $\phi+1$, which negates both sums. (iii) is Theorem~\ref{thm:hexadformula}.
+\end{proof}
+
+\begin{theorem}[the classes with $N_0\mid2$]\label{thm:N0div2}
+Let $k$ be odd and $B_\lambda$ of class $1^6$, $2\,1^4$, $2^21^2$ or $2^3$. For every $\lambda_1$ all sixteen values $\qq^{(2)}_\lambda(w)$, $w\in T'^{-1}(1)$, are even; put $\phi_i=\frac12\qq^{(2)}_\lambda(r_i)$. Then $s_4(\lambda_1)=\pm4q^2$ with the sign of Lemma~\ref{lem:sixteen}\textup{(ii)}, where:
+\begin{enumerate}[label=\textup{(\roman*)},leftmargin=2em]
+\item every rational root has $\phi_i=\Tr_{q/2}(r_i)=f_1(C)+1$, and conjugate roots have equal $\phi_i$;
+\item class $1^6$: $n_1=6$ and $s_4(\lambda_1)=+4q^2$ for all $\lambda_1$;
+\item class $2^3$: the number of conjugate pairs with $\phi=1$ is odd, $n_1\in\{2,6\}$, and $s_4(\lambda_1)=+4q^2$ for all $\lambda_1$;
+\item class $2\,1^4$ (rational roots $r_1,\dots,r_4$, pair $r_5,r_6$, $\tau_0=r_5+r_6$): $n_1=2\phi_5$ and $s_4(\lambda_1)=+4q^2$ iff $\frac12\qq^{(2)}_\lambda(r_5)=1$, which holds for exactly $q/2$ values of $\lambda_1$ (those with $\Tr_{q/2}(\lambda_1\tau_0)=1+\frac12\qq^{(2)}_{\lambda,0}(r_5)$);
+\item class $2^21^2$ (rational roots $r_1,r_2$, pairs $\{r_3,r_4\}$, $\{r_5,r_6\}$): $n_1=2+2\phi_3+2\phi_5$ and $s_4(\lambda_1)=+4q^2$ iff $\phi_3=\phi_5$, which holds for exactly $q/2$ values of $\lambda_1$ (those with $\Tr_{q/2}(\lambda_1(r_1+r_2))=\frac12\qq^{(2)}_{\lambda,0}(r_3)+\frac12\qq^{(2)}_{\lambda,0}(r_5)$).
+\end{enumerate}
+In particular $W'=+4q^7$ in the classes $1^6$, $2^3$ and $W'=0$ in the classes $2\,1^4$, $2^21^2$: Target Theorem~\ref{tgt:signs} holds for the six classes with $N_0\mid4$.
+\end{theorem}
+\begin{proof}
+\emph{Parity.} Theorem~\ref{thm:traceparity} with $m=2$, $2k+f_2=2k+4$ even, once its hypothesis is checked: $\Kk_\lambda\cap\ker\tau_2=\Kk_\lambda\cap\F_q=\Kk_\lambda^\sigma$ is spanned by the duads fixed by $\sigma$, i.e.\ $r+\sigma r$ for a conjugate pair and $r_i+r_j$ for two rational roots, and $\qq^{(2)}_{\lambda,0}$ vanishes on them: $\qq^{(2)}(r+\sigma r)=2\qq^{(2)}(r)+2\Tr_{q^2/2}(r)\equiv2(\qq^{(2)}(r)+\Tr_{q^2/2}(r))=0$ by Lemma~\ref{lem:gaussbasics}(ii), and $\qq^{(2)}(r_i+r_j)=2\Tr_{q/2}(r_i+r_j)=0$ for rational $r_i,r_j$ by the pair lemma (for $x\in\F_q$, $\qq^{(2)}_\lambda(x)=2\Tr_{q/2}(x)$ as in Step~1 of Theorem~\ref{thm:hexadformula}). So Lemma~\ref{lem:sixteen} applies with $p=0$.
+
+(i) For rational $r$, $\qq^{(2)}_\lambda(r)=2\Tr_{q/2}(r)$ for every $\lambda_1$, and $\Tr_{q/2}(r)=f_1+1$ by Corollary~\ref{cor:rationalroots}; $\qq^{(2)}_\lambda$ is $\sigma$-invariant. (ii) $f_1(1^6)=4$. (iii) $f_1(2^3)=2$; the four rational points of the coset are totals (the partitions $\{1,3,5\}|\{2,4,6\}$ etc.\ with one index from each pair, which $\sigma=(12)(34)(56)$ maps to their complements), and such a total $w=r_a+r_b+r_c$ has $\phi(w)=\Tr_{q/2}(w)=f_1+1=1$ by Corollary~\ref{cor:rationalroots} (totals included) and $\phi(w)=\phi_a+\phi_b+\phi_c$ by Lemma~\ref{lem:sixteen}(i), one $\phi$ from each pair; hence an odd number of pairs has $\phi=1$. (iv), (v): $f_1=3$, resp.\ $2$, give $\phi=0$, resp.\ $1$, at the rational roots, and the pairs contribute $0$ or $2$ to $n_1$; the $\lambda_1$-dependence is $\frac12\qq^{(2)}_{\lambda}(r)=\frac12\qq^{(2)}_{\lambda,0}(r)+\Tr_{q/2}(\lambda_1\tau_2(r))$ with $\tau_2(r_5)=\tau_0\ne0$ in (iv) and $\tau_2(r_3)+\tau_2(r_5)=r_3+r_4+r_5+r_6=r_1+r_2\ne0$ in (v), so each sign occurs for $q/2$ values of $\lambda_1$. The values of $W'=q^4\sum_{\lambda_1}s_4$ follow, and the statement about Target Theorem~\ref{tgt:signs} combines this with Theorem~\ref{thm:order4}.
 \end{proof}
 
 \begin{remark}
-Table~\ref{tab:hexadterms} shows the patterns at $q=8$: e.g.\ in the class $2^3$ the sixteen Witt values are either $(4{:}0,2{:}2\,|\,4{:}0,6{:}2)$ or all equal to $2$, both giving $+4$. What has to be proved is a statement about the distribution of $\frac12\qq^{(2)}_\lambda$ on the two $\Kk_\lambda$-orbits (roots, totals) of the coset, a sixteen-point configuration; the shift calculus (Lemma~\ref{lem:coset}) reduces it to one $\lambda_1$ per coset of $T'_\lambda(\F_q)$, of codimension $f_1$. The Witt values at the roots are those of Lemma~\ref{lem:cofactor} type (through the elementary symmetric functions of the Frobenius orbits), the values at the totals follow from them by \eqref{eq:polar}: $\qq^{(2)}(r_i+r_j+r_l)=\qq^{(2)}(r_i)+\qq^{(2)}(r_j)+\qq^{(2)}(r_l)+2\Tr_{q^2/2}(r_i+r_j+r_l)+2\Tr_{q^2/2}(r_j+r_l)$ \todo{carry this out}.
+(1) Table~\ref{tab:hexadterms} is the theorem at $q=8$: e.g.\ in the class $2^21^2$ the rational roots always have $\phi=1$ (``$2{:}2$'' among the roots), and the three patterns are $n_1=2,4,6$ with signs $+,-,+$; in the class $2^3$ the patterns are $n_1=2$ and $n_1=6$. The rule is verified for every pair and every $\lambda_1$ at $q=8$ and for three pairs per class at $q=32$ (\texttt{part4\_sign\_rules.py}). (2) The proof explains the ``half-half'' behaviour of the classes $2\,1^4$ and $2^21^2$ and the constancy in the classes $1^6$, $2^3$ in one stroke: a conjugate pair contributes an even number to $n_1$ and its $\phi$ depends on $\lambda_1$ through $\Tr(\lambda_1\tau)$, $\tau$ the sum of the pair; in the classes $1^6$ and $2^3$ these $\tau$'s sum to zero over the pairs, so $n_1\bmod4$ is independent of $\lambda_1$, while in the other two classes exactly one $\tau$ (resp.\ one sum of two $\tau$'s) is free.
 \end{remark}
 
 \subsection{The classes with \texorpdfstring{$N_0\in\{3,6\}$}{N0 in \{3,6\}}}\label{subsec:N0div6}
-\begin{proposition}\label{prop:N0div6}
-Let $B_\lambda$ have class $3\,1^3$, $3^2$, $3\,2\,1$ or $6$, and suppose $s_3(\lambda_1')\ne0$ for some $\lambda_1'$. Then:
-\begin{enumerate}[label=\textup{(\roman*)},leftmargin=2em]
-\item in the classes $3\,1^3$, $3^2$, $6$ every $w\in T'^{-1}(1)\cap\F_{q^3}$ has $\Tr_{q^3/2}(w)=1$, all terms of \eqref{eq:hexadformula} ($m=3$) are $\pm i$, and $s_6(\lambda_1)\in i\,q^3\Z$ for \emph{every} $\lambda_1$; consequently $\Spp(\lambda_1)=+4q^6$ for every $\lambda_1$ with $s_6(\lambda_1)\ne0$;
-\item in the class $3\,2\,1$ every such $w$ has $\Tr_{q^3/2}(w)=0$, all terms are $\pm1$ and $s_6(\lambda_1)\in q^3\Z$.
-\end{enumerate}
-\end{proposition}
+For $N_0\in\{3,6\}$ the relevant small field is $\F_{q^3}$ and the relevant hypothesis of Theorem~\ref{thm:traceparity} is
+\begin{equation}\label{eq:H}
+\textup{(H)}\qquad s_3(\lambda_1')\ne0\ \text{for some }\lambda_1'\in\F_q,\quad\text{i.e.\ }\tfrac12\qq^{(3)}_{\lambda,0}\ \text{vanishes on }\Kk_\lambda\cap\F_{q^3}\cap\ker\tau_3
+\end{equation}
+(Lemma~\ref{lem:gaussbasics}(iv)).
+
+\begin{lemma}\label{lem:Hcheck}
+\textup{(H)} holds unconditionally in the classes $3\,1^3$ and $3^2$. In the class $6$ it is equivalent to the single identity $\qq^{(3)}_{\lambda,0}(r_1+r_4)=0$, $r_4=\sigma^3r_1$, which does not depend on $\lambda_1$ and is equivalent to $\Tr_{q^3/2}(N\gamma_w)=1$ for $w=r_1+r_4$, $N=r_1r_4$, $\gamma_w=1+\lambda_5w^3+\lambda_3w+(\lambda_5w)^{1/2}$; it holds for all pairs of the class at $q=8$ and $q=32$.
+\end{lemma}
 \begin{proof}
-Theorem~\ref{thm:traceparity} with $m=3$: $3k+f_3$ is odd for $f_3=4,4,2$ (classes $3\,1^3$, $3^2$, $6$) and even for $f_3=3$ (class $3\,2\,1$), by Table~\ref{tab:classes}. Then Theorem~\ref{thm:hexadformula} and Part~III, Theorem~6.14(iii): $\Spp=-4q^6\nu_6^2$ with $\nu_6=-s_6/4q^3$, which is $+4q^6$ iff $\nu_6=\pm i$.
+For a duad inside a $\sigma$-orbit contained in $\F_{q^3}$, $\qq^{(3)}(r+\sigma r)=2\qq^{(3)}(r)+2\Tr_{q^3/2}(r)\equiv0$ by Lemma~\ref{lem:gaussbasics}(ii). Class $3\,1^3$ ($\sigma=(123)$): $\tau_3$ vanishes on the duads $r_1+r_2$, $r_2+r_3$, $r_1+r_3$ and is $\ne0$ on the twelve others ($\tau_3(r_4+r_5)=r_4+r_5$, $\tau_3(r_1+r_4)=r_5+r_6$), so $\Kk_\lambda\cap\ker\tau_3=\{0,r_1+r_2,r_2+r_3,r_1+r_3\}$, on which $\qq^{(3)}_0$ vanishes by the first sentence. Class $3^2$ ($\sigma=(123)(456)$, $\alpha:=r_1+r_2+r_3=r_4+r_5+r_6\in\F_q$): $\tau_3\equiv0$ on $\Kk_\lambda$, and it remains to treat a duad $r_1+r_4$ across the two cycles. With $\beta=e_2(r_1,r_2,r_3)$, $\beta''=e_2(r_4,r_5,r_6)$ and $\beta+\beta''+\alpha^2=e_2(r_1,\dots,r_6)=0$,
+\begin{align*}
+\Tw_{3k}(r_1)+\Tw_{3k}(r_4)&=\bigl(\Tw_k(\alpha)+2\Tr(\beta)\bigr)+\bigl(\Tw_k(\alpha)+2\Tr(\beta+\alpha^2)\bigr)\\
+&=2\Tw_k(\alpha)+2\Tr(\alpha)=4\Tr(\alpha)+4e_2^{\rm abs}(\alpha)\equiv0\pmod 4,
+\end{align*}
+and $2\Tr_{q^3/2}\bigl(f(r_1)+f(r_4)\bigr)=2\Tr_{q/2}\bigl(\lambda_5p_5+\lambda_3p_3+2\lambda_1\alpha\bigr)$ with $p_3,p_5$ the power sums of all six roots, which are $p_3=0$ and $p_5=5e_5=b$ (Newton with $e_1=e_2=e_3=0$); so this is $2\Tr(\lambda_5b)=2\Tr(1)=2$. By \eqref{eq:polar}, $\qq^{(3)}_0(r_1+r_4)=\qq^{(3)}_0(r_1)+\qq^{(3)}_0(r_4)+2\Tr_{q^3/2}(r_4)=2+2\Tr_{q/2}(\alpha)$. Now $\alpha$ is a synthematic total ($\{123\}|\{456\}$), rational, so $\Tr_{q/2}(\alpha)=f_1(3^2)+1=1$ by Corollary~\ref{cor:rationalroots}, and $\qq^{(3)}_0(r_1+r_4)=0$. Class $6$: $\Kk_\lambda\cap\F_{q^3}=\Kk_\lambda^{\sigma^3}=\{0,r_1+r_4,r_2+r_5,r_3+r_6\}$, on which $\tau_3$ vanishes ($\tau_3(r_1+r_4)=\sum r_i=0$) and which is permuted by $\sigma$, so (H) is the one identity stated. For the reformulation apply Step~3 of the proof of Theorem~\ref{thm:hexadformula} to $c=r_1$, $c+c^{q^3}=w$, which gives $\qq^{(6)}_\lambda(r_1)=\qq^{(3)}_\lambda(w)+2\Tr_{q^3/2}(N\gamma_w)$ (that step used nothing about $T'(w)$), together with $\qq^{(6)}_\lambda(r_1)=\Tw_{6k}(r_1)+2\Tr_{q^6/2}(f(r_1))=\Tr_{W_2(\F_q)/\Z/4}(e_1,e_2)+2\Tr_{q/2}(\lambda_5p_5+\lambda_3p_3+\lambda_1p_1)=0+2\Tr(\lambda_5b)=2$. The numerical statement is Part~III, Table~7 ($q=8$) and the $L$-polynomial data of Part~III at $q=32$ (\texttt{witt\_lpoly\_k5.txt}: $s_3\ne0$ for all $128$ triples of the class), and \texttt{part4\_sign\_rules.py}.
+\end{proof}
+
+\begin{theorem}[the classes with $N_0\in\{3,6\}$]\label{thm:N0div6}
+Let $k$ be odd.
+\begin{enumerate}[label=\textup{(\roman*)},leftmargin=2em]
+\item In the classes $3\,1^3$ and $3^2$, for every $\lambda_1$: all sixteen values $\qq^{(3)}_\lambda(w)$, $w\in T'^{-1}(1)$, are odd, $s_6(\lambda_1)=\pm4i\,q^3$ with the sign of Lemma~\ref{lem:sixteen}\textup{(ii)} applied to $\phi(w)=(\qq^{(3)}_\lambda(w)-1)/2$, and $\Spp(\lambda_1)=+4q^6$. Hence $W'=+4q^7$.
+\item In the class $6$, assume \textup{(H)}. Then for every $\lambda_1$ the four values $\qq^{(3)}_\lambda(w)$ at the points of $T'^{-1}(1)\cap\F_{q^3}$ (four synthematic totals) are odd and equal, $s_6(\lambda_1)=\mp4i\,q^3$ accordingly, and $\Spp(\lambda_1)=+4q^6$, $W'=+4q^7$.
+\item In the class $3\,2\,1$, assume \textup{(H)}. Then every $w\in T'^{-1}(1)\cap\F_{q^3}$ (four roots and four totals) has $\Tr_{q^3/2}(w)=0$, all terms of \eqref{eq:hexadformula} are $\pm1$, and $s_6(\lambda_1)\in\{0,\pm4q^3\}$.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+(i) By Lemma~\ref{lem:Hcheck}, Theorem~\ref{thm:traceparity} applies with $m=3$ and $3k+f_3=3k+4$ odd: every coset point in $\F_{q^3}$ (all sixteen) has odd Witt value. Lemma~\ref{lem:sixteen} with $p=1$ gives $s_6=i\,q^3(\pm4)$, in particular $s_6\ne0$ and $\nu_6=-s_6/4q^3=\mp i$; by Part~III, Theorem~6.14(iii), $\Spp=-4q^6\nu_6^2=+4q^6$. (ii) Trace parity with $3k+f_3=3k+2$ odd gives odd values at the four points $w_0+\Kk_\lambda^{\sigma^3}$; by \eqref{eq:polar} and (H), $\qq^{(3)}(w_0+\kappa)=\qq^{(3)}(w_0)+\qq^{(3)}(\kappa)+2\Tr_{q^3/2}(\kappa)=\qq^{(3)}(w_0)+0+2\Tr_{q/2}(\tau_3\kappa)=\qq^{(3)}(w_0)$ for $\kappa\in\Kk_\lambda^{\sigma^3}$ (the $\lambda_1$-part of $\qq^{(3)}(\kappa)$ is $2\Tr_{q/2}(\lambda_1\tau_3\kappa)=0$). So the four terms of \eqref{eq:hexadformula} are equal, all with $\eps=-1$: $s_6=-4q^3\,i^{\qq^{(3)}(w_0)}=\mp4iq^3$, and $\Spp=+4q^6$ as before. (iii) Trace parity with $3k+f_3=3k+3$ even.
 \end{proof}
 
 \begin{remark}
-(1) In the classes $3^2$ and $6$, $\tau_3$ vanishes on $\Kk_\lambda^{\sigma^3}$, so $s_3(\lambda_1)\ne0$ either for all $\lambda_1$ or for none; the hypothesis of the proposition is then the single condition that $\qq^{(3)}_{\lambda,0}$ vanish on $\Kk_\lambda^{\sigma^3}$, i.e.\ (class $3^2$) $\qq^{(3)}(r_1+r_4)=0$ for roots in different $3$-cycles, the values at duads inside a cycle being automatically $0$. At $q=8$ this holds for all pairs of both classes (Part~III, Table~7: $s_3\ne0$ throughout), and then the proposition gives $\Spp=+4q^6$ for all $\lambda_1$ with $s_6\ne0$, which at $q=8$ is all of them (Table~\ref{tab:hexadterms}). What remains for these two classes is (a) the nonvanishing of $s_3$, a Witt-value identity on the hexad, and (b) the nonvanishing of $s_6$, i.e.\ that the signed count of the sixteen (class $3^2$) or four (class $6$) terms is not $0$ \todo{prove (a), (b)}. (2) In the class $3\,2\,1$ the proposition is consistent with the target ($\pm4q^6$ in equal numbers) but does not prove it: the eight real terms sum to $\pm4$ or $0$ (Table~\ref{tab:hexadterms}), and when $s_6(\lambda_1)=0$ the value of $\Spp(\lambda_1)$ is not determined by $s_6$. (3) Figure~\ref{fig:phases} shows the normalised Frobenius eigenvalues of the Witt sheaf at $q=8$ in all classes; the order-$4$ classes are rotated against each other by $2\pi/8$, which is the sign $(-1)^{\Tr(\rho_0/\tau_0^2)}$ of Theorem~\ref{thm:order4} seen on the eigenvalues ($\omega_j^4=-q^2\,\sgn s_4$).
+(1) Theorem~\ref{thm:N0div6}(i) settles Target Theorem~\ref{tgt:signs} for the classes $3\,1^3$ and $3^2$, and (ii) for the class $6$ modulo the single Witt identity (H), which is verified for all pairs at $q=8$ and $q=32$. Together with Theorems~\ref{thm:order4} and \ref{thm:N0div2}, nine of the eleven classes are done unconditionally and one conditionally; Table~\ref{tab:hexadterms} is the theorem at $q=8$ (class $3^2$: $n_1\in\{0,6\}$ only, because $\psi\equiv0$ there; class $3\,1^3$: all four values of $n_1$ occur). (2) The class $3\,2\,1$ remains open: (iii) is consistent with the target ($\Spp=\pm4q^6$ in equal numbers) but does not prove it, because when $s_6(\lambda_1)=0$, which happens (Table~\ref{tab:hexadterms}), $\Spp(\lambda_1)$ is not determined by $s_6$; one needs either $s_{12}$ directly or the $L$-polynomial from $s_1,\dots,s_4$ as in Part~III. (3) Figure~\ref{fig:phases} shows the normalised Frobenius eigenvalues of the Witt sheaf at $q=8$ in all classes; the order-$4$ classes are rotated against each other by $2\pi/8$, which is the sign $(-1)^{\Tr(\rho_0/\tau_0^2)}$ of Theorem~\ref{thm:order4} seen on the eigenvalues ($\omega_j^4=-q^2\,\sgn s_4$).
 \end{remark}
 
 \begin{figure}[htbp]
@@ -627,15 +684,14 @@ Theorem~\ref{thm:traceparity} with $m=3$: $3k+f_3$ is odd for $f_3=4,4,2$ (class
 
 \section{The constant \texorpdfstring{$X$}{X}}\label{sec:X}
 \begin{theorem}\label{thm:Xstatus}
-Let $k$ be odd. Suppose that Target Theorem~\ref{tgt:counts} holds and that
+Let $k$ be odd. Suppose that Target Theorem~\ref{tgt:counts} holds, that \textup{(H)} of \eqref{eq:H} holds in the class $6$, and that
 \begin{enumerate}[label=\textup{(\alph*)},leftmargin=2em]
-\item $s_4(\lambda_1)=+4q^2$ for all $\lambda_1$ in the classes $1^6$, $2^3$, and for exactly $q/2$ values of $\lambda_1$ in the classes $2\,1^4$, $2^21^2$ (with $-4q^2$ for the others);
-\item $\Spp(\lambda_1)=+4q^6$ for all $\lambda_1$ in the classes $3\,1^3$, $3^2$, $6$, and for exactly $q/2$ values of $\lambda_1$ in the class $3\,2\,1$.
+\item $\Spp(\lambda_1)=+4q^6$ for exactly $q/2$ values of $\lambda_1$ in the class $3\,2\,1$ (equivalently $W'=0$ there).
 \end{enumerate}
-Then $X=q^6+q^5$ and the variance formula of Corollary~\ref{cor:X} holds. The hypothesis on the classes $4\,1^2$, $4\,2$ in Part~III, Corollary~1.5, is no longer needed (Theorem~\ref{thm:order4}).
+Then $X=q^6+q^5$ and the variance formula of Corollary~\ref{cor:X} holds. Of the eleven sign hypotheses of Part~III, Corollary~1.5, only (a) and \textup{(H)} remain (Theorems~\ref{thm:order4}, \ref{thm:N0div2}, \ref{thm:N0div6}).
 \end{theorem}
 \begin{proof}
-Under (a), (b) and Theorem~\ref{thm:order4} the values of $W'$ on the classes are those of Part~III, Theorem~6.9 ($+4q^7$, $0$, $0$, $+4q^7$, $+4q^7$, $+4q^7$, $0$, $+2q^7$, $-2q^7$, $-q^7$, $+4q^7$ in the order of Table~\ref{tab:classes}), and the bookkeeping of Part~III, Corollary~1.5, with the counts of Target Theorem~\ref{tgt:counts} gives $q^3X=W'(0,0)+\sum_{\lambda_3\ne0}W'(\lambda_3,0)+\sum_{\lambda_5\ne0,\lambda_3=0}W'+\sum_{\text{mixed}}W'=q^7+q^8+(3q^8-2q^7)+(q^9-3q^8+q^7)=q^9+q^8$.
+Under (a), (H) and Theorems~\ref{thm:order4}, \ref{thm:N0div2}, \ref{thm:N0div6} the values of $W'$ on the classes are those of Part~III, Theorem~6.9 ($+4q^7$, $0$, $0$, $+4q^7$, $+4q^7$, $+4q^7$, $0$, $+2q^7$, $-2q^7$, $-q^7$, $+4q^7$ in the order of Table~\ref{tab:classes}), and the bookkeeping of Part~III, Corollary~1.5, with the counts of Target Theorem~\ref{tgt:counts} gives $q^3X=W'(0,0)+\sum_{\lambda_3\ne0}W'(\lambda_3,0)+\sum_{\lambda_5\ne0,\lambda_3=0}W'+\sum_{\text{mixed}}W'=q^7+q^8+(3q^8-2q^7)+(q^9-3q^8+q^7)=q^9+q^8$.
 \end{proof}
 
 \begin{remark}[even $k$]
@@ -658,7 +714,8 @@ All scripts are in the directory \texttt{code/} of the repository and depend onl
 \item \texttt{moment3\_structure.py}: Proposition~\ref{prop:GHstructure}.
 \item \texttt{part4\_moment\_system.py}: Proposition~\ref{prop:elimination} and the interpolation checks.
 \item \texttt{part4\_hexad\_formula.py}: Theorem~\ref{thm:hexadformula} for every $\lambda$ at $q=8$ ($m=2,3$) and for three pairs per class with $N_0\mid4$ at $q=32$ ($m=2$); Table~\ref{tab:hexadterms}.
-\item \texttt{part4\_trace\_parity.py}: Corollary~\ref{cor:rationalroots} for every $(a,b)$ at $q=8,32,128$.
+\item \texttt{part4\_trace\_parity.py}: Corollary~\ref{cor:rationalroots} for every $(a,b)$ at $q=8,32,128$ (and $q=4,16,64$ for even $k$).
+\item \texttt{part4\_sign\_rules.py}: Lemma~\ref{lem:sixteen} and Theorems~\ref{thm:N0div2}, \ref{thm:N0div6} ($\phi$-values with the Frobenius orbit structure, $n_1$, predicted and actual $s_{2m}$, hypothesis (H)) for every pair and every $\lambda_1$ at $q=8$ and three pairs per class at $q=32$.
 \item \texttt{part4\_order4\_all.py}: for every pair of the classes of order $4$ at $q=8$ and $q=32$, the direct Witt values, $\kappa_0$ by \eqref{eq:q4r1} and \eqref{eq:kappaclosed}, and $s_4(\lambda_1)$ for all $\lambda_1$ (sign, hyperplane, $W'$).
 \item \texttt{part4\_kappa\_scan.py}: Table~\ref{tab:kappa} and Lemma~\ref{lem:resolvent}; \texttt{part4\_relative\_reduction.py}: the coset form of the hexad formula; \texttt{part4\_brown\_invariants.py}: the earlier sampling version.
 \end{itemize}
