@@ -2,7 +2,9 @@
 
 **Point counts on hexad modular curves, Brown invariants of Witt sheaves, and the constant X**
 
-Ruqing Chen (GUT Geoservice Inc., Montreal) — working draft, October 2026. DOI 10.5281/zenodo.23299284.
+Ruqing Chen (GUT Geoservice Inc., Montreal) — version 2, October 2026. DOI [10.5281/zenodo.23308682](https://doi.org/10.5281/zenodo.23308682) (version 1: 10.5281/zenodo.23299284).
+
+**New in version 2:** Theorem 3.23 proves the sign laws in the classes 3 2 1 and 6, so the sign conjecture of Part III holds in all eleven classes (Theorem 1.2). X = q⁶ + q⁵ now depends only on the class counts (Target Theorem 1.1).
 
 Part I: DOI 10.5281/zenodo.23225896 · Part II: DOI 10.5281/zenodo.23252762 · Part III: DOI 10.5281/zenodo.23290724 ([repository](https://github.com/Ruqing1963/legendre-intervals-part3)).
 
@@ -27,7 +29,7 @@ Not proved here: the class counts of Target Theorem 1.1, equivalently the eleven
 ## Layout
 
 ```
-paper/    legendre_IV_hexad_moments_brown_X.tex / .pdf (23 pages), make_figures4.py, figures/
+paper/    legendre_IV_hexad_moments_brown_X.tex / .pdf (24 pages), make_figures4.py, figures/
 code/     self-contained Python (NumPy, SymPy, Numba): field tables, hexad search, Witt sums, all Part IV scripts
 data/     outputs of every script quoted in the paper (q = 8, 32, 128)
 figures/  the figures of the paper (vector PDF)
@@ -57,7 +59,7 @@ Field sizes: q = 8, 32, 128 use F_{2^{3k}} (moments), F_{2^{4k}} (s_4), F_{2^{6k
 
 ## Zenodo record
 
-Reserved DOI: [10.5281/zenodo.23299284](https://doi.org/10.5281/zenodo.23299284). Resource type: publication / preprint. Version v1, 2026-10-11, English, CC BY 4.0.
+Reserved DOI: [10.5281/zenodo.23308682](https://doi.org/10.5281/zenodo.23308682) (version 2; version 1: 10.5281/zenodo.23299284). Resource type: publication / preprint. Version v2, 2026-10-12, English, CC BY 4.0.
 
 **Title.** Prime polynomials in Legendre intervals over F_{2^k}[t], IV: point counts on hexad modular curves, Brown invariants of Witt sheaves, and the constant X
 
@@ -65,15 +67,15 @@ Reserved DOI: [10.5281/zenodo.23299284](https://doi.org/10.5281/zenodo.23299284)
 
 **Description.**
 
-> Let q = 2^k with k odd. Part III (DOI 10.5281/zenodo.23290724) reduced the closed form X = q^6 + q^5 of the second constant of the degree-6 Legendre variance to two statements about the sextic family B_λ = λ5² u⁶ + λ3² u² + λ5 u + 1, whose roots form the hexad of ker L'_λ: the polynomial frequencies of its eleven factorisation types over F_q (Target Theorem 1.1), and the signs of the Gauss sums s_4, s_6 of explicit Z/4-valued quadratic forms on F_{q^4}, F_{q^6} (Target Theorem 1.2).
+> Let q = 2^k with k odd. Part III (DOI 10.5281/zenodo.23290724) reduced the closed form X = q^6 + q^5 of the second constant of the degree-6 Legendre variance to two statements about the sextic family B_λ = λ5² u⁶ + λ3² u² + λ5 u + 1, whose roots form the hexad of ker L'_λ: the polynomial frequencies of its eleven factorisation types over F_q (Target Theorem 1.1), and the signs of the Gauss sums s_4, s_6, s_12 of explicit Z/4-valued quadratic forms (Theorem 1.2, a conjecture of Part III).
 >
-> This paper proves three structural theorems about these Gauss sums. The hexad formula expresses s_{2m}, a sum over F_{q^{2m}}, as q^m times a signed sum of at most sixteen fourth roots of unity indexed by the F_{q^m}-rational points of the coset T'^{-1}(1) (the six roots and the ten synthematic totals). The trace parity theorem determines the absolute trace of every such point, Tr(w) ≡ mk + dim(K_λ ∩ F_{q^m}) (mod 2); for m = 1 it fixes the trace of every rational root of B_λ by Frobenius class. A sixteen-point lemma on the configuration of roots and totals then determines the signs in nine of the eleven classes: s_4 = +4q² throughout the classes 1^6 and 2^3; a half-half law in λ1 in the classes 2 1^4 and 2^2 1^2; s_4 ∈ {0, +4q²}, respectively {0, −4q²}, nonzero exactly on an explicit affine hyperplane, in the classes 4 1^2 and 4 2, hence W' = +2q^7 and −2q^7 as conjectured since Part II; and S'' = +4q^6 throughout the classes 3 1^3 and 3^2. The class 6 is settled under a single Witt identity verified for q ≤ 32; the class 3 2 1 remains open. The hyperplane parameter κ0 of the order-4 classes is given in closed form; contrary to what the data at q = 8 suggested, it is not constant on the class.
+> This paper proves three structural theorems about these Gauss sums. The hexad formula expresses s_{2m}, a sum over F_{q^{2m}}, as q^m times a signed sum of at most sixteen fourth roots of unity indexed by the F_{q^m}-rational points of the coset T'^{-1}(1) (the six roots and the ten synthematic totals). The trace parity theorem determines the absolute trace of every such point, Tr(w) ≡ mk + dim(K_λ ∩ F_{q^m}) (mod 2); for m = 1 it fixes the trace of every rational root of B_λ by Frobenius class. A sixteen-point lemma on the configuration of roots and totals then determines the signs in all eleven classes. s_4 = +4q² throughout the classes 1^6 and 2^3. A half-half law in λ1 holds in the classes 2 1^4 and 2^2 1^2. In the classes 4 1^2 and 4 2, s_4 ∈ {0, +4q²}, respectively {0, −4q²}, nonzero exactly on an explicit affine hyperplane, hence W' = +2q^7 and −2q^7 as conjectured since Part II. S'' = +4q^6 throughout the classes 3 1^3, 3^2 and 6. In the class 3 2 1, S''(λ1) = ±4q^6 (−1)^{Tr(λ1(r4+r5))}, hence W' = 0. The last two classes come from applying the hexad formula directly over F_{q^6}; version 2 adds this step, which removes the Witt identity (H) previously needed for the class 6. The sign conjecture of Part III is therefore a theorem, and X = q^6 + q^5 now depends only on the conjectured class counts. The hyperplane parameter κ0 of the order-4 classes is given in closed form; contrary to what the data at q = 8 suggested, it is not constant on the class.
 >
 > For the factorisation counts, every moment Σ_λ N_m(B_λ) is expressed through Gauss sums of Gold-type forms on the trace-zero hyperplane of F_{q^m}; the identity is proved for all m, the third moment 2q² − 3q − 1 is verified for q ≤ 128, and an explicit nonsingular 11 × 11 system of pure and mixed moments, whose unique solution is the conjectured table of class counts, is written down.
 >
-> All numerical statements are reproducible with the self-contained Python code in the companion repository (https://github.com/Ruqing1963/legendre-intervals-part4), with the raw outputs for q = 8, 32, 128 included. 23 pages, 2 figures, 3 tables.
+> All numerical statements are reproducible with the self-contained Python code in the companion repository (https://github.com/Ruqing1963/legendre-intervals-part4), with the raw outputs for q = 8, 32, 128 included. 24 pages, 3 figures, 3 tables.
 >
-> Related records: Part I, DOI 10.5281/zenodo.23225896; Part II, DOI 10.5281/zenodo.23252762; Part III, DOI 10.5281/zenodo.23290724.
+> Related records: Part I, DOI 10.5281/zenodo.23225896; Part II, DOI 10.5281/zenodo.23252762; Part III, DOI 10.5281/zenodo.23290724; Part IV version 1, DOI 10.5281/zenodo.23299284.
 
 **Keywords.** Legendre intervals; prime polynomial distribution; function fields; even characteristic; Witt vectors; Z/4-valued quadratic forms; Brown invariant; Gauss sums; Arf invariant; hexad; synthematic totals; Sp4(F2); Gold-type functions; Kloosterman sums; quartic cofactor; moment method; variance of primes; finite fields.
 
