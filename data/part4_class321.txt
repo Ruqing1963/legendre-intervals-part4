@@ -1,0 +1,9 @@
+﻿k=3, q=8: class 3 2 1, 9 pairs, every lambda_1
+   ("law S''(l1) = A (-1)^Tr(l1 t0) holds", True, 'A', (-1-0j), "#{S''=+4q^6}", 4, 'of', 8, 'Tr(t0)', 0) x 9
+k=3, q=8: class 6 (mixed pairs), 12 pairs, every lambda_1
+   ("S''/4q^6 over all l1", ((1-0j),)) x 12
+k=5, q=32: class 3 2 1, 12 pairs, every lambda_1
+   ("law S''(l1) = A (-1)^Tr(l1 t0) holds", True, 'A', (-1-0j), "#{S''=+4q^6}", 16, 'of', 32, 'Tr(t0)', 0) x 8
+   ("law S''(l1) = A (-1)^Tr(l1 t0) holds", True, 'A', (1+0j), "#{S''=+4q^6}", 16, 'of', 32, 'Tr(t0)', 0) x 4
+k=5, q=32: class 6 (mixed pairs), 12 pairs, every lambda_1
+   ("S''/4q^6 over all l1", ((1-0j),)) x 12

@@ -34,6 +34,10 @@ No exception in any case.
 
 All pairs at q = 8, all λ1, and three pairs per class with N0 | 2 at q = 32 (including the classes 1⁶ and 2 1⁴, absent at q = 8): the Witt values on the coset have the predicted parity (even for m = 2, odd for m = 3), Σφ_i = 0, rational roots have φ = f1 + 1, and s_{2m}/q^m equals +4·i^p if n1 ≡ 2 (mod 4) and −4·i^p otherwise, without exception. Hypothesis (H) (q^{(3)}_0 = 0 on K ∩ F_{q³}) holds for every pair of the classes 3 1³, 3², 6 at q = 8; at q = 32 s_3 ≠ 0 for all 128 sampled triples of the classes 3² and 6 (Part III data).
 
+## The classes 3 2 1 and 6 (Theorem 3.23), `part4_class321.py`
+
+S'' computed from the L-polynomial of the Witt sheaf (s_1..s_4), independently of the hexad formula. Class 3 2 1: S''(λ1)·(−1)^{Tr(λ1 t0)} is constant (t0 = r4 + r5, the nonzero element of ker T' ∩ F_q) for all 9 pairs at q = 8 (constant −4q⁶) and the first 12 pairs at q = 32 (−4q⁶ for 8 pairs, +4q⁶ for 4); exactly q/2 values of λ1 have S'' = +4q⁶ in every case. Class 6: S'' = +4q⁶ for every λ1 on all 12 mixed pairs at q = 8 and the first 12 at q = 32.
+
 ## The 11 × 11 moment system, `part4_moment_system.py`
 
 Rows m = 1..6 plus N1N2, N1N3, N2², N1²N2, N1N2N3: rank 10, det 0. Rows m = 1..6 plus N3², N2N3, N2², N1N3, N3³: rank 11, det 1433272320 = 2¹⁷·3⁷·5. Predicted mixed moments 8q²−12q−7, 5q²−11q+3, 7q²−18q+9, 3q²−7q+3, 38q²−54q−43; back-substitution returns Table 2 of Part III.
