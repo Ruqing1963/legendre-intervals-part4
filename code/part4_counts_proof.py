@@ -327,12 +327,12 @@ def symbolic_even():
     sol = {"1^6": n16, "2 1^4": n214, "2^2 1^2": n2212, "2^3": n23, "3 1^3": n313, "3^2": n32, "3 2 1": n321, "4 1^2": n412, "4 2": n42, "5 1": n51, "6": n6}
     for c in CLASSES:
         say("  solved N(%s) = %s  equals even table: %s" % (c, sp.factor(sol[c]), z(sol[c] - N[c])))
-    # pure counts (Proposition 3.18) and Part III, Table 9 (mixed = total - pure)
+    # pure counts (Proposition 3.18) and Part III, Table 4 (mixed = total - pure)
     P3 = {"2 mod 4": {"1^6": (Q - 4) * (Q - 28) / 720, "2^2 1^2": (Q - 4) ** 2 / 16, "3^2": (Q - 1) * (Q - 4) / 18, "5 1": (Q - 3) * (Q + 1) / 5},
           "0 mod 4": {"1^6": (Q - 16) ** 2 / 720, "2^2 1^2": Q * (Q - 8) / 16, "3^2": (Q - 1) * (Q - 4) / 18, "5 1": (Q - 1) ** 2 / 5}}
     for res in ("2 mod 4", "0 mod 4"):
         P = PURE[res]
-        say("  pure counts, k = %s: sum = q-1: %s; 6 n16 + 2 n2212 + n51 = q-2 (first moment on a = 0): %s; total - pure = mixed column of Part III, Table 9: %s" % (
+        say("  pure counts, k = %s: sum = q-1: %s; 6 n16 + 2 n2212 + n51 = q-2 (first moment on a = 0): %s; total - pure = mixed column of Part III, Table 4: %s" % (
             res, z(sum(P.values()) - (Q - 1)), z(6 * P["1^6"] + 2 * P["2^2 1^2"] + P["5 1"] - (Q - 2)),
             all(z(N[c] - P[c] - P3[res].get(c, N[c])) for c in CLASSES)))
         say("    sum over the pure column of W'_C n_C / q^7 = %s" % sp.factor(sum(WEVEN[c] * P[c] for c in CLASSES)))

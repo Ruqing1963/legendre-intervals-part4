@@ -1,7 +1,7 @@
 """
 part4_moment_system.py -- Part IV, Section 2.4: the elimination system of the moments.
 
-With n_C(q) the class counts of Part III, Table 2 (mixed pairs lambda_3 != 0 and pure pairs lambda_3 = 0) and
+With n_C(q) the class counts of Part III, Table 3 (mixed pairs lambda_3 != 0 and pure pairs lambda_3 = 0) and
 f_C^(m) the number of fixed points of pi^m for a permutation pi of class C in S_6, the m-th moment of the sextic family is
     sum_{(a,b)} N_m(a,b) = sum_C n_C(q) f_C^(m).
 The script prints these polynomials for m = 1..6, the implied values of the Gauss-sum totals

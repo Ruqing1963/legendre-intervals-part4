@@ -40,7 +40,7 @@ S'' computed from the L-polynomial of the Witt sheaf (s_1..s_4), independently o
 
 ## The 11 × 11 moment system, `part4_moment_system.py`
 
-Rows m = 1..6 plus N1N2, N1N3, N2², N1²N2, N1N2N3: rank 10, det 0. Rows m = 1..6 plus N3², N2N3, N2², N1N3, N3³: rank 11, det 1433272320 = 2¹⁷·3⁷·5. Predicted mixed moments 8q²−12q−7, 5q²−11q+3, 7q²−18q+9, 3q²−7q+3, 38q²−54q−43; back-substitution returns Table 2 of Part III.
+Rows m = 1..6 plus N1N2, N1N3, N2², N1²N2, N1N2N3: rank 10, det 0. Rows m = 1..6 plus N3², N2N3, N2², N1N3, N3³: rank 11, det 1433272320 = 2¹⁷·3⁷·5. Predicted mixed moments 8q²−12q−7, 5q²−11q+3, 7q²−18q+9, 3q²−7q+3, 38q²−54q−43; back-substitution returns Table 3 of Part III.
 
 ## Even k: class counts and the pure line (Theorems 3.16, 3.17, Proposition 3.18), `part4_counts_proof.py`
 
