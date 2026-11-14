@@ -1,4 +1,4 @@
-﻿\documentclass[12pt,a4paper]{amsart}
+\documentclass[12pt,a4paper]{amsart}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{amsmath,amssymb,amsthm}
@@ -21,7 +21,6 @@
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{corollary}[theorem]{Corollary}
 \newtheorem{conjecture}[theorem]{Conjecture}
-\newtheorem{target}[theorem]{Target Theorem}
 \theoremstyle{definition}
 \newtheorem{definition}[theorem]{Definition}
 \newtheorem{remark}[theorem]{Remark}
@@ -55,7 +54,7 @@
 \author{Ruqing Chen}
 \address{GUT Geoservice Inc., Montreal, Canada}
 \email{ruqing@hotmail.com}
-\thanks{Version 3 (November 2026: the third moment is proved, Theorems~2.2 and~2.3). Version 2, DOI 10.5281/zenodo.23308682; version 1, DOI 10.5281/zenodo.23299284.}
+\thanks{Version 3 (November 2026: the third moment is proved, Theorems~2.2 and~2.3, and the class counts, Theorem~3.16; $X=q^6+q^5$ is unconditional). Version 2, DOI 10.5281/zenodo.23308682; version 1, DOI 10.5281/zenodo.23299284.}
 \thanks{Part~I: DOI 10.5281/zenodo.23225896; Part~II: DOI 10.5281/zenodo.23252762; Part~III: DOI 10.5281/zenodo.23290724.}
 \thanks{Code and data: \url{https://github.com/Ruqing1963/legendre-intervals-part4}}
 \date{\today}
@@ -63,7 +62,7 @@
 \begin{document}
 
 \begin{abstract}
-Let $q=2^k$ with $k$ odd. Part~III reduced the closed form $X=q^6+q^5$ of the second constant of the degree-$6$ Legendre variance to two statements about the sextic family $B_\lambda=\lambda_5^2u^6+\lambda_3^2u^2+\lambda_5u+1$ whose roots form the hexad of $\ker L'_\lambda$: the polynomial frequencies of its eleven factorisation types over $\F_q$, and the signs of the Gauss sums $s_4$, $s_6$ of explicit $\Z/4$-valued quadratic forms on $\F_{q^4}$, $\F_{q^6}$. This paper proves three structural theorems about these Gauss sums and uses them to settle the signs in the two classes of order~$4$. The \emph{hexad formula} expresses $s_{2m}$, a sum over $\F_{q^{2m}}$, as $q^m$ times a signed sum of at most sixteen fourth roots of unity indexed by the $\F_{q^m}$-rational points of the coset $T_\lambda'^{-1}(1)$ (the six roots and the ten synthematic totals), with sign $+$ at roots and $-$ at totals. The \emph{trace parity theorem} determines the absolute trace of every such point: $\Tr_{q^m/2}(w)\equiv mk+\dim(\Kk_\lambda\cap\F_{q^m})\pmod2$; for $m=1$ it says that a rational root of $B_\lambda$ has trace $0$ or $1$ according to the Frobenius class. Together with an elementary count on the sixteen-point configuration of roots and totals, they determine the signs in all eleven classes. $s_4=+4q^2$ throughout the classes $1^6$, $2^3$. $s_4=\pm4q^2$ on complementary half-spaces of $\lambda_1$ in the classes $2\,1^4$, $2^21^2$. In the classes $4\,1^2$, $4\,2$, $s_4\in\{0,+4q^2\}$, respectively $\{0,-4q^2\}$, nonzero exactly on an explicit affine hyperplane, hence $W'=+2q^7$ and $-2q^7$ as conjectured since Part~II. $\Spp=+4q^6$ throughout the classes $3\,1^3$, $3^2$ and $6$. In the class $3\,2\,1$, $\Spp=\pm4q^6(-1)^{\Tr(\lambda_1(r_4+r_5))}$, hence $W'=0$. The last two classes come from the hexad formula applied directly over $\F_{q^6}$. The sign conjecture of Part~III is therefore proved, and $X=q^6+q^5$ now depends only on the conjectured class counts. The hyperplane parameter $\kappa_0$ of the order-$4$ classes is given in closed form in the ground-field data of the quartic cofactor; contrary to what the data at $q=8$ suggested, it is not constant on the class. For the factorisation counts, every moment $\sum_\lambda N_m(B_\lambda)$ is expressed through Gauss sums of Gold-type forms on the trace-zero hyperplane of $\F_{q^m}$; the identity is proved for all $m$, and the third moment is evaluated in closed form: for $c=\theta^{-1}$ with minimal polynomial $c^3+sc+N$ over $\F_q$ the Gauss sum on the trace-zero plane of $\F_{q^3}$ equals $q(1+(-1)^{\Tr(s^5/N^2)})$, which gives $\sum_\lambda N_3(B_\lambda)=2q^2-3q-1$ for odd $k$ (and $2q^2-3q+1$ for even $k$), the value predicted by the conjectured class counts. An explicit nonsingular $11\times11$ system of pure and mixed moments whose unique solution is the conjectured table of class counts is written down.
+Let $q=2^k$ with $k$ odd. Part~III reduced the closed form $X=q^6+q^5$ of the second constant of the degree-$6$ Legendre variance to two statements about the sextic family $B_\lambda=\lambda_5^2u^6+\lambda_3^2u^2+\lambda_5u+1$ whose roots form the hexad of $\ker L'_\lambda$: the polynomial frequencies of its eleven factorisation types over $\F_q$, and the signs of the Gauss sums $s_4$, $s_6$ of explicit $\Z/4$-valued quadratic forms on $\F_{q^4}$, $\F_{q^6}$. This paper proves three structural theorems about these Gauss sums and uses them to settle the signs in the two classes of order~$4$. The \emph{hexad formula} expresses $s_{2m}$, a sum over $\F_{q^{2m}}$, as $q^m$ times a signed sum of at most sixteen fourth roots of unity indexed by the $\F_{q^m}$-rational points of the coset $T_\lambda'^{-1}(1)$ (the six roots and the ten synthematic totals), with sign $+$ at roots and $-$ at totals. The \emph{trace parity theorem} determines the absolute trace of every such point: $\Tr_{q^m/2}(w)\equiv mk+\dim(\Kk_\lambda\cap\F_{q^m})\pmod2$; for $m=1$ it says that a rational root of $B_\lambda$ has trace $0$ or $1$ according to the Frobenius class. Together with an elementary count on the sixteen-point configuration of roots and totals, they determine the signs in all eleven classes. $s_4=+4q^2$ throughout the classes $1^6$, $2^3$. $s_4=\pm4q^2$ on complementary half-spaces of $\lambda_1$ in the classes $2\,1^4$, $2^21^2$. In the classes $4\,1^2$, $4\,2$, $s_4\in\{0,+4q^2\}$, respectively $\{0,-4q^2\}$, nonzero exactly on an explicit affine hyperplane, hence $W'=+2q^7$ and $-2q^7$ as conjectured since Part~II. $\Spp=+4q^6$ throughout the classes $3\,1^3$, $3^2$ and $6$. In the class $3\,2\,1$, $\Spp=\pm4q^6(-1)^{\Tr(\lambda_1(r_4+r_5))}$, hence $W'=0$. The last two classes come from the hexad formula applied directly over $\F_{q^6}$. The sign conjecture of Part~III is therefore proved. The hyperplane parameter $\kappa_0$ of the order-$4$ classes is given in closed form in the ground-field data of the quartic cofactor; contrary to what the data at $q=8$ suggested, it is not constant on the class. For the factorisation counts, every moment $\sum_\lambda N_m(B_\lambda)$ is expressed through Gauss sums of Gold-type forms on the trace-zero hyperplane of $\F_{q^m}$; the identity is proved for all $m$, and the third moment is evaluated in closed form: for $c=\theta^{-1}$ with minimal polynomial $c^3+sc+N$ over $\F_q$ the Gauss sum on the trace-zero plane of $\F_{q^3}$ equals $q(1+(-1)^{\Tr(s^5/N^2)})$, which gives $\sum_\lambda N_3(B_\lambda)=2q^2-3q-1$ for odd $k$ (and $2q^2-3q+1$ for even $k$), the value predicted by the class counts. The class counts themselves are then proved: the sextics with a quadratic factor are parametrised by a plane on which the quartic cofactor is given by a depressed quartic with resolvent $Y^3+a'Y+a'/s$; a rational root $r$ of the resolvent is linearised by $u=rs$, $\xi=1/r$, and the number of rational roots, the splitting of the quadratic factor and the splitting of the partition quadratic are the traces of $u/(u+1)$, $u\xi$ and $(u+1)\xi$, which are equidistributed because $u$ and $u+1$ are $\F_2$-independent. This gives the eight classes with a quadratic factor; the first moment, the third moment and the total give the other three. All eleven class counts of Part~III, Conjecture~5.3, are therefore theorems, and $X=q^6+q^5$ holds for all odd $k$. An explicit nonsingular $11\times11$ system of pure and mixed moments whose unique solution is the table of class counts is also written down; its higher Gauss-sum totals follow.
 \end{abstract}
 
 \maketitle
@@ -95,7 +94,7 @@ for the forms $\qq^{(m)}_\lambda(x)=\Tw_{mk}(x)+2\Tr_{q^m/2}(\lambda_5x^5+\lambd
 \item $N_0\in\{3,6\}$ (classes $3\,1^3$, $3^2$, $3\,2\,1$, $6$): $\Spp(\lambda)=\pm4q^6$ for all $\lambda_1$ (proved); the sign is $+$ when $s_3\ne0$ and $N_0=3$ (proved), and is otherwise conjectural.
 \end{itemize}
 
-\begin{target}[Part~III, Conjecture~5.3]\label{tgt:counts}
+\begin{theorem}[the class counts; Part~III, Conjecture~5.3]\label{tgt:counts}
 For odd $k$ the number of $(\lambda_3,\lambda_5)\in\F_q^\times\times\F_q^\times$ with $B_\lambda$ of class $C$ is the polynomial $n_C(q)$ of Part~III, Table~2:
 \[
 \begin{array}{llll}
@@ -104,9 +103,9 @@ For odd $k$ the number of $(\lambda_3,\lambda_5)\in\F_q^\times\times\F_q^\times$
 4\,2:\ \tfrac{q(q-2)}{8}, & 5\,1:\ \tfrac{q^2+1}{5}, & 6:\ \tfrac{(q+1)(q-2)}{6}, &
 \end{array}
 \]
-and for $\lambda_3=0$ the classes $2^3$, $4\,1^2$, $6$ occur $(q-2)/6$, $(q-2)/2$, $(q+1)/3$ times (the latter is a theorem).
-\emph{Status: verified for $q\le512$; the relations of Part~III, Corollary~5.1, the moment identities of Section~\ref{sec:moments} and the third moment $\sum_\lambda N_3=2q^2-3q-1$ (Theorem~\ref{thm:N3value}) are proved.}
-\end{target}
+and for $\lambda_3=0$ the classes $2^3$, $4\,1^2$, $6$ occur $(q-2)/6$, $(q-2)/2$, $(q+1)/3$ times (Part~III).
+\emph{Proved in Section~\ref{subsec:counts} (Theorem~\ref{thm:counts}): the eight classes with a quadratic factor by a point count on the resolvent locus of Lemma~\ref{lem:resolvent}, the other three from the first moment (Part~III, Theorem~1.3), the third moment (Theorem~\ref{thm:N3value}) and the total $q(q-1)$.}
+\end{theorem}
 
 \begin{theorem}[the complete sign law; Part~III, Conjecture~6.17]\label{tgt:signs}
 For odd $k$: $s_4(\lambda)=+4q^2$ for all $\lambda_1$ in the classes $1^6$, $2^3$; $s_4(\lambda)=\pm4q^2$ for $q/2$ values of $\lambda_1$ each in the classes $2\,1^4$, $2^21^2$; $s_4(\lambda)\in\{0,+4q^2\}$ in the class $4\,1^2$ and $\in\{0,-4q^2\}$ in the class $4\,2$, nonzero for $q/2$ values of $\lambda_1$; $\Spp(\lambda)=+4q^6$ for all $\lambda_1$ in the classes $3\,1^3$, $3^2$, $6$, and $=\pm4q^6$ in equal numbers in the class $3\,2\,1$.
@@ -114,7 +113,7 @@ For odd $k$: $s_4(\lambda)=+4q^2$ for all $\lambda_1$ in the classes $1^6$, $2^3
 \end{theorem}
 
 \begin{corollary}[Part~III, Corollary~1.5]\label{cor:X}
-Target Theorem~\ref{tgt:counts} implies, together with Theorem~\ref{tgt:signs}, $X=q^6+q^5$ for all odd $k$, and hence
+Theorems~\ref{tgt:counts} and~\ref{tgt:signs} give $X=q^6+q^5$ for all odd $k$, and hence
 \[
 \frac{\Var_{\G^2}(\Psi)}{q^7}=\frac{(q-1)^2(q+2)^2}{q^2}+\frac{(q-1)(4q^2+m_k^2)}{q^4}\qquad(k\text{ odd}),
 \]
@@ -122,7 +121,7 @@ with $m_k=Y/q^3$ the only remaining unevaluated quantity.
 \end{corollary}
 
 \subsection{Results of this paper}\label{subsec:results}
-The paper has two halves, corresponding to the two statements above: the second is proved here in full, the first is reduced to eleven explicit point counts. Everything stated as a theorem, proposition or lemma below is proved; numerical statements carry the word \emph{numerical} in their header, with the range of verification.
+The paper has two halves, corresponding to the two statements above; both are proved here, so that $X=q^6+q^5$ is a theorem for all odd $k$. Everything stated as a theorem, proposition or lemma below is proved; numerical statements carry the word \emph{numerical} in their header, with the range of verification.
 
 \emph{Gauss sums (Section~\ref{sec:brown}).}
 \begin{enumerate}[label=(\roman*),leftmargin=2em]
@@ -147,10 +146,11 @@ and takes both values on each class as soon as $q\ge32$ (Table~\ref{tab:kappa});
 
 \emph{Counts (Section~\ref{sec:moments}).}
 \begin{enumerate}[label=(\roman*),leftmargin=2em,resume]
-\item Proposition~\ref{prop:Nm}: for every $m$, $\sum_\lambda N_m(B_\lambda)=(q-1)^2-q[2\mid m]+q^{2-m}\sum_{\theta\in\Theta_m}G_{H_m}(\theta)$, where $G_{H_m}(\theta)$ is the Gauss sum of the Gold-type form $e\mapsto\Tr(\theta e^5+\theta e^3)$ on the trace-zero hyperplane of $\F_{q^m}$ and $\Theta_m$ is a trace condition on the Gold parameter $1/\theta$; the cases $m=1,2$ recover Part~III. \textbf{The third moment} (Theorems~\ref{thm:GH}, \ref{thm:N3value}): for $c=\theta^{-1}$ with minimal polynomial $c^3+sc+N$ over $\F_q$, $G_{H_3}(\theta)=q(1+(-1)^{\Tr_{q/2}(s^5/N^2)})$, the phase $s^5/N^2$ has weight $4$ along the $\F_q^\times$-rays of the trace-zero plane, and hence $\sum_\lambda N_3(B_\lambda)=2q^2-3q-1$ for odd $k$ (and $2q^2-3q+1$ for even $k$), the value predicted by Target Theorem~\ref{tgt:counts}. The Gold quintic plays no role in this evaluation; Remark~\ref{rem:m3special} explains why the argument does not extend to $m\ge4$ as it stands, and records that the predicted totals for $m=4,5,6$ hold at $q=8$ by direct summation.
-\item Proposition~\ref{prop:elimination}: the moments $m\le6$ form a linear system of rank $6$ in the eleven class counts, and the Gauss-sum totals predicted by Target Theorem~\ref{tgt:counts} are listed; the proof of the target is thereby reduced to six explicit Gauss-sum evaluations plus the mixed moments.
+\item Proposition~\ref{prop:Nm}: for every $m$, $\sum_\lambda N_m(B_\lambda)=(q-1)^2-q[2\mid m]+q^{2-m}\sum_{\theta\in\Theta_m}G_{H_m}(\theta)$, where $G_{H_m}(\theta)$ is the Gauss sum of the Gold-type form $e\mapsto\Tr(\theta e^5+\theta e^3)$ on the trace-zero hyperplane of $\F_{q^m}$ and $\Theta_m$ is a trace condition on the Gold parameter $1/\theta$; the cases $m=1,2$ recover Part~III. \textbf{The third moment} (Theorems~\ref{thm:GH}, \ref{thm:N3value}): for $c=\theta^{-1}$ with minimal polynomial $c^3+sc+N$ over $\F_q$, $G_{H_3}(\theta)=q(1+(-1)^{\Tr_{q/2}(s^5/N^2)})$, the phase $s^5/N^2$ has weight $4$ along the $\F_q^\times$-rays of the trace-zero plane, and hence $\sum_\lambda N_3(B_\lambda)=2q^2-3q-1$ for odd $k$ (and $2q^2-3q+1$ for even $k$), the value of Theorem~\ref{tgt:counts}. The Gold quintic plays no role in this evaluation; Remark~\ref{rem:m3special} explains why the argument does not extend to $m\ge4$ as it stands, and records that the predicted totals for $m=4,5,6$ hold at $q=8$ by direct summation.
+\item Proposition~\ref{prop:elimination}: the moments $m\le6$ form a linear system of rank $6$ in the eleven class counts, and the Gauss-sum totals of the eleven classes are listed; with (viii) these totals, $\Sigma_4=q^3(2q-3)$, $\Sigma_5=q^3(q^2+1)$, $\Sigma_6=q^4(q-1)(3q+2)$, and the five mixed moments become theorems (Corollary~\ref{cor:totals}).
+\item \textbf{The class counts} (Theorem~\ref{thm:counts}, Section~\ref{subsec:counts}). Lemma~\ref{lem:resolvent} parametrises the incidences (sextic, quadratic factor) by a plane $(y,s)$ and describes the quartic cofactor by its cubic resolvent $Y^3+a'Y+a'/s$. A rational root $r$ of the resolvent is linearised by $u=rs$, $\xi=1/r$: the number of rational roots is $1$ or $3$ according to $\Tr(u/(u+1))$, the quadratic factor splits according to $\Tr(u\xi)$, and the partition quadratic of the pairing splits according to $\Tr((u+1)\xi)$. Since $u$ and $u+1$ are $\F_2$-independent, the two traces are equidistributed over the four quadrants, and the eight classes with a quadratic factor are read off cell by cell. The classes $5\,1$, $3^2$, $6$ then follow from the first moment, the third moment and the total. This proves Part~III, Conjecture~5.3, and with Theorem~\ref{tgt:signs} the constant $X$ (Theorem~\ref{thm:Xstatus}).
 \end{enumerate}
-Section~\ref{sec:X} records that $X=q^6+q^5$ now depends only on the class counts, and Section~\ref{sec:lifts} discusses the interpretation of the hexad as the $2$-torsion of a lift of the supersingular Jacobian, including the mechanism behind the dependence of the even-$k$ counts on $k\bmod4$.
+Section~\ref{sec:X} records the resulting unconditional value of $X$, and Section~\ref{sec:lifts} discusses the interpretation of the hexad as the $2$-torsion of a lift of the supersingular Jacobian, including the mechanism behind the dependence of the even-$k$ counts on $k\bmod4$.
 
 \subsection{Notation}
 $q=2^k$, $k$ odd unless said otherwise; $\sigma(x)=x^q$; $\Tr=\Tr_{q^m/2}$ when $m$ is clear; $\tau_m=\Tr_{q^m/q}$. For a permutation class $C$ of $S_6$, $f_m(C)$ is the number of fixed points of $\pi^m$ on $\{1,\dots,6\}$ and, by abuse, also $\dim_{\F_2}\Kk_\lambda^{\sigma^m}=\log_2(1+\#\{\text{duads fixed by }\pi^m\})$; the two are listed in Table~\ref{tab:classes}. $\Tw_n$ is the Witt trace, $\Tw_n(x)=\Tr_{2^n/2}(x)+2e_2^{\rm abs}(x)$ with $e_2^{\rm abs}(x)=\sum_{i<j}x^{2^i+2^j}$, so that $\qq^{(m)}_\lambda(x)\equiv\Tr_{q^m/2}(x)\pmod 2$. All numerical statements refer to the scripts listed in the final section.
@@ -288,14 +288,14 @@ For odd $k$, $G_H(\theta)\in\{0,2^{k+1}\}$ for every $\theta\in\Theta$, exactly 
 \[
 \sum_{(a,b)\in\F_q\times\F_q^\times}N_3(a,b)=(q-1)^2+(q+1)(q-2)=2q^2-3q-1 ,
 \]
-the value predicted by Target Theorem~\ref{tgt:counts} (Proposition~\ref{prop:elimination}). For even $k$, $\sum_{\theta\in\Theta}G_H(\theta)=q^2(q-1)$ and $\sum_{(a,b)}N_3(a,b)=2q^2-3q+1=(q-1)(2q-1)$.
+the value of Theorem~\ref{tgt:counts} (Proposition~\ref{prop:elimination}). For even $k$, $\sum_{\theta\in\Theta}G_H(\theta)=q^2(q-1)$ and $\sum_{(a,b)}N_3(a,b)=2q^2-3q+1=(q-1)(2q-1)$.
 \end{theorem}
 \begin{proof}
 $H\setminus\{0\}$ is the disjoint union of the $q+1$ rays $\F_q^\times c$ (the points of $\mathbb P(H)\cong\mathbb P^1(\F_q)$), each with $q-1$ elements. On a ray with $s(c)\ne0$, Theorem~\ref{thm:GH}(iv) says that $s^5/N^2$ runs through $v^4s(c)^5/N(c)^2$, $v\in\F_q^\times$, i.e.\ through every element of $\F_q^\times$ exactly once, since $v\mapsto v^4$ is a bijection of $\F_q^\times$; as $\Tr_{q/2}$ vanishes at $q/2-1$ elements of $\F_q^\times$, exactly $(q-2)/2$ points of the ray have $G_H=2q$ and the others have $G_H=0$. For odd $k$ every ray is of this kind (Theorem~\ref{thm:GH}(ii)), so $\#\{G_H\ne0\}=(q+1)(q-2)/2$, $\sum_\Theta G_H=2q\cdot(q+1)(q-2)/2$, and Proposition~\ref{prop:N3} gives the moment. For even $k$ two rays have $s=0$ and $G_H=q$ at each of their $2(q-1)$ points, and the other $q-1$ rays are of the first kind: $\sum_\Theta G_H=2q(q-1)+2q\cdot(q-1)(q-2)/2=q^2(q-1)$ and $\sum N_3=(q-1)^2+q(q-1)$.
 \end{proof}
 
-\begin{remark}[numerical confirmation; \texttt{moment3\_proof.py}, \texttt{moment3\_check.py}, \texttt{moment3\_structure.py}]\label{rem:N3numerics}
-The closed form of Theorem~\ref{thm:GH}(ii) agrees with the brute-force Gauss sum for every $\theta\in\Theta$ at $q=4,8,16,32,64,128$; every ray with $s\ne0$ carries exactly $(q-2)/2$ values $2q$, the two rays with $s=0$ at $q=4,16,64$ carry the value $q$ throughout, and $\sum N_3$ computed by factoring all $q(q-1)$ sextics is $21$, $103$, $465$ at $q=4,8,16$ ($=2q^2-3q\pm1$). At $q=8,32,128$ the nonzero values number $27$, $495$, $8127$ ($\sum N_3=103$, $1951$, $32383$), and $\dim R_H=2$ for every $\theta$, as in (iii). The joint distribution of the Gold type of $v^5+v+c$ over $\F_{q^3}$ (by the number of roots in $\F_{q^3}$: $1$, $0$, $3$ for the types $(1,4)$, $(2,3)$, $(1,1,1,2)$) and of the vanishing of $G_H(\theta)$ is
+\begin{remark}[numerical confirmation]\label{rem:N3numerics}
+The closed form of Theorem~\ref{thm:GH}(ii) agrees with the brute-force Gauss sum (\texttt{moment3\_proof.py}) for every $\theta\in\Theta$ at $q=4,8,16,32,64,128$; every ray with $s\ne0$ carries exactly $(q-2)/2$ values $2q$, the two rays with $s=0$ at $q=4,16,64$ carry the value $q$ throughout, and $\sum N_3$ computed by factoring all $q(q-1)$ sextics is $21$, $103$, $465$ at $q=4,8,16$ ($=2q^2-3q\pm1$). At $q=8,32,128$ the nonzero values number $27$, $495$, $8127$ ($\sum N_3=103$, $1951$, $32383$), and $\dim R_H=2$ for every $\theta$, as in (iii) (\texttt{moment3\_check.py}). The joint distribution (\texttt{moment3\_structure.py}) of the Gold type of $v^5+v+c$ over $\F_{q^3}$ (by the number of roots in $\F_{q^3}$: $1$, $0$, $3$ for the types $(1,4)$, $(2,3)$, $(1,1,1,2)$) and of the vanishing of $G_H(\theta)$ is
 \[
 \begin{array}{l|cc|cc|cc}
  & \multicolumn{2}{c|}{(1,4)} & \multicolumn{2}{c|}{(2,3)} & \multicolumn{2}{c}{(1,1,1,2)}\\
@@ -314,7 +314,7 @@ Two facts carry the argument. (a) The $\F_q$-line $L=\F_qc$ is totally singular 
 \[
 G_{H_m}(\theta)=q\sum_{w\in K/L}(-1)^{Q_\theta(w)},\qquad K=L^\perp=\{w\in H_m:\tau_m(c^3w)=\tau_m(cw)^2\},
 \]
-but now $\dim_{\F_2}K/L\ge(m-3)k$ and the residual sum is a genuine Gauss sum. At $q=8$ (\texttt{moment\_higher\_m.py}) $\dim K/L$ takes the values $3,4,6$ for $m=4$, equals $6$ for every $\theta$ at $m=5$, and takes the values $9,10,12$ for $m=6$; $G_{H_4}$ takes the values $-32,0,32,64,128$ with multiplicities $48,266,144,50,3$, $G_{H_5}$ the values $0,\pm64,\pm128,-256$ and $G_{H_6}$ the values $0,\pm256,\pm512,\pm1024$, so both signs occur and the values along a ray are not governed by a single phase of fixed weight. The totals are nevertheless those predicted by Target Theorem~\ref{tgt:counts}: $\Sigma_4=6656=q^3(2q-3)$, $\Sigma_5=33280=q^3(q^2+1)$ and $\Sigma_6=745472=q^4(q-1)(3q+2)$ at $q=8$, by direct summation over $\Theta_m$. So the rows $m=4,5,6$ of Proposition~\ref{prop:elimination} are confirmed independently of the class counts, but their proof needs the quintic frame of $v^5+v+c$ over $\F_{q^m}$, not only the ground-field data of $c$.
+but now $\dim_{\F_2}K/L\ge(m-3)k$ and the residual sum is a genuine Gauss sum. At $q=8$ (\texttt{moment\_higher\_m.py}) $\dim K/L$ takes the values $3,4,6$ for $m=4$, equals $6$ for every $\theta$ at $m=5$, and takes the values $9,10,12$ for $m=6$; $G_{H_4}$ takes the values $-32,0,32,64,128$ with multiplicities $48,266,144,50,3$, $G_{H_5}$ the values $0,\pm64,\pm128,-256$ and $G_{H_6}$ the values $0,\pm256,\pm512,\pm1024$, so both signs occur and the values along a ray are not governed by a single phase of fixed weight. The totals are nevertheless those predicted by Theorem~\ref{tgt:counts}: $\Sigma_4=6656=q^3(2q-3)$, $\Sigma_5=33280=q^3(q^2+1)$ and $\Sigma_6=745472=q^4(q-1)(3q+2)$ at $q=8$, by direct summation over $\Theta_m$. So the rows $m=4,5,6$ of Proposition~\ref{prop:elimination} are confirmed independently of the class counts at $q=8$; a proof through the Gauss sums would need the quintic frame of $v^5+v+c$ over $\F_{q^m}$, not only the ground-field data of $c$. Theorem~\ref{thm:counts} proves the class counts directly, which makes these rows theorems (Corollary~\ref{cor:totals}).
 \end{remark}
 
 \subsection{All moments}
@@ -350,13 +350,13 @@ Let $n_C(q)$ be the class counts (mixed and pure pairs together) and $f^{(m)}_C$
 M_{3,3}=\sum N_3^2,\qquad M_{2,3}=\sum N_2N_3,\qquad M_{2,2}=\sum N_2^2,\\
 M_{1,3}=\sum N_1N_3,\qquad M_{3,3,3}=\sum N_3^3
 \end{gather*}
-gives an $11\times11$ matrix of determinant $1433272320=2^{17}\cdot3^7\cdot5\ne0$. Hence the eleven class counts are the unique solution of the linear system formed by the six pure moments and these five mixed moments, which are point counts on fibre products of the curves $C_m^{(b)}$ over the $a$-line (the two-fold products $C_3\times_{\mathbb A^1}C_3$, $C_2\times_{\mathbb A^1}C_3$, $C_2\times_{\mathbb A^1}C_2$, $C_1\times_{\mathbb A^1}C_3$ and the triple product of $C_3$). If the counts are those of Target Theorem~\ref{tgt:counts}, the five mixed moments are
+gives an $11\times11$ matrix of determinant $1433272320=2^{17}\cdot3^7\cdot5\ne0$. Hence the eleven class counts are the unique solution of the linear system formed by the six pure moments and these five mixed moments, which are point counts on fibre products of the curves $C_m^{(b)}$ over the $a$-line (the two-fold products $C_3\times_{\mathbb A^1}C_3$, $C_2\times_{\mathbb A^1}C_3$, $C_2\times_{\mathbb A^1}C_2$, $C_1\times_{\mathbb A^1}C_3$ and the triple product of $C_3$). If the counts are those of Theorem~\ref{tgt:counts}, the five mixed moments are
 \begin{gather*}
 M_{3,3}=8q^2-12q-7,\qquad M_{2,3}=5q^2-11q+3,\qquad M_{2,2}=7q^2-18q+9,\\
 M_{1,3}=3q^2-7q+3,\qquad M_{3,3,3}=38q^2-54q-43 ,
 \end{gather*}
-and back-substitution of these eleven values returns the table. Target Theorem~\ref{tgt:counts} is therefore equivalent to eleven explicit point counts: six on the curves $C_m^{(b)}$ and five on their fibre products.
-\item If the counts are those of Target Theorem~\ref{tgt:counts}, then the moments and the Gauss-sum totals are
+and back-substitution of these eleven values returns the table. Theorem~\ref{tgt:counts} is therefore equivalent to eleven explicit point counts: six on the curves $C_m^{(b)}$ and five on their fibre products.
+\item With the counts of Theorem~\ref{tgt:counts}, the moments and the Gauss-sum totals are
 \[
 \begin{array}{c|l|l}
 m & \sum_{(a,b)}N_m & \Sigma_m=\sum_{\Theta_m}G_{H_m}\\
@@ -369,15 +369,22 @@ m & \sum_{(a,b)}N_m & \Sigma_m=\sum_{\Theta_m}G_{H_m}\\
 6 & 4q^2-4q-1 & q^4(q-1)(3q+2)
 \end{array}
 \]
-Conversely, Target Theorem~\ref{tgt:counts} is equivalent to these six evaluations together with the five mixed moments; the rows $m=1,2$ are theorems (Part~III), the row $m=3$ is Theorem~\ref{thm:N3value}, and the rows $m=4,5,6$ are confirmed by direct summation at $q=8$ (Remark~\ref{rem:m3special}).
+Conversely, Theorem~\ref{tgt:counts} is equivalent to these six evaluations together with the five mixed moments; the rows $m=1,2$ are theorems (Part~III) and the row $m=3$ is Theorem~\ref{thm:N3value}.
 \end{enumerate}
 \end{proposition}
 \begin{proof}
 (i) is a rank computation (the matrix is printed by the script). (ii) is the substitution of the table into \eqref{eq:moments}; the second column is then a direct consequence of Proposition~\ref{prop:Nm}. For the converse note that the class counts are integers determined by the eleven joint fixed-point statistics, which are linear combinations of the pure and mixed moments.
 \end{proof}
 
+\begin{corollary}[the higher totals]\label{cor:totals}
+For odd $k$ the rows $m=4,5,6$ of the table in Proposition~\ref{prop:elimination}\textup{(ii)} and the five mixed moments $M_{3,3}$, $M_{2,3}$, $M_{2,2}$, $M_{1,3}$, $M_{3,3,3}$ of \textup{(i)} hold: in particular $\sum_{\theta\in\Theta_4}G_{H_4}(\theta)=q^3(2q-3)$, $\sum_{\Theta_5}G_{H_5}=q^3(q^2+1)$ and $\sum_{\Theta_6}G_{H_6}=q^4(q-1)(3q+2)$.
+\end{corollary}
+\begin{proof}
+Theorem~\ref{thm:counts} (Section~\ref{subsec:counts}) proves the class counts independently of these moments; substitute them into \eqref{eq:moments} and Proposition~\ref{prop:Nm}. At $q=8$ the three totals agree with the direct summation of Remark~\ref{rem:m3special}.
+\end{proof}
+
 \begin{remark}
-The rows are a list of exact Gauss-sum identities to be proved. The row $m=4$ reads $\sum_{\theta\in\F_{q^4}^\times,\ \tau_4(1/\theta)=0}G_{H_4}(\theta)=q^3(2q-3)$ with $H_4$ of dimension $3k$: the forms $e\mapsto\Tr_{q^4/2}(\theta e^5+\theta e^3)$ have radicals controlled by the Gold quintic over $\F_{q^4}$, whose factorisation types over $\F_{q^4}$ are those of Part~II, Proposition~6.8, extended by the splitting of $\F_{q^4}(\mu_5)$; the rows $m=5,6$ involve the Gold quintic over $\F_{q^5}$ and $\F_{q^6}$, where $\mu_5\subset\F_{q^4}$ enters for $m\equiv0\bmod4$ only. This is the precise sense in which the counts of Target Theorem~\ref{tgt:counts} are polynomial: each $\Sigma_m$ is a sum of terms $0,\pm2^{(mk+r)/2}$ whose number is a polynomial point count on the Gold-quintic curves over $\F_{q^m}$ with a trace constraint, and the Arf invariants are constant on the strata; there is no cuspidal cohomology to control because every sum involved is supersingular (all normalised Frobenius eigenvalues are roots of unity), which is the structural reason for the absence of $O(q^{1/2})$ error terms. For $m=3$ the evaluation is Theorem~\ref{thm:N3value}, where the Gold quintic drops out entirely; turning the remaining rows into proofs means evaluating the residual Gauss sums of Remark~\ref{rem:m3special} for $m=4,5,6$ and the corresponding sums for the fibre products; Katz \cite{KatzKR} reaches polynomial answers in the odd-characteristic setting by Deligne's theory \cite{Deligne}, which here is replaced by the exact Witt-vector evaluation.
+The rows are a list of exact Gauss-sum identities; they are now theorems through the class counts (Corollary~\ref{cor:totals}), and a direct proof through the Gauss sums remains open. The row $m=4$ reads $\sum_{\theta\in\F_{q^4}^\times,\ \tau_4(1/\theta)=0}G_{H_4}(\theta)=q^3(2q-3)$ with $H_4$ of dimension $3k$: the forms $e\mapsto\Tr_{q^4/2}(\theta e^5+\theta e^3)$ have radicals controlled by the Gold quintic over $\F_{q^4}$, whose factorisation types over $\F_{q^4}$ are those of Part~II, Proposition~6.8, extended by the splitting of $\F_{q^4}(\mu_5)$; the rows $m=5,6$ involve the Gold quintic over $\F_{q^5}$ and $\F_{q^6}$, where $\mu_5\subset\F_{q^4}$ enters for $m\equiv0\bmod4$ only. This is the precise sense in which the counts of Theorem~\ref{tgt:counts} are polynomial: each $\Sigma_m$ is a sum of terms $0,\pm2^{(mk+r)/2}$ whose number is a polynomial point count on the Gold-quintic curves over $\F_{q^m}$ with a trace constraint, and the Arf invariants are constant on the strata; there is no cuspidal cohomology to control because every sum involved is supersingular (all normalised Frobenius eigenvalues are roots of unity), which is the structural reason for the absence of $O(q^{1/2})$ error terms. For $m=3$ the evaluation is Theorem~\ref{thm:N3value}, where the Gold quintic drops out entirely; a direct evaluation of the remaining rows means evaluating the residual Gauss sums of Remark~\ref{rem:m3special} for $m=4,5,6$ and the corresponding sums for the fibre products; Katz \cite{KatzKR} reaches polynomial answers in the odd-characteristic setting by Deligne's theory \cite{Deligne}, which here is replaced by the exact Witt-vector evaluation.
 \end{remark}
 
 \section{Explicit Brown invariants of length-two Witt sheaves}\label{sec:brown}
@@ -636,7 +643,86 @@ The parametrisation is Lemma~\ref{lem:cofactor} (the two solutions $b$ of $\tau_
 \end{proof}
 
 \begin{remark}
-The lemma describes the locus of the classes of order $4$ inside the $(y,s)$-plane by one cubic and two Artin--Schreier conditions, so the counts $n_{4\,1^2}+n_{4\,1^2}^{\rm pure}=(q-2)(q-4)/8+(q-2)/2$ and $n_{4\,2}=q(q-2)/8$ of Target Theorem~\ref{tgt:counts} are, in this parametrisation, point counts of an explicit curve of Artin--Schreier type over the cubic resolvent; this is a possible route to those two entries of the table that avoids the moments. The expectation of an earlier draft that the resolvent conditions would force $\kappa_0=0$ was wrong: $\kappa_0$ and the irreducibility conditions are independent trace conditions.
+The expectation of an earlier draft that the resolvent conditions would force $\kappa_0=0$ was wrong: $\kappa_0$ and the irreducibility conditions are independent trace conditions. The lemma does more than describe the two classes of order $4$: it describes every sextic with a quadratic factor through the cubic resolvent of its cofactor, and the next subsection counts the points of this locus.
+\end{remark}
+
+\subsection{The class counts}\label{subsec:counts}
+A \emph{stable pair} of $B_\lambda$ is a pair of roots $\{r_5,r_6\}$ that is contained in $\F_q$ or conjugate over $\F_q$, i.e.\ a monic quadratic factor $u^2+\tau_0u+\rho_0\in\F_q[u]$; here $\tau_0=r_5+r_6\ne0$ (the roots are distinct), $\rho_0\ne0$ ($B_\lambda(0)\ne0$) and $\Tr_{q/2}(\tau_0)=0$ by the pair lemma (Part~III, Theorem~1.3). The numbers of stable pairs of the eleven classes, in the order of Table~\ref{tab:classes}, are
+\[
+15,\ 7,\ 3,\ 3,\ 3,\ 0,\ 1,\ 1,\ 1,\ 0,\ 0
+\]
+(class $2\,1^4$: six rational pairs and the conjugate pair; $2^21^2$: the rational pair and two conjugate pairs; $2^3$, $3\,1^3$: three; $3\,2\,1$, $4\,1^2$, $4\,2$: one). The cofactor of a stable pair has one of the factorisation types $(1111)$, $(211)$, $(22)$, $(13)$, $(4)$, and the class of $B_\lambda$ is determined by this type and by whether the quadratic splits:
+\begin{equation}\label{eq:typetable}
+\begin{array}{c|ccccc}
+\text{type of the cofactor} & (1111) & (211) & (22) & (13) & (4)\\
+\hline
+\text{quadratic splits } (\Tr s=0) & 1^6 & 2\,1^4 & 2^21^2 & 3\,1^3 & 4\,1^2\\
+\text{quadratic irreducible } (\Tr s=1) & 2\,1^4 & 2^21^2 & 2^3 & 3\,2\,1 & 4\,2
+\end{array}
+\end{equation}
+
+\begin{theorem}[the class counts]\label{thm:counts}
+Let $k$ be odd. The number of $(\lambda_3,\lambda_5)\in\F_q\times\F_q^\times$, mixed and pure pairs together, with $B_\lambda$ of class $C$ is
+\[
+\begin{array}{llll}
+1^6:\ \tfrac{(q-2)(q-8)}{720}, & 2\,1^4:\ \tfrac{(q-2)(q-8)}{48}, & 2^21^2:\ \tfrac{q(q-2)}{16}, & 2^3:\ \tfrac{q(q-2)}{48},\\[0.5ex]
+3\,1^3:\ \tfrac{(q+1)(q-2)}{18}, & 3^2:\ \tfrac{(q+1)(q-2)}{18}, & 3\,2\,1:\ \tfrac{(q+1)(q-2)}{6}, & 4\,1^2:\ \tfrac{q(q-2)}{8},\\[0.5ex]
+4\,2:\ \tfrac{q(q-2)}{8}, & 5\,1:\ \tfrac{q^2+1}{5}, & 6:\ \tfrac{q(q+1)}{6}. &
+\end{array}
+\]
+With the pure counts $(q-2)/6$, $(q-2)/2$, $(q+1)/3$ of the classes $2^3$, $4\,1^2$, $6$ (Part~III, Proposition~5.2) this is Theorem~\ref{tgt:counts}.
+\end{theorem}
+\begin{proof}
+\emph{Step 1: the incidence plane.} By Lemma~\ref{lem:resolvent} the map $(y,s)\mapsto(a,b,u^2+\tau_0u+\rho_0)$ is a bijection from $(\F_q\setminus\{0,1\})\times\F_q^\times$ onto the set of incidences $(B_\lambda,\text{stable pair})$: a stable pair determines $(\tau_0,\rho_0)$ with $\Tr(\tau_0)=0$, hence $\tau_0=y^2+y$ for exactly two values $y,y+1$, and these give the two roots $b$ of $\tau_0b^2+\rho_0b+\rho_0^2\tau_0^3=0$ (Lemma~\ref{lem:cofactor}), of which the given $b$ is one; conversely every $(y,s)$ gives a sextic divisible by $u^2+\tau_0u+\rho_0$. So the plane has $(q-1)(q-2)$ points, and in the coordinates of the lemma the cofactor is the depressed quartic $\Phi(x)=x^4+a'x^2+b'x+c'$ with $a'=1/(1+t)\in\F_q\setminus\{0,1\}$ and $b'=c'=a'/s$; the map $y\mapsto t=(y/(y+1))^4\mapsto a'$ is a bijection of $\F_q\setminus\{0,1\}$, so $(a',s)$ runs over $(\F_q\setminus\{0,1\})\times\F_q^\times$ exactly once. The type of $\Phi$ is that of the cofactor (the substitution $u=\tau_0(x^{-1}+1)$ is a M\"obius change of variable that moves no root to $0$ or $\infty$).
+
+\emph{Step 2: the resolvent.} Let $\alpha_1,\dots,\alpha_4$ be the roots of $\Phi$. The roots of $Y^3+a'Y+b'$ are the three sums $\gamma=\alpha_i+\alpha_j=\alpha_l+\alpha_n$ over the pairings $\{\{i,j\},\{l,n\}\}$, and the Frobenius permutes them as it permutes the pairings. Hence the resolvent has three rational roots for the types $(1111)$ and $(22)$ (for $(22)$, with $\alpha_2=\sigma\alpha_1$, $\alpha_4=\sigma\alpha_3$: $\sigma(\alpha_1+\alpha_3)=\alpha_2+\alpha_4=\alpha_1+\alpha_3$), exactly one for $(211)$ and $(4)$, and none for $(13)$. For a rational root $r=\alpha_i+\alpha_j$ the products $\mu=\alpha_i\alpha_j$, $\mu'=\alpha_l\alpha_n$ are the roots of the partition quadratic $X^2+(a'+r^2)X+c'$ and $\Phi=(x^2+rx+\mu)(x^2+rx+\mu')$. This quadratic splits, i.e.\ $\Tr(c'/(a'+r^2)^2)=0$, for the unique root of a type-$(211)$ quartic (the pairing separates the rational roots from the conjugate pair), for all three roots of a type-$(1111)$ quartic, and for exactly one of the three roots of a type-$(22)$ quartic (the pairing into the two conjugate pairs; for the other two, $\mu=\alpha_1\alpha_3$ is conjugate to $\mu'$); it does not split for the root of a type-$(4)$ quartic (Lemma~\ref{lem:resolvent}).
+
+\emph{Step 3: linearisation.} Let $r$ be a rational root of the resolvent at $(a',s)$. From $r^3+a'r+a'/s=0$, $a'=r^3s/(rs+1)$; put
+\[
+u=rs,\qquad \xi=\frac1r,\qquad\text{so that}\qquad a'=\frac u{(u+1)\xi^2},\quad s=u\xi .
+\]
+Then $(a',s,r)\mapsto(u,\xi)$ is a bijection from the set of triples (point $(a',s)$ of the plane, rational root $r$ of its resolvent) onto $\{(u,\xi):u\in\F_q\setminus\{0,1\},\ \xi\in\F_q^\times,\ \xi\ne\xi_0(u)\}$, $\xi_0(u)=\sqrt{u/(u+1)}$: indeed $a'\ne0$ means $u\ne0$, $a'$ finite means $u\ne1$, and $a'\ne1$ means $\xi\ne\xi_0$. In these coordinates:
+\begin{itemize}[leftmargin=2em]
+\item $\Tr(s)=\Tr(u\xi)$;
+\item the other two roots of the resolvent are the roots of $Y^2+rY+(a'+r^2)$, rational iff $\Tr\bigl((a'+r^2)/r^2\bigr)=1+\Tr(a'/r^2)=1+\Tr\bigl(u/(u+1)\bigr)$ vanishes; so $r$ is the only rational root iff $\Tr(u/(u+1))=0$ and one of three iff $\Tr(u/(u+1))=1$;
+\item since $a'+r^2=r^2/(u+1)$ and $c'=a'/s=r^3/(u+1)$, the partition quadratic splits iff $\Tr\bigl(c'/(a'+r^2)^2\bigr)=\Tr\bigl((u+1)\xi\bigr)=0$.
+\end{itemize}
+
+\emph{Step 4: equidistribution.} For fixed $u$ the $\F_2$-linear map $\xi\mapsto\bigl(\Tr(u\xi),\Tr((u+1)\xi)\bigr)$ is onto $\F_2^2$, because $u$ and $u+1$ are $\F_2$-independent, so each of the four quadrants is taken by $q/4$ values of $\xi\in\F_q$. The excluded values are $\xi=0$, in the quadrant $(0,0)$, and $\xi_0$, in the quadrant $\bigl(\Tr(u/(u+1)),0\bigr)$: $\Tr((u+1)\xi_0)=\Tr\bigl(((u+1)\xi_0)^2\bigr)=\Tr(u^2+u)=0$ and $\Tr(u\xi_0)=\Tr(u^3/(u+1))=\Tr\bigl(u^2+u+1+\tfrac1{u+1}\bigr)=1+\Tr\bigl(\tfrac1{u+1}\bigr)=\Tr\bigl(\tfrac u{u+1}\bigr)$. Since $u\mapsto u/(u+1)$ is a bijection of $\F_q\setminus\{0,1\}$ and $\Tr(1)=1$, the sets $U_1=\{u:\Tr(u/(u+1))=0\}$ and $U_3=\{u:\Tr(u/(u+1))=1\}$ have $(q-2)/2$ elements each.
+
+\emph{Step 5: the eight cells.} Write $n_C$ for the total count of the class $C$. Each point $(u,\xi)$ is an incidence (sextic, stable pair, rational resolvent root), and by \eqref{eq:typetable} and Step~2 its class is determined by its cell. On $U_1$ (one root; types $(211)$ and $(4)$), with $(q-2)/2$ values of $u$:
+\begin{itemize}[leftmargin=2em]
+\item quadrant $(0,1)$, $q/4$ points per $u$: type $(4)$, split quadratic, class $4\,1^2$, one incidence per pair: $n_{4\,1^2}=\frac{q(q-2)}8$;
+\item quadrant $(1,1)$, $q/4$ points: type $(4)$, class $4\,2$: $n_{4\,2}=\frac{q(q-2)}8$;
+\item quadrant $(0,0)$, $q/4-2$ points ($\xi=0$ and $\xi_0$ removed): type $(211)$, split quadratic, class $2\,1^4$, whose six rational pairs each have a cofactor of type $(211)$: $6n_{2\,1^4}=\frac{(q-2)(q-8)}8$;
+\item quadrant $(1,0)$, $q/4$ points: type $(211)$, class $2^21^2$, whose two conjugate pairs have cofactors of type $(211)$: $2n_{2^21^2}=\frac{q(q-2)}8$.
+\end{itemize}
+On $U_3$ (three roots; types $(1111)$ and $(22)$), $\xi=0$ lies in $(0,0)$ and $\xi_0$ in $(1,0)$:
+\begin{itemize}[leftmargin=2em]
+\item quadrant $(1,1)$, $q/4$ points: the partition quadratic does not split, so the type is $(22)$ and $r$ is one of its two other roots; the quadratic is irreducible, the class is $2^3$, with three stable pairs and two roots each: $6n_{2^3}=\frac{q(q-2)}8$;
+\item quadrant $(0,0)$, $q/4-1$ points: split quadratic and split partition quadratic: either type $(1111)$ with any of its three roots (class $1^6$, fifteen pairs) or type $(22)$ with its distinguished root (class $2^21^2$, its rational pair): $45n_{1^6}+n_{2^21^2}=\frac{(q-2)(q-4)}8$.
+\end{itemize}
+Hence $n_{2\,1^4}=\frac{(q-2)(q-8)}{48}$, $n_{2^21^2}=\frac{q(q-2)}{16}$, $n_{2^3}=\frac{q(q-2)}{48}$ and $45n_{1^6}=\frac{(q-2)(q-4)}8-\frac{q(q-2)}{16}=\frac{(q-2)(q-8)}{16}$. The remaining two cells of $U_3$ are consistency checks: $(1,0)$ with $q/4-1$ points gives $3n_{2\,1^4}+3n_{2^3}=\frac{(q-2)(q-4)}8$ (the conjugate pair of $2\,1^4$ has a cofactor of type $(1111)$; the pairs of $2^3$ contribute their distinguished root), and $(0,1)$ gives $2n_{2^21^2}=\frac{q(q-2)}8$.
+
+\emph{Step 6: the type $(13)$.} The points $(a',s)$ with $\Tr(s)=0$ number $(q-2)\cdot\frac{q-2}2$. Those whose resolvent has a rational root are the incidences with split quadratic and cofactor of type $(1111)$, $(211)$, $(22)$ or $(4)$, counted once per stable pair: $15n_{1^6}+6n_{2\,1^4}+n_{2^21^2}+n_{4\,1^2}$; the others have type $(13)$ and class $3\,1^3$, three stable pairs each. So
+\[
+3n_{3\,1^3}=\frac{(q-2)^2}2-\Bigl[\tfrac{(q-2)(q-8)}{48}+\tfrac{(q-2)(q-8)}8+\tfrac{q(q-2)}{16}+\tfrac{q(q-2)}8\Bigr]=\frac{(q+1)(q-2)}6 .
+\]
+Likewise the $(q-2)\cdot\frac q2$ points with $\Tr(s)=1$ split as $n_{2\,1^4}+2n_{2^21^2}+3n_{2^3}+n_{4\,2}+n_{3\,2\,1}$ (the conjugate pair of $2\,1^4$, the two conjugate pairs of $2^21^2$, the three pairs of $2^3$, the pair of $4\,2$, and the $2$-cycle of $3\,2\,1$, whose cofactor has type $(13)$), whence $n_{3\,2\,1}=\frac{(q+1)(q-2)}6$.
+
+\emph{Step 7: the classes without a stable pair.} Among $3^2$, $5\,1$, $6$ only $5\,1$ has a rational root, so the first moment $\sum_Cf^{(1)}_Cn_C=(q-1)^2$ (Part~III, Theorem~1.3) gives
+\[
+n_{5\,1}=(q-1)^2-\bigl[6n_{1^6}+4n_{2\,1^4}+2n_{2^21^2}+3n_{3\,1^3}+n_{3\,2\,1}+2n_{4\,1^2}\bigr]=\frac{q^2+1}5 ;
+\]
+among $3^2$ and $6$ only $3^2$ has roots in $\F_{q^3}$ ($f^{(3)}=6$), so the third moment $\sum_Cf^{(3)}_Cn_C=2q^2-3q-1$ (Theorem~\ref{thm:N3value}) gives
+\[
+6n_{3^2}=2q^2-3q-1-\bigl[6n_{1^6}+4n_{2\,1^4}+2n_{2^21^2}+6n_{3\,1^3}+4n_{3\,2\,1}+2n_{4\,1^2}+n_{5\,1}\bigr]=\frac{(q+1)(q-2)}3 ;
+\]
+and $\sum_Cn_C=q(q-1)$ gives $n_6=\frac{q(q+1)}6$. The three bracketed sums are elementary (\texttt{part4\_counts\_proof.py} expands them with SymPy).
+\end{proof}
+
+\begin{remark}[numerical check; \texttt{part4\_counts\_proof.py}]
+For $q=8,32,128,512$ the script runs through every point $(y,s)$: the quadratic divides the sextic and the cofactor is that of Lemma~\ref{lem:cofactor}; the incidences are distinct and number $(q-1)(q-2)$; the type of $\Phi$ equals the type of the cofactor and, with $\Tr(s)$, gives the class obtained by factoring the sextic directly (for $q\le128$); the resolvent has $3$, $0$, $1$, $3$, $1$ rational roots for the types $(1111)$, $(13)$, $(211)$, $(22)$, $(4)$; for every rational root the three trace identities of Step~3 hold; the eight cells of Step~5 have exactly the predicted sizes and class contents; and for every $u$ the quadrant counts are those of Step~4. The polynomial identities of Steps~5--7 are verified symbolically.
 \end{remark}
 
 \subsection{The classes with \texorpdfstring{$N_0\mid2$}{N0 | 2}}
@@ -776,10 +862,10 @@ The conjugates of $r_i$ over $\F_q$ are the roots in its $\sigma$-orbit, each co
 \Needspace*{14\baselineskip}
 \section{The constant \texorpdfstring{$X$}{X}}\label{sec:X}
 \begin{theorem}\label{thm:Xstatus}
-Let $k$ be odd. If the class counts of Target Theorem~\ref{tgt:counts} hold, then $X=q^6+q^5$ and the variance formula of Corollary~\ref{cor:X} holds. All eleven sign hypotheses of Part~III, Corollary~1.5, are now theorems (Theorem~\ref{tgt:signs}). The only remaining input is the eleven class counts, equivalently the eleven point counts of Proposition~\ref{prop:elimination}.
+Let $k$ be odd. Then $X=q^6+q^5$, and the variance formula of Corollary~\ref{cor:X} holds. Both inputs of Part~III, Corollary~1.5, are theorems: the eleven class counts (Theorem~\ref{thm:counts}) and the eleven sign laws (Theorem~\ref{tgt:signs}).
 \end{theorem}
 \begin{proof}
-By Theorems~\ref{thm:order4}, \ref{thm:N0div2}, \ref{thm:N0div6} and \ref{thm:level6} the values of $W'$ on the classes are those of Part~III, Theorem~6.9 ($+4q^7$, $0$, $0$, $+4q^7$, $+4q^7$, $+4q^7$, $0$, $+2q^7$, $-2q^7$, $-q^7$, $+4q^7$ in the order of Table~\ref{tab:classes}), and the bookkeeping of Part~III, Corollary~1.5, with the counts of Target Theorem~\ref{tgt:counts} gives $q^3X=W'(0,0)+\sum_{\lambda_3\ne0}W'(\lambda_3,0)+\sum_{\lambda_5\ne0,\lambda_3=0}W'+\sum_{\text{mixed}}W'=q^7+q^8+(3q^8-2q^7)+(q^9-3q^8+q^7)=q^9+q^8$.
+By Theorems~\ref{thm:order4}, \ref{thm:N0div2}, \ref{thm:N0div6} and \ref{thm:level6} the values of $W'$ on the classes are those of Part~III, Theorem~6.9 ($+4q^7$, $0$, $0$, $+4q^7$, $+4q^7$, $+4q^7$, $0$, $+2q^7$, $-2q^7$, $-q^7$, $+4q^7$ in the order of Table~\ref{tab:classes}), and the bookkeeping of Part~III, Corollary~1.5, with the counts of Theorem~\ref{thm:counts} gives $q^3X=W'(0,0)+\sum_{\lambda_3\ne0}W'(\lambda_3,0)+\sum_{\lambda_5\ne0,\lambda_3=0}W'+\sum_{\text{mixed}}W'=q^7+q^8+(3q^8-2q^7)+(q^9-3q^8+q^7)=q^9+q^8$.
 \end{proof}
 
 \begin{remark}[even $k$]
@@ -799,7 +885,7 @@ For even $k$ the class counts of Part~III, Table~9, depend on $k\bmod4$ through 
 All scripts are in the directory \texttt{code/} of the repository and depend only on NumPy, SymPy and Numba (for the field tables); their outputs are in \texttt{data/}, the figures are produced by \texttt{paper/make\_figures4.py}.
 \begin{itemize}[leftmargin=2em]
 \item \texttt{moment3\_proof.py}: Theorems~\ref{thm:GH} and \ref{thm:N3value} for every $\theta$ at $q=4,8,16,32,64,128$ (closed form against brute force, ray counts, $\sum N_3$ by factoring for $q\le16$).
-\item \texttt{moment3\_check.py}: Proposition~\ref{prop:N3} and the value distribution of $G_H$ for $q=8,32,128$; \texttt{moment3\_structure.py}: the radicals and Gold types of Remark~\ref{rem:N3numerics}.
+\item \texttt{moment3\_check.py} and \texttt{moment3\_structure.py}: Proposition~\ref{prop:N3}, the value distribution of $G_H$ for $q=8,32,128$, and the radicals and Gold types of Remark~\ref{rem:N3numerics}.
 \item \texttt{moment\_higher\_m.py}: $G_{H_m}$, $\dim K/L$ and $\Sigma_m$ for $m=4,5,6$ at $q=8$ (Remark~\ref{rem:m3special}; $m=6$ takes two minutes).
 \item \texttt{part4\_moment\_system.py}: Proposition~\ref{prop:elimination} and the interpolation checks.
 \item \texttt{part4\_hexad\_formula.py}: Theorem~\ref{thm:hexadformula} for every $\lambda$ at $q=8$ ($m=2,3$) and for three pairs per class with $N_0\mid4$ at $q=32$ ($m=2$); Table~\ref{tab:hexadterms}.
@@ -808,6 +894,7 @@ All scripts are in the directory \texttt{code/} of the repository and depend onl
 \item \texttt{part4\_order4\_all.py}: for every pair of the classes of order $4$ at $q=8$ and $q=32$, the direct Witt values, $\kappa_0$ by \eqref{eq:q4r1} and \eqref{eq:kappaclosed}, and $s_4(\lambda_1)$ for all $\lambda_1$ (sign, hyperplane, $W'$).
 \item \texttt{part4\_class321.py}: Theorem~\ref{thm:level6}, checked against the $L$-polynomial of the Witt sheaf from $s_1,\dots,s_4$: all pairs of the classes $3\,2\,1$ and $6$ at $q=8$, the first $12$ pairs of each at $q=32$, every $\lambda_1$.
 \item \texttt{part4\_kappa\_scan.py}: Table~\ref{tab:kappa} and Lemma~\ref{lem:resolvent}; \texttt{part4\_relative\_reduction.py}: the coset form of the hexad formula; \texttt{part4\_brown\_invariants.py}: the earlier sampling version.
+\item \texttt{part4\_counts\_proof.py}: every step of the proof of Theorem~\ref{thm:counts} on the $(y,s)$-plane at $q=8,32,128,512$ (direct factorisation of all sextics for $q\le128$) and the polynomial identities with SymPy.
 \end{itemize}
 
 \section*{Acknowledgements}
