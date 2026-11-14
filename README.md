@@ -4,6 +4,8 @@
 
 Ruqing Chen (GUT Geoservice Inc., Montreal) — version 2, October 2026. DOI [10.5281/zenodo.23308682](https://doi.org/10.5281/zenodo.23308682) (version 1: 10.5281/zenodo.23299284).
 
+**New in version 3 (November 2026):** the third moment is proved. For c = 1/θ in the trace-zero plane of F_{q³} with minimal polynomial c³ + s c + N over F_q, the Gauss sum of e ↦ Tr(θ(e⁵ + e³)) on that plane is `G_H(θ) = q (1 + (−1)^{Tr(s⁵/N²)})` (Theorem 2.2); the phase s⁵/N² has weight 4 along the F_q^×-rays, so exactly (q−2)/2 points of each of the q+1 rays contribute 2q, and `Σ_λ N_3(B_λ) = 2q² − 3q − 1` for odd k (Theorem 2.3; for even k the value is 2q² − 3q + 1). The former Proposition 2.2 (numerical) and Conjecture 2.4 are replaced by these theorems; the Gold quintic does not enter. Remark 2.5 explains why the argument stops at m = 3 and confirms the predicted totals Σ_4, Σ_5, Σ_6 at q = 8 by direct summation (`code/moment_higher_m.py`).
+
 **New in version 2:** Theorem 3.23 proves the sign laws in the classes 3 2 1 and 6, so the sign conjecture of Part III holds in all eleven classes (Theorem 1.2). X = q⁶ + q⁵ now depends only on the class counts (Target Theorem 1.1).
 
 Part I: DOI 10.5281/zenodo.23225896 · Part II: DOI 10.5281/zenodo.23252762 · Part III: DOI 10.5281/zenodo.23290724 ([repository](https://github.com/Ruqing1963/legendre-intervals-part3)).
@@ -19,17 +21,17 @@ Part III reduced the closed form `X = q^6 + q^5` (q = 2^k, k odd) of the second 
 * **The classes of order 4** (Theorem 3.9). `s_4(λ1) = 2q² (i^{q^{(2)}(r5)} − i^{q^{(2)}(w3)})`, with q^{(2)}(r5) = 0 in the class 4 1² and q^{(2)}(w3) = 0 in the class 4 2; hence s_4 ∈ {0, +4q²} resp. {0, −4q²}, `sgn s_4 = (−1)^{Tr(ρ0/τ0²)}`, and `W' = +2q^7` resp. `−2q^7`. Confirmed for all 12 pairs at q = 8 and all 240 pairs at q = 32, each with all λ1. The hyperplane parameter κ0 is given in closed form, `κ0 = Tr(z³ + ρ0²/z + (z+1)τ0²/ρ0)`, z = τ0/(λ5 ρ0); it is **not** constant on the class (130 of the 240 pairs at q = 32 have κ0 = 1), which corrects a conjecture of the first draft.
 * **The other classes** (Theorems 3.17, 3.20). On the sixteen-point coset the half-Witt values are affine-linear in the duads, so the hexad sum is ±4 according to the number n₁ of roots with φ = 1 mod 4, and trace parity fixes φ at rational points. This proves `s_4 = +4q²` for all λ1 in the classes 1⁶, 2³, the half-half law in 2 1⁴, 2² 1², and `S'' = +4q⁶` for all λ1 in 3 1³, 3².
 * **The classes 3 2 1 and 6** (Theorem 3.23). Applying the hexad formula with m = 6 expresses S'' = s_12 itself as a sixteen-point sum. On the coset, ε = (−1)^Q for a quadratic form Q polarising the intersection form. The λ1-free part of the Witt form is a Frobenius-invariant linear form, hence dual to a Frobenius-fixed duad. Result: `S''(λ1) = ±4q⁶ (−1)^{Tr(λ1 (r4+r5))}` in the class 3 2 1, so W' = 0, and `S'' = +4q⁶` for every λ1 in the class 6, without the hypothesis (H). **The sign conjecture of Part III (Theorem 1.2) is proved in all eleven classes.** Checked against independent L-polynomial data at q = 8 (all pairs) and q = 32 (12 pairs per class): `code/part4_class321.py`.
-* **Moments** (Propositions 2.1, 2.6, 2.8). For every m, `Σ N_m = (q−1)² − q[2|m] + q^{2−m} Σ_{Θ_m} G_{H_m}(θ)` with G_{H_m} the Gauss sums of Gold-type forms on the trace-zero hyperplane; m = 1, 2 recover Part III; m = 3 gives 2q² − 3q − 1 (verified q ≤ 128).
+* **Moments** (Propositions 2.1, 2.6, 2.8; Theorems 2.2, 2.3). For every m, `Σ N_m = (q−1)² − q[2|m] + q^{2−m} Σ_{Θ_m} G_{H_m}(θ)` with G_{H_m} the Gauss sums of Gold-type forms on the trace-zero hyperplane; m = 1, 2 recover Part III. For m = 3 the Gauss sum is evaluated in closed form, `G_H(1/c) = q(1 + (−1)^{Tr(s⁵/N²)})` with c³ + s c + N the minimal polynomial of c over F_q, and the ray count gives `Σ N_3 = 2q² − 3q − 1` for odd k (2q² − 3q + 1 for even k): a theorem for every q. Checked pointwise at q = 4, 8, 16, 32, 64, 128 (`code/moment3_proof.py`). The rows m = 4, 5, 6 of the moment table are confirmed by direct summation at q = 8 but not proved.
 * **The 11 × 11 moment system** (Proposition 2.8): the six pure moments plus the mixed moments Σ N3², Σ N2N3, Σ N2², Σ N1N3, Σ N3³ form a nonsingular system (determinant 2¹⁷·3⁷·5) whose unique solution is the conjectured table; the five mixed moments N1N2, N1N3, N2², N1²N2, N1N2N3 give rank 10 only.
 
 Even k: the trace parity law becomes `Tr(r) ≡ f_1 (mod 2)` (verified at q = 4, 16, 64) and the two order-4 signs are exchanged (`W' = −2q^7` for 4 1², `+2q^7` for 4 2; verified at q = 4), in line with the sign (−1)^{k+1} of Part II.
 
-Not proved here: the class counts of Target Theorem 1.1, equivalently the eleven point counts of the moment system. By Theorem 4.1, X = q⁶ + q⁵ follows from them alone; all sign inputs are now theorems. The identity (H) is no longer needed for X; it only concerns the value of s_6 in the class 6.
+Not proved here: the class counts of Target Theorem 1.1, equivalently the eleven point counts of the moment system (the pure moments m ≤ 3 are now theorems; m = 4, 5, 6 and the five mixed moments are not). By Theorem 4.1, X = q⁶ + q⁵ follows from them alone; all sign inputs are now theorems. The identity (H) is no longer needed for X; it only concerns the value of s_6 in the class 6.
 
 ## Layout
 
 ```
-paper/    legendre_IV_hexad_moments_brown_X.tex / .pdf (24 pages), make_figures4.py, figures/
+paper/    legendre_IV_hexad_moments_brown_X.tex / .pdf (26 pages), make_figures4.py, figures/
 code/     self-contained Python (NumPy, SymPy, Numba): field tables, hexad search, Witt sums, all Part IV scripts
 data/     outputs of every script quoted in the paper (q = 8, 32, 128)
 figures/  the figures of the paper (vector PDF)
@@ -40,6 +42,8 @@ results/  summary.md: the numerical facts in one page
 
 ```
 cd code
+python moment3_proof.py 3 5 7 2 4 6       # Theorems 2.2, 2.3: closed form of G_H, rays       -> data/moment3_proof.txt
+python moment_higher_m.py 3 4 5 6         # Sigma_m, G_{H_m} values, dim K/L, m = 4,5,6, q=8 -> data/moment_higher_m.txt
 python moment3_check.py 3 5 7             # third moment identity, G_H distribution         -> data/moment3_check.txt
 python moment3_structure.py 3 5 7         # radicals, Arf invariants, Gold types            -> data/moment3_structure.txt
 python part4_moment_system.py             # 6x11 and 11x11 moment systems, totals, fits     -> data/part4_moment_system.txt

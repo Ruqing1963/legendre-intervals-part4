@@ -1,0 +1,70 @@
+
+=== moment_higher_m.py run ===
+k=3, q=8, m=4: |H_m| = 512, |Theta_m| = 511
+   values of G_{H_m}(theta) -> multiplicity: {-32: 48, 0: 266, 32: 144, 64: 50, 128: 3}
+   dim_F2 (K/L) -> multiplicity: {3: 462, 4: 42, 6: 7}   (K/L is the residual space after the totally singular line L = F_q c; for m = 3 it is {1})
+   Sigma_m = 6656;  predicted by the class counts: 6656;  equal: True
+   sum N_m = (q-1)^2 - q[2|m] + q^(2-m) Sigma_m = 145  (predicted 145)
+   [0.6 s]
+k=3, q=8, m=4: G_{H_m} along rays {v c : v in F_q^x} (first 6 rays)
+   ray of c=1: sorted G values [0, 0, 0, 0, 128, 128, 128]  (multiset {0: 4, 128: 3})
+   ray of c=12: sorted G values [-32, 0, 0, 0, 32, 32, 32]  (multiset {-32: 1, 0: 3, 32: 3})
+   ray of c=13: sorted G values [-32, 0, 0, 0, 32, 32, 32]  (multiset {-32: 1, 0: 3, 32: 3})
+   ray of c=23: sorted G values [0, 0, 0, 0, 0, 0, 0]  (multiset {0: 7})
+   ray of c=26: sorted G values [-32, 0, 0, 0, 32, 32, 32]  (multiset {-32: 1, 0: 3, 32: 3})
+   ray of c=32: sorted G values [0, 0, 0, 0, 0, 0, 0]  (multiset {0: 7})
+k=3, q=8, m=5: |H_m| = 4096, |Theta_m| = 4095
+   values of G_{H_m}(theta) -> multiplicity: {-256: 5, -128: 135, -64: 1035, 0: 1545, 64: 905, 128: 470}
+   dim_F2 (K/L) -> multiplicity: {6: 4095}   (K/L is the residual space after the totally singular line L = F_q c; for m = 3 it is {1})
+   Sigma_m = 33280;  predicted by the class counts: 33280;  equal: True
+   sum N_m = (q-1)^2 - q[2|m] + q^(2-m) Sigma_m = 114  (predicted 114)
+   [7.2 s]
+k=3, q=8, m=5: G_{H_m} along rays {v c : v in F_q^x} (first 6 rays)
+   ray of c=2: sorted G values [-64, -64, 0, 0, 0, 0, 64]  (multiset {-64: 2, 0: 4, 64: 1})
+   ray of c=4: sorted G values [-64, -64, 0, 0, 0, 0, 64]  (multiset {-64: 2, 0: 4, 64: 1})
+   ray of c=6: sorted G values [-64, -64, 0, 0, 0, 0, 64]  (multiset {-64: 2, 0: 4, 64: 1})
+   ray of c=16: sorted G values [-64, -64, 0, 0, 0, 0, 64]  (multiset {-64: 2, 0: 4, 64: 1})
+   ray of c=18: sorted G values [-64, -64, 0, 0, 0, 0, 64]  (multiset {-64: 2, 0: 4, 64: 1})
+   ray of c=20: sorted G values [-64, -64, 0, 0, 0, 0, 64]  (multiset {-64: 2, 0: 4, 64: 1})
+
+=== moment_higher_m.py run ===
+k=2, q=4, m=4: |H_m| = 64, |Theta_m| = 63
+   values of G_{H_m}(theta) -> multiplicity: {0: 32, 8: 16, 16: 10, 32: 5}
+   dim_F2 (K/L) -> multiplicity: {2: 48, 3: 12, 4: 3}   (K/L is the residual space after the totally singular line L = F_q c; for m = 3 it is {1})
+   Sigma_m = 448;  predicted by the class counts: 320;  equal: False
+   sum N_m = (q-1)^2 - q[2|m] + q^(2-m) Sigma_m = 33  (predicted 25)
+   [0.0 s]
+k=2, q=4, m=4: G_{H_m} along rays {v c : v in F_q^x} (first 6 rays)
+   ray of c=1: sorted G values [16, 16, 32]  (multiset {16: 2, 32: 1})
+   ray of c=6: sorted G values [0, 8, 8]  (multiset {0: 1, 8: 2})
+   ray of c=7: sorted G values [0, 0, 0]  (multiset {0: 3})
+   ray of c=10: sorted G values [16, 16, 32]  (multiset {16: 2, 32: 1})
+   ray of c=11: sorted G values [16, 16, 32]  (multiset {16: 2, 32: 1})
+   ray of c=12: sorted G values [0, 0, 0]  (multiset {0: 3})
+k=2, q=4, m=5: |H_m| = 256, |Theta_m| = 255
+   values of G_{H_m}(theta) -> multiplicity: {-32: 20, -16: 50, 0: 70, 16: 80, 32: 35}
+   dim_F2 (K/L) -> multiplicity: {4: 255}   (K/L is the residual space after the totally singular line L = F_q c; for m = 3 it is {1})
+   Sigma_m = 960;  predicted by the class counts: 1088;  equal: False
+   sum N_m = (q-1)^2 - q[2|m] + q^(2-m) Sigma_m = 24  (predicted 26)
+   [0.3 s]
+k=2, q=4, m=5: G_{H_m} along rays {v c : v in F_q^x} (first 6 rays)
+   ray of c=3: sorted G values [0, 0, 16]  (multiset {0: 2, 16: 1})
+   ray of c=5: sorted G values [0, 0, 16]  (multiset {0: 2, 16: 1})
+   ray of c=6: sorted G values [0, 16, 32]  (multiset {0: 1, 16: 1, 32: 1})
+   ray of c=8: sorted G values [-16, 16, 32]  (multiset {-16: 1, 16: 1, 32: 1})
+   ray of c=11: sorted G values [0, 16, 16]  (multiset {0: 1, 16: 2})
+   ray of c=13: sorted G values [0, 16, 16]  (multiset {0: 1, 16: 2})
+k=2, q=4, m=6: |H_m| = 1024, |Theta_m| = 1023
+   values of G_{H_m}(theta) -> multiplicity: {-128: 1, -64: 24, -32: 168, 0: 477, 32: 216, 64: 134, 256: 3}
+   dim_F2 (K/L) -> multiplicity: {6: 1011, 7: 9, 8: 3}   (K/L is the residual space after the totally singular line L = F_q c; for m = 3 it is {1})
+   Sigma_m = 9216;  predicted by the class counts: 10752;  equal: False
+   sum N_m = (q-1)^2 - q[2|m] + q^(2-m) Sigma_m = 41  (predicted 47)
+   [1.7 s]
+
+=== moment_higher_m.py run ===
+k=3, q=8, m=6: |H_m| = 32768, |Theta_m| = 32767
+   values of G_{H_m}(theta) -> multiplicity: {-1024: 3, -512: 270, -256: 5814, 0: 18324, 256: 7506, 512: 814, 1024: 36}
+   dim_F2 (K/L) -> multiplicity: {9: 32697, 10: 63, 12: 7}   (K/L is the residual space after the totally singular line L = F_q c; for m = 3 it is {1})
+   Sigma_m = 745472;  predicted by the class counts: 745472;  equal: True
+   sum N_m = (q-1)^2 - q[2|m] + q^(2-m) Sigma_m = 223  (predicted 223)
+   [117.0 s]

@@ -47,9 +47,12 @@ Rows m = 1..6 plus N1N2, N1N3, N2², N1²N2, N1N2N3: rank 10, det 0. Rows m = 1.
 * Tr(r) ≡ f1 (mod 2) for every rational root at q = 4, 16, 64 (e.g. q=64: 1024 roots of class 4 1² all trace 1, 819 roots of class 5 1 all trace 0); no exception.
 * q = 4: the four order-4 pairs have s_4 ∈ {0, −4q²} (class 4 1², W' = −2q^7) and {0, +4q²} (class 4 2, W' = +2q^7), on the coset Tr(λ1 τ0) = κ0 (κ0 = 0 for all four); both κ0 formulas agree with the direct Witt value.
 
-## Moments (Section 2), `moment3_check.py`, `moment3_structure.py`, `part4_moment_system.py`
+## Moments (Section 2), `moment3_proof.py`, `moment_higher_m.py`, `moment3_check.py`, `moment3_structure.py`, `part4_moment_system.py`
 
+* Theorem 2.2 (closed form): for c = 1/θ with minimal polynomial c³ + s c + N over F_q, G_H(θ) = q(1 + (−1)^{Tr(s⁵/N²)}) (s ≠ 0), G_H = q if s = 0 (even k only). Agrees with the brute-force sum for every θ at q = 4, 8, 16, 32, 64, 128. Every ray {v c} with s ≠ 0 carries exactly (q−2)/2 values 2q; the two rays with s = 0 (q = 4, 16, 64) carry q throughout.
+* Theorem 2.3: Σ_3 = q(q+1)(q−2) and Σ N_3 = 2q² − 3q − 1 for odd k (432/103, 31680/1951, 2080512/32383 at q = 8, 32, 128); Σ_3 = q²(q−1) and Σ N_3 = 2q² − 3q + 1 for even k (48/21, 3840/465, 258048/8001 at q = 4, 16, 64). Σ N_3 by factoring all sextics: 21, 103, 465 at q = 4, 8, 16.
+* m = 4, 5, 6 at q = 8 (direct summation over Θ_m): Σ_4 = 6656 = q³(2q−3), Σ_5 = 33280 = q³(q²+1), Σ_6 = 745472 = q⁴(q−1)(3q+2), all as predicted by the class counts. Values of G_{H_4}: −32 (48), 0 (266), 32 (144), 64 (50), 128 (3); G_{H_5}: 0, ±64, ±128, −256; G_{H_6}: 0, ±256, ±512, ±1024. Residual dimension dim K/L after the totally singular line F_q c: {3, 4, 6} (m = 4), 6 (m = 5), {9, 10, 12} (m = 6); for m = 3 it is 1, which is why the proof works there.
 * Σ N_3 = (q−1)² + q^{−1} Σ_Θ G_H(θ): exact at q = 8, 32, 128 (103, 1951, 32383 = 2q² − 3q − 1).
 * G_H(θ) ∈ {0, 2^{k+1}}, number of nonzero values (q+1)(q−2)/2 = 27, 495, 8127; dim R_H = 2 always; Arf = 0 whenever nonzero.
-* Per Gold type (G_H ≠ 0 / = 0): q=8: (1,4) 27/27, (2,3) 0/9, (1,1,1,2) 0/0; q=32: 285/255, 90/243, 120/30; q=128: 4347/4095, 2436/2901, 1344/1260 — not a common quadratic polynomial per type.
+* Per Gold type (G_H ≠ 0 / = 0): q=8: (1,4) 27/27, (2,3) 0/9, (1,1,1,2) 0/0; q=32: 285/255, 90/243, 120/30; q=128: 4347/4095, 2436/2901, 1344/1260 — not a common quadratic polynomial per type (explained by Theorem 2.2: the criterion Tr(s⁵/N²) = 0 is not aligned with the Gold type).
 * Rank of the fixed-point matrix (m = 1..6, eleven classes): 6. Predicted Σ N_m: (q−1)², 2q²−4q+1, 2q²−3q−1, 3q²−6q+1, 2q²−2q+2, 4q²−4q−1; Gauss-sum totals Σ_m: 0, q(q−1), q(q+1)(q−2), q³(2q−3), q³(q²+1), q⁴(q−1)(3q+2).
