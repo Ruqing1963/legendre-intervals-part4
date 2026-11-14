@@ -127,3 +127,489 @@ direct classification skipped (Part III, Proposition 5.2, q <= 512); table value
   (u, xi) bijection: 510 values of u (= q-2: True), quadrant counts per u as predicted: True
   first moment 261121 = (q-1)^2 = 261121: True;  third moment 522751 = 2q^2-3q-1 = 522751: True
   [368 s]
+
+=== part4_counts_proof.py run ===
+=== polynomial identities (sympy) ===
+  sum N = q(q-1): True
+  sum N f1 = (q-1)^2: True
+  sum N f3 = 2q^2-3q-1: True
+  sum N stab = (q-1)(q-2): True
+  cell (1, 0, 1): sum mult*N = size: True
+  cell (1, 1, 1): sum mult*N = size: True
+  cell (1, 0, 0): sum mult*N = size: True
+  cell (1, 1, 0): sum mult*N = size: True
+  cell (3, 1, 1): sum mult*N = size: True
+  cell (3, 0, 0): sum mult*N = size: True
+  cell (3, 1, 0): sum mult*N = size: True
+  cell (3, 0, 1): sum mult*N = size: True
+  slice Tr s = 0: (q-2)^2/2: True;  slice Tr s = 1: q(q-2)/2: True
+  solved N(1^6) = (q - 8)*(q - 2)/720  equals table: True
+  solved N(2 1^4) = (q - 8)*(q - 2)/48  equals table: True
+  solved N(2^2 1^2) = q*(q - 2)/16  equals table: True
+  solved N(2^3) = q*(q - 2)/48  equals table: True
+  solved N(3 1^3) = (q - 2)*(q + 1)/18  equals table: True
+  solved N(3^2) = (q - 2)*(q + 1)/18  equals table: True
+  solved N(3 2 1) = (q - 2)*(q + 1)/6  equals table: True
+  solved N(4 1^2) = q*(q - 2)/8  equals table: True
+  solved N(4 2) = q*(q - 2)/8  equals table: True
+  solved N(5 1) = (q**2 + 1)/5  equals table: True
+  solved N(6) = q*(q + 1)/6  equals table: True
+=== polynomial identities, even k (sympy) ===
+  sum N = q(q-1): True;  sum N f1 = (q-1)^2: True;  sum N f3 = 2q^2-3q+1: True;  sum N stab = (q-1)(q-2): True
+  cell (1, 0, 1): True
+  cell (1, 1, 1): True
+  cell (1, 0, 0): True
+  cell (1, 1, 0): True
+  cell (3, 1, 1): True
+  cell (3, 0, 0): True
+  cell (3, 1, 0): True
+  cell (3, 0, 1): True
+  slices: True True
+  solved N(1^6) = (q - 16)*(q - 4)/720  equals even table: True
+  solved N(2 1^4) = q*(q - 4)/48  equals even table: True
+  solved N(2^2 1^2) = q*(q - 4)/16  equals even table: True
+  solved N(2^3) = q*(q - 4)/48  equals even table: True
+  solved N(3 1^3) = (q - 4)*(q - 1)/18  equals even table: True
+  solved N(3^2) = (q - 1)*(q + 2)/18  equals even table: True
+  solved N(3 2 1) = q*(q - 1)/6  equals even table: True
+  solved N(4 1^2) = q**2/8  equals even table: True
+  solved N(4 2) = q**2/8  equals even table: True
+  solved N(5 1) = (q - 1)*(q + 1)/5  equals even table: True
+  solved N(6) = q*(q - 1)/6  equals even table: True
+  pure counts, k = 2 mod 4: sum = q - 1 (q-1: True); 6 n16 + 2 n2212 + n51 = q-2 (first moment on a = 0): True
+  pure counts, k = 0 mod 4: sum = q - 1 (q-1: True); 6 n16 + 2 n2212 + n51 = q-2 (first moment on a = 0): True
+  even k: sum_C n_C W'_C = -q**7*(q - 1)**2 = -q^9 + 2q^8 - q^7: True; with W'(0,0) + sum_{l3 != 0} W'(l3,0) = -q^8 + q^7 the total is -q**8*(q - 1), i.e. X = -q**5*(q - 1)
+  odd k (check): sum_C n_C W'_C = q**7*(q - 1)*(q + 1); with W'(0,0) + sum_{l3 != 0} W'(l3,0) = q^7 + q^8 the total is q**8*(q + 1), i.e. X = q**5*(q + 1)
+
+=== k = 2, q = 4 (even k) ===
+direct classification of all 12 sextics: 1^6:0, 2 1^4:0, 2^2 1^2:0, 2^3:0, 3 1^3:0, 3^2:1, 3 2 1:2, 4 1^2:2, 4 2:2, 5 1:3, 6:2
+  equals the even-k table (totals, mixed + pure) for every class: True   [0 s]
+  pure (lambda_3 = 0) counts: 3^2:1, 5 1:2; equal the k = 2 mod 4 formulas: True
+  incidences (sextic, stable pair) from the classes: 6; (q-1)(q-2) = 6: True
+(y, s) plane: 6 incidences, all distinct, quadratic divides and cofactor agrees with Lemma 3.14 in every case; type(Phi) = type(K) in 6 cases
+  pure locus a = 0: 0 points, all on the curve a' = s/(s^2+1) (and conversely); r = 1/(s+1) is a resolvent root with a'+r^2 = r, c' = r^2 in 0 cases; expected q-2 (odd) or q-4 (even): 0
+  classes of the pure incidences: {}
+  resolvent roots by type of Phi: 13:0 roots x2, 4:1 roots x4
+  cell (roots=1, Tr s=0, Tr((u+1)xi)=0): {}; size 0 (predicted 0) OK
+  cell (roots=1, Tr s=0, Tr((u+1)xi)=1): {'4 1^2': 2}; size 2 (predicted 2) OK
+  cell (roots=1, Tr s=1, Tr((u+1)xi)=0): {}; size 0 (predicted 0) OK
+  cell (roots=1, Tr s=1, Tr((u+1)xi)=1): {'4 2': 2}; size 2 (predicted 2) OK
+  cell (roots=3, Tr s=0, Tr((u+1)xi)=0): {}; size 0 (predicted 0) OK
+  cell (roots=3, Tr s=0, Tr((u+1)xi)=1): {}; size 0 (predicted 0) OK
+  cell (roots=3, Tr s=1, Tr((u+1)xi)=0): {}; size 0 (predicted 0) OK
+  cell (roots=3, Tr s=1, Tr((u+1)xi)=1): {}; size 0 (predicted 0) OK
+  all eight cells as predicted: True
+  (u, xi) bijection: 2 values of u (= q-2: True), quadrant counts per u as predicted: True
+  first moment 9 = (q-1)^2 = 9: True;  third moment 21 = 2q^2-3q+1 = 21: True
+  [0 s]
+
+=== k = 4, q = 16 (even k) ===
+direct classification of all 240 sextics: 1^6:0, 2 1^4:4, 2^2 1^2:12, 2^3:4, 3 1^3:10, 3^2:15, 3 2 1:40, 4 1^2:32, 4 2:32, 5 1:51, 6:40
+  equals the even-k table (totals, mixed + pure) for every class: True   [0 s]
+  pure (lambda_3 = 0) counts: 2^2 1^2:4, 3^2:5, 5 1:6; equal the k = 0 mod 4 formulas: True
+  incidences (sextic, stable pair) from the classes: 210; (q-1)(q-2) = 210: True
+(y, s) plane: 210 incidences, all distinct, quadratic divides and cofactor agrees with Lemma 3.14 in every case; type(Phi) = type(K) in 210 cases
+  pure locus a = 0: 12 points, all on the curve a' = s/(s^2+1) (and conversely); r = 1/(s+1) is a resolvent root with a'+r^2 = r, c' = r^2 in 12 cases; expected q-2 (odd) or q-4 (even): 12
+  classes of the pure incidences: {'2^2 1^2': 12}
+  resolvent roots by type of Phi: 1111:3 roots x4, 13:0 roots x70, 211:1 roots x48, 22:3 roots x24, 4:1 roots x64
+  cell (roots=1, Tr s=0, Tr((u+1)xi)=0): {'2 1^4': 24}; size 24 (predicted 24) OK
+  cell (roots=1, Tr s=0, Tr((u+1)xi)=1): {'4 1^2': 32}; size 32 (predicted 32) OK
+  cell (roots=1, Tr s=1, Tr((u+1)xi)=0): {'2^2 1^2': 24}; size 24 (predicted 24) OK
+  cell (roots=1, Tr s=1, Tr((u+1)xi)=1): {'4 2': 32}; size 32 (predicted 32) OK
+  cell (roots=3, Tr s=0, Tr((u+1)xi)=0): {'2^2 1^2': 12}; size 12 (predicted 12) OK
+  cell (roots=3, Tr s=0, Tr((u+1)xi)=1): {'2^2 1^2': 24}; size 24 (predicted 24) OK
+  cell (roots=3, Tr s=1, Tr((u+1)xi)=0): {'2 1^4': 12, '2^3': 12}; size 24 (predicted 24) OK
+  cell (roots=3, Tr s=1, Tr((u+1)xi)=1): {'2^3': 24}; size 24 (predicted 24) OK
+  all eight cells as predicted: True
+  (u, xi) bijection: 14 values of u (= q-2: True), quadrant counts per u as predicted: True
+  first moment 225 = (q-1)^2 = 225: True;  third moment 465 = 2q^2-3q+1 = 465: True
+  [0 s]
+
+=== k = 6, q = 64 (even k) ===
+direct classification of all 4032 sextics: 1^6:4, 2 1^4:80, 2^2 1^2:240, 2^3:80, 3 1^3:210, 3^2:231, 3 2 1:672, 4 1^2:512, 4 2:512, 5 1:819, 6:672
+  equals the even-k table (totals, mixed + pure) for every class: True   [2 s]
+  pure (lambda_3 = 0) counts: 1^6:1, 2^2 1^2:15, 3^2:21, 5 1:26; equal the k = 2 mod 4 formulas: True
+  incidences (sextic, stable pair) from the classes: 3906; (q-1)(q-2) = 3906: True
+(y, s) plane: 3906 incidences, all distinct, quadratic divides and cofactor agrees with Lemma 3.14 in every case; type(Phi) = type(K) in 3906 cases
+  pure locus a = 0: 60 points, all on the curve a' = s/(s^2+1) (and conversely); r = 1/(s+1) is a resolvent root with a'+r^2 = r, c' = r^2 in 60 cases; expected q-2 (odd) or q-4 (even): 60
+  classes of the pure incidences: {'1^6': 15, '2^2 1^2': 45}
+  resolvent roots by type of Phi: 1111:3 roots x140, 13:0 roots x1302, 211:1 roots x960, 22:3 roots x480, 4:1 roots x1024
+  cell (roots=1, Tr s=0, Tr((u+1)xi)=0): {'2 1^4': 480}; size 480 (predicted 480) OK
+  cell (roots=1, Tr s=0, Tr((u+1)xi)=1): {'4 1^2': 512}; size 512 (predicted 512) OK
+  cell (roots=1, Tr s=1, Tr((u+1)xi)=0): {'2^2 1^2': 480}; size 480 (predicted 480) OK
+  cell (roots=1, Tr s=1, Tr((u+1)xi)=1): {'4 2': 512}; size 512 (predicted 512) OK
+  cell (roots=3, Tr s=0, Tr((u+1)xi)=0): {'1^6': 180, '2^2 1^2': 240}; size 420 (predicted 420) OK
+  cell (roots=3, Tr s=0, Tr((u+1)xi)=1): {'2^2 1^2': 480}; size 480 (predicted 480) OK
+  cell (roots=3, Tr s=1, Tr((u+1)xi)=0): {'2 1^4': 240, '2^3': 240}; size 480 (predicted 480) OK
+  cell (roots=3, Tr s=1, Tr((u+1)xi)=1): {'2^3': 480}; size 480 (predicted 480) OK
+  all eight cells as predicted: True
+  (u, xi) bijection: 62 values of u (= q-2: True), quadrant counts per u as predicted: True
+  first moment 3969 = (q-1)^2 = 3969: True;  third moment 8001 = 2q^2-3q+1 = 8001: True
+  [4 s]
+
+=== part4_counts_proof.py run ===
+=== polynomial identities (sympy) ===
+  sum N = q(q-1): True
+  sum N f1 = (q-1)^2: True
+  sum N f3 = 2q^2-3q-1: True
+  sum N stab = (q-1)(q-2): True
+  cell (1, 0, 1): sum mult*N = size: True
+  cell (1, 1, 1): sum mult*N = size: True
+  cell (1, 0, 0): sum mult*N = size: True
+  cell (1, 1, 0): sum mult*N = size: True
+  cell (3, 1, 1): sum mult*N = size: True
+  cell (3, 0, 0): sum mult*N = size: True
+  cell (3, 1, 0): sum mult*N = size: True
+  cell (3, 0, 1): sum mult*N = size: True
+  slice Tr s = 0: (q-2)^2/2: True;  slice Tr s = 1: q(q-2)/2: True
+  solved N(1^6) = (q - 8)*(q - 2)/720  equals table: True
+  solved N(2 1^4) = (q - 8)*(q - 2)/48  equals table: True
+  solved N(2^2 1^2) = q*(q - 2)/16  equals table: True
+  solved N(2^3) = q*(q - 2)/48  equals table: True
+  solved N(3 1^3) = (q - 2)*(q + 1)/18  equals table: True
+  solved N(3^2) = (q - 2)*(q + 1)/18  equals table: True
+  solved N(3 2 1) = (q - 2)*(q + 1)/6  equals table: True
+  solved N(4 1^2) = q*(q - 2)/8  equals table: True
+  solved N(4 2) = q*(q - 2)/8  equals table: True
+  solved N(5 1) = (q**2 + 1)/5  equals table: True
+  solved N(6) = q*(q + 1)/6  equals table: True
+=== polynomial identities, even k (sympy) ===
+  sum N = q(q-1): True;  sum N f1 = (q-1)^2: True;  sum N f3 = 2q^2-3q+1: True;  sum N stab = (q-1)(q-2): True
+  cell (1, 0, 1): True
+  cell (1, 1, 1): True
+  cell (1, 0, 0): True
+  cell (1, 1, 0): True
+  cell (3, 1, 1): True
+  cell (3, 0, 0): True
+  cell (3, 1, 0): True
+  cell (3, 0, 1): True
+  slices: True True
+  solved N(1^6) = (q - 16)*(q - 4)/720  equals even table: True
+  solved N(2 1^4) = q*(q - 4)/48  equals even table: True
+  solved N(2^2 1^2) = q*(q - 4)/16  equals even table: True
+  solved N(2^3) = q*(q - 4)/48  equals even table: True
+  solved N(3 1^3) = (q - 4)*(q - 1)/18  equals even table: True
+  solved N(3^2) = (q - 1)*(q + 2)/18  equals even table: True
+  solved N(3 2 1) = q*(q - 1)/6  equals even table: True
+  solved N(4 1^2) = q**2/8  equals even table: True
+  solved N(4 2) = q**2/8  equals even table: True
+  solved N(5 1) = (q - 1)*(q + 1)/5  equals even table: True
+  solved N(6) = q*(q - 1)/6  equals even table: True
+  pure counts, k = 2 mod 4: sum = q - 1 (q-1: True); 6 n16 + 2 n2212 + n51 = q-2 (first moment on a = 0): True
+  pure counts, k = 0 mod 4: sum = q - 1 (q-1: True); 6 n16 + 2 n2212 + n51 = q-2 (first moment on a = 0): True
+  even k: sum_C n_C W'_C = -q**7*(q - 1)**2 = -q^9 + 2q^8 - q^7: True; with W'(0,0) + sum_{l3 != 0} W'(l3,0) = -q^8 + q^7 the total is -q**8*(q - 1), i.e. X = -q**5*(q - 1)
+  odd k (check): sum_C n_C W'_C = q**7*(q - 1)*(q + 1); with W'(0,0) + sum_{l3 != 0} W'(l3,0) = q^7 + q^8 the total is q**8*(q + 1), i.e. X = q**5*(q + 1)
+
+=== k = 8, q = 256 (even k) ===
+direct classification of all 65280 sextics: 1^6:84, 2 1^4:1344, 2^2 1^2:4032, 2^3:1344, 3 1^3:3570, 3^2:3655, 3 2 1:10880, 4 1^2:8192, 4 2:8192, 5 1:13107, 6:10880
+  equals the even-k table (totals, mixed + pure) for every class: True   [54 s]
+  pure (lambda_3 = 0) counts: 1^6:4, 2^2 1^2:64, 3^2:85, 5 1:102; equal the k = 0 mod 4 formulas: True
+  incidences (sextic, stable pair) from the classes: 64770; (q-1)(q-2) = 64770: True
+(y, s) plane: 64770 incidences, all distinct, quadratic divides and cofactor agrees with Lemma 3.14 in every case; type(Phi) = type(K) in 64770 cases
+  pure locus a = 0: 252 points, all on the curve a' = s/(s^2+1) (and conversely); r = 1/(s+1) is a resolvent root with a'+r^2 = r, c' = r^2 in 252 cases; expected q-2 (odd) or q-4 (even): 252
+  classes of the pure incidences: {'1^6': 60, '2^2 1^2': 192}
+  resolvent roots by type of Phi: 1111:3 roots x2604, 13:0 roots x21590, 211:1 roots x16128, 22:3 roots x8064, 4:1 roots x16384
+  cell (roots=1, Tr s=0, Tr((u+1)xi)=0): {'2 1^4': 8064}; size 8064 (predicted 8064) OK
+  cell (roots=1, Tr s=0, Tr((u+1)xi)=1): {'4 1^2': 8192}; size 8192 (predicted 8192) OK
+  cell (roots=1, Tr s=1, Tr((u+1)xi)=0): {'2^2 1^2': 8064}; size 8064 (predicted 8064) OK
+  cell (roots=1, Tr s=1, Tr((u+1)xi)=1): {'4 2': 8192}; size 8192 (predicted 8192) OK
+  cell (roots=3, Tr s=0, Tr((u+1)xi)=0): {'1^6': 3780, '2^2 1^2': 4032}; size 7812 (predicted 7812) OK
+  cell (roots=3, Tr s=0, Tr((u+1)xi)=1): {'2^2 1^2': 8064}; size 8064 (predicted 8064) OK
+  cell (roots=3, Tr s=1, Tr((u+1)xi)=0): {'2 1^4': 4032, '2^3': 4032}; size 8064 (predicted 8064) OK
+  cell (roots=3, Tr s=1, Tr((u+1)xi)=1): {'2^3': 8064}; size 8064 (predicted 8064) OK
+  all eight cells as predicted: True
+  (u, xi) bijection: 254 values of u (= q-2: True), quadrant counts per u as predicted: True
+  first moment 65025 = (q-1)^2 = 65025: True;  third moment 130305 = 2q^2-3q+1 = 130305: True
+  [116 s]
+
+=== part4_counts_proof.py run ===
+=== polynomial identities (sympy) ===
+  sum N = q(q-1): True
+  sum N f1 = (q-1)^2: True
+  sum N f3 = 2q^2-3q-1: True
+  sum N stab = (q-1)(q-2): True
+  cell (1, 0, 1): sum mult*N = size: True
+  cell (1, 1, 1): sum mult*N = size: True
+  cell (1, 0, 0): sum mult*N = size: True
+  cell (1, 1, 0): sum mult*N = size: True
+  cell (3, 1, 1): sum mult*N = size: True
+  cell (3, 0, 0): sum mult*N = size: True
+  cell (3, 1, 0): sum mult*N = size: True
+  cell (3, 0, 1): sum mult*N = size: True
+  slice Tr s = 0: (q-2)^2/2: True;  slice Tr s = 1: q(q-2)/2: True
+  solved N(1^6) = (q - 8)*(q - 2)/720  equals table: True
+  solved N(2 1^4) = (q - 8)*(q - 2)/48  equals table: True
+  solved N(2^2 1^2) = q*(q - 2)/16  equals table: True
+  solved N(2^3) = q*(q - 2)/48  equals table: True
+  solved N(3 1^3) = (q - 2)*(q + 1)/18  equals table: True
+  solved N(3^2) = (q - 2)*(q + 1)/18  equals table: True
+  solved N(3 2 1) = (q - 2)*(q + 1)/6  equals table: True
+  solved N(4 1^2) = q*(q - 2)/8  equals table: True
+  solved N(4 2) = q*(q - 2)/8  equals table: True
+  solved N(5 1) = (q**2 + 1)/5  equals table: True
+  solved N(6) = q*(q + 1)/6  equals table: True
+=== polynomial identities, even k (sympy) ===
+  sum N = q(q-1): True;  sum N f1 = (q-1)^2: True;  sum N f3 = 2q^2-3q+1: True;  sum N stab = (q-1)(q-2): True
+  cell (1, 0, 1): sum mult*N = size: True
+  cell (1, 1, 1): sum mult*N = size: True
+  cell (1, 0, 0): sum mult*N = size: True
+  cell (1, 1, 0): sum mult*N = size: True
+  cell (3, 1, 1): sum mult*N = size: True
+  cell (3, 0, 0): sum mult*N = size: True
+  cell (3, 1, 0): sum mult*N = size: True
+  cell (3, 0, 1): sum mult*N = size: True
+  solved N(1^6) = (q - 16)*(q - 4)/720  equals even table: True
+  solved N(2 1^4) = q*(q - 4)/48  equals even table: True
+  solved N(2^2 1^2) = q*(q - 4)/16  equals even table: True
+  solved N(2^3) = q*(q - 4)/48  equals even table: True
+  solved N(3 1^3) = (q - 4)*(q - 1)/18  equals even table: True
+  solved N(3^2) = (q - 1)*(q + 2)/18  equals even table: True
+  solved N(3 2 1) = q*(q - 1)/6  equals even table: True
+  solved N(4 1^2) = q**2/8  equals even table: True
+  solved N(4 2) = q**2/8  equals even table: True
+  solved N(5 1) = (q - 1)*(q + 1)/5  equals even table: True
+  solved N(6) = q*(q - 1)/6  equals even table: True
+  pure counts, k = 2 mod 4: sum = q-1: True; 6 n16 + 2 n2212 + n51 = q-2 (first moment on a = 0): True; total - pure = mixed column of Part III, Table 9: True
+    sum over the pure column of W'_C n_C / q^7 = 2 - q
+  pure counts, k = 0 mod 4: sum = q-1: True; 6 n16 + 2 n2212 + n51 = q-2 (first moment on a = 0): True; total - pure = mixed column of Part III, Table 9: True
+    sum over the pure column of W'_C n_C / q^7 = 2 - q
+  even k: sum_C n_C W'_C / q^7 = -(q - 1)**2; adding W'(0,0) + sum_{l3 != 0} W'(l3,0) = -q^7 - (q-2)q^7 gives q^3 X / q^7 = -q*(q - 1), i.e. X = -q^6 + q^5: True
+  odd k:  sum_C n_C W'_C / q^7 = (q - 1)*(q + 1); adding W'(0,0) + sum_{l3 != 0} W'(l3,0) = q^7 + q^8 gives q^3 X / q^7 = q*(q + 1), i.e. X = q^6 + q^5: True
+  odd k: pure column sum W'_C n_C / q^7 = 3*q - 2 (= 3q - 2)
+
+=== k = 2, q = 4 (even k) ===
+direct classification of all 12 sextics: 1^6:0, 2 1^4:0, 2^2 1^2:0, 2^3:0, 3 1^3:0, 3^2:1, 3 2 1:2, 4 1^2:2, 4 2:2, 5 1:3, 6:2
+  equals Table (totals, mixed + pure) for every class: True   [0 s]
+  pure (lambda_3 = 0) counts: 3^2:1, 5 1:2; equal the formulas for k 2 mod 4: True
+  incidences (sextic, stable pair) from the classes: 6; (q-1)(q-2) = 6: True
+(y, s) plane: 6 incidences, all distinct, quadratic divides and cofactor agrees with Lemma 3.14 in every case; type(Phi) = type(K) in 6 cases
+  pure locus a = 0: 0 points (q-2 for odd k, q-4 for even k: True), it is exactly the curve a' = s/(s^2+1) (0 points); r = 1/(s+1) is a resolvent root with a'+r^2 = r, c' = r^2, s^2+s+1 != 0 in 0 cases
+  classes of the pure incidences: {}
+  resolvent roots by type of Phi: 13:0 roots x2, 4:1 roots x4
+  cell (roots=1, Tr s=0, Tr((u+1)xi)=0): {}; size 0 (predicted 0) OK
+  cell (roots=1, Tr s=0, Tr((u+1)xi)=1): {'4 1^2': 2}; size 2 (predicted 2) OK
+  cell (roots=1, Tr s=1, Tr((u+1)xi)=0): {}; size 0 (predicted 0) OK
+  cell (roots=1, Tr s=1, Tr((u+1)xi)=1): {'4 2': 2}; size 2 (predicted 2) OK
+  cell (roots=3, Tr s=0, Tr((u+1)xi)=0): {}; size 0 (predicted 0) OK
+  cell (roots=3, Tr s=0, Tr((u+1)xi)=1): {}; size 0 (predicted 0) OK
+  cell (roots=3, Tr s=1, Tr((u+1)xi)=0): {}; size 0 (predicted 0) OK
+  cell (roots=3, Tr s=1, Tr((u+1)xi)=1): {}; size 0 (predicted 0) OK
+  all eight cells as predicted: True
+  (u, xi) bijection: 2 values of u occur (q-2 = 2), quadrant counts per u as predicted: True
+  first moment 9 = (q-1)^2 = 9: True;  third moment 21 = 2q^2-3q+1 = 21: True
+  sum_C n_C W'_C / q^7 = -9 = -(q-1)^2: True
+  [0 s]
+
+=== k = 4, q = 16 (even k) ===
+direct classification of all 240 sextics: 1^6:0, 2 1^4:4, 2^2 1^2:12, 2^3:4, 3 1^3:10, 3^2:15, 3 2 1:40, 4 1^2:32, 4 2:32, 5 1:51, 6:40
+  equals Table (totals, mixed + pure) for every class: True   [0 s]
+  pure (lambda_3 = 0) counts: 2^2 1^2:4, 3^2:5, 5 1:6; equal the formulas for k 0 mod 4: True
+  incidences (sextic, stable pair) from the classes: 210; (q-1)(q-2) = 210: True
+(y, s) plane: 210 incidences, all distinct, quadratic divides and cofactor agrees with Lemma 3.14 in every case; type(Phi) = type(K) in 210 cases
+  pure locus a = 0: 12 points (q-2 for odd k, q-4 for even k: True), it is exactly the curve a' = s/(s^2+1) (12 points); r = 1/(s+1) is a resolvent root with a'+r^2 = r, c' = r^2, s^2+s+1 != 0 in 12 cases
+  classes of the pure incidences: {'2^2 1^2': 12}
+  resolvent roots by type of Phi: 1111:3 roots x4, 13:0 roots x70, 211:1 roots x48, 22:3 roots x24, 4:1 roots x64
+  cell (roots=1, Tr s=0, Tr((u+1)xi)=0): {'2 1^4': 24}; size 24 (predicted 24) OK
+  cell (roots=1, Tr s=0, Tr((u+1)xi)=1): {'4 1^2': 32}; size 32 (predicted 32) OK
+  cell (roots=1, Tr s=1, Tr((u+1)xi)=0): {'2^2 1^2': 24}; size 24 (predicted 24) OK
+  cell (roots=1, Tr s=1, Tr((u+1)xi)=1): {'4 2': 32}; size 32 (predicted 32) OK
+  cell (roots=3, Tr s=0, Tr((u+1)xi)=0): {'2^2 1^2': 12}; size 12 (predicted 12) OK
+  cell (roots=3, Tr s=0, Tr((u+1)xi)=1): {'2^2 1^2': 24}; size 24 (predicted 24) OK
+  cell (roots=3, Tr s=1, Tr((u+1)xi)=0): {'2 1^4': 12, '2^3': 12}; size 24 (predicted 24) OK
+  cell (roots=3, Tr s=1, Tr((u+1)xi)=1): {'2^3': 24}; size 24 (predicted 24) OK
+  all eight cells as predicted: True
+  (u, xi) bijection: 14 values of u occur (q-2 = 14), quadrant counts per u as predicted: True
+  first moment 225 = (q-1)^2 = 225: True;  third moment 465 = 2q^2-3q+1 = 465: True
+  sum_C n_C W'_C / q^7 = -225 = -(q-1)^2: True
+  [0 s]
+
+=== k = 6, q = 64 (even k) ===
+direct classification of all 4032 sextics: 1^6:4, 2 1^4:80, 2^2 1^2:240, 2^3:80, 3 1^3:210, 3^2:231, 3 2 1:672, 4 1^2:512, 4 2:512, 5 1:819, 6:672
+  equals Table (totals, mixed + pure) for every class: True   [2 s]
+  pure (lambda_3 = 0) counts: 1^6:1, 2^2 1^2:15, 3^2:21, 5 1:26; equal the formulas for k 2 mod 4: True
+  incidences (sextic, stable pair) from the classes: 3906; (q-1)(q-2) = 3906: True
+(y, s) plane: 3906 incidences, all distinct, quadratic divides and cofactor agrees with Lemma 3.14 in every case; type(Phi) = type(K) in 3906 cases
+  pure locus a = 0: 60 points (q-2 for odd k, q-4 for even k: True), it is exactly the curve a' = s/(s^2+1) (60 points); r = 1/(s+1) is a resolvent root with a'+r^2 = r, c' = r^2, s^2+s+1 != 0 in 60 cases
+  classes of the pure incidences: {'1^6': 15, '2^2 1^2': 45}
+  resolvent roots by type of Phi: 1111:3 roots x140, 13:0 roots x1302, 211:1 roots x960, 22:3 roots x480, 4:1 roots x1024
+  cell (roots=1, Tr s=0, Tr((u+1)xi)=0): {'2 1^4': 480}; size 480 (predicted 480) OK
+  cell (roots=1, Tr s=0, Tr((u+1)xi)=1): {'4 1^2': 512}; size 512 (predicted 512) OK
+  cell (roots=1, Tr s=1, Tr((u+1)xi)=0): {'2^2 1^2': 480}; size 480 (predicted 480) OK
+  cell (roots=1, Tr s=1, Tr((u+1)xi)=1): {'4 2': 512}; size 512 (predicted 512) OK
+  cell (roots=3, Tr s=0, Tr((u+1)xi)=0): {'1^6': 180, '2^2 1^2': 240}; size 420 (predicted 420) OK
+  cell (roots=3, Tr s=0, Tr((u+1)xi)=1): {'2^2 1^2': 480}; size 480 (predicted 480) OK
+  cell (roots=3, Tr s=1, Tr((u+1)xi)=0): {'2 1^4': 240, '2^3': 240}; size 480 (predicted 480) OK
+  cell (roots=3, Tr s=1, Tr((u+1)xi)=1): {'2^3': 480}; size 480 (predicted 480) OK
+  all eight cells as predicted: True
+  (u, xi) bijection: 62 values of u occur (q-2 = 62), quadrant counts per u as predicted: True
+  first moment 3969 = (q-1)^2 = 3969: True;  third moment 8001 = 2q^2-3q+1 = 8001: True
+  sum_C n_C W'_C / q^7 = -3969 = -(q-1)^2: True
+  [4 s]
+
+=== k = 3, q = 8 (odd k) ===
+direct classification of all 56 sextics: 1^6:0, 2 1^4:0, 2^2 1^2:3, 2^3:1, 3 1^3:3, 3^2:3, 3 2 1:9, 4 1^2:6, 4 2:6, 5 1:13, 6:12
+  equals Table (totals, mixed + pure) for every class: True   [0 s]
+  pure (lambda_3 = 0) counts: 2^3:1, 4 1^2:3, 6:3; equal the formulas for k odd: True
+  incidences (sextic, stable pair) from the classes: 42; (q-1)(q-2) = 42: True
+(y, s) plane: 42 incidences, all distinct, quadratic divides and cofactor agrees with Lemma 3.14 in every case; type(Phi) = type(K) in 42 cases
+  pure locus a = 0: 6 points (q-2 for odd k, q-4 for even k: True), it is exactly the curve a' = s/(s^2+1) (6 points); r = 1/(s+1) is a resolvent root with a'+r^2 = r, c' = r^2, s^2+s+1 != 0 in 6 cases
+  classes of the pure incidences: {'2^3': 3, '4 1^2': 3}
+  resolvent roots by type of Phi: 13:0 roots x18, 211:1 roots x6, 22:3 roots x6, 4:1 roots x12
+  cell (roots=1, Tr s=0, Tr((u+1)xi)=0): {}; size 0 (predicted 0) OK
+  cell (roots=1, Tr s=0, Tr((u+1)xi)=1): {'4 1^2': 6}; size 6 (predicted 6) OK
+  cell (roots=1, Tr s=1, Tr((u+1)xi)=0): {'2^2 1^2': 6}; size 6 (predicted 6) OK
+  cell (roots=1, Tr s=1, Tr((u+1)xi)=1): {'4 2': 6}; size 6 (predicted 6) OK
+  cell (roots=3, Tr s=0, Tr((u+1)xi)=0): {'2^2 1^2': 3}; size 3 (predicted 3) OK
+  cell (roots=3, Tr s=0, Tr((u+1)xi)=1): {'2^2 1^2': 6}; size 6 (predicted 6) OK
+  cell (roots=3, Tr s=1, Tr((u+1)xi)=0): {'2^3': 3}; size 3 (predicted 3) OK
+  cell (roots=3, Tr s=1, Tr((u+1)xi)=1): {'2^3': 6}; size 6 (predicted 6) OK
+  all eight cells as predicted: True
+  (u, xi) bijection: 6 values of u occur (q-2 = 6), quadrant counts per u as predicted: True
+  first moment 49 = (q-1)^2 = 49: True;  third moment 103 = 2q^2-3q-1 = 103: True
+  sum_C n_C W'_C / q^7 = 63 = q^2-1: True
+  [0 s]
+
+=== k = 5, q = 32 (odd k) ===
+direct classification of all 992 sextics: 1^6:1, 2 1^4:15, 2^2 1^2:60, 2^3:20, 3 1^3:55, 3^2:55, 3 2 1:165, 4 1^2:120, 4 2:120, 5 1:205, 6:176
+  equals Table (totals, mixed + pure) for every class: True   [0 s]
+  pure (lambda_3 = 0) counts: 2^3:5, 4 1^2:15, 6:11; equal the formulas for k odd: True
+  incidences (sextic, stable pair) from the classes: 930; (q-1)(q-2) = 930: True
+(y, s) plane: 930 incidences, all distinct, quadratic divides and cofactor agrees with Lemma 3.14 in every case; type(Phi) = type(K) in 930 cases
+  pure locus a = 0: 30 points (q-2 for odd k, q-4 for even k: True), it is exactly the curve a' = s/(s^2+1) (30 points); r = 1/(s+1) is a resolvent root with a'+r^2 = r, c' = r^2, s^2+s+1 != 0 in 30 cases
+  classes of the pure incidences: {'2^3': 15, '4 1^2': 15}
+  resolvent roots by type of Phi: 1111:3 roots x30, 13:0 roots x330, 211:1 roots x210, 22:3 roots x120, 4:1 roots x240
+  cell (roots=1, Tr s=0, Tr((u+1)xi)=0): {'2 1^4': 90}; size 90 (predicted 90) OK
+  cell (roots=1, Tr s=0, Tr((u+1)xi)=1): {'4 1^2': 120}; size 120 (predicted 120) OK
+  cell (roots=1, Tr s=1, Tr((u+1)xi)=0): {'2^2 1^2': 120}; size 120 (predicted 120) OK
+  cell (roots=1, Tr s=1, Tr((u+1)xi)=1): {'4 2': 120}; size 120 (predicted 120) OK
+  cell (roots=3, Tr s=0, Tr((u+1)xi)=0): {'1^6': 45, '2^2 1^2': 60}; size 105 (predicted 105) OK
+  cell (roots=3, Tr s=0, Tr((u+1)xi)=1): {'2^2 1^2': 120}; size 120 (predicted 120) OK
+  cell (roots=3, Tr s=1, Tr((u+1)xi)=0): {'2 1^4': 45, '2^3': 60}; size 105 (predicted 105) OK
+  cell (roots=3, Tr s=1, Tr((u+1)xi)=1): {'2^3': 120}; size 120 (predicted 120) OK
+  all eight cells as predicted: True
+  (u, xi) bijection: 30 values of u occur (q-2 = 30), quadrant counts per u as predicted: True
+  first moment 961 = (q-1)^2 = 961: True;  third moment 1951 = 2q^2-3q-1 = 1951: True
+  sum_C n_C W'_C / q^7 = 1023 = q^2-1: True
+  [1 s]
+
+=== part4_counts_proof.py run ===
+=== polynomial identities (sympy) ===
+  sum N = q(q-1): True
+  sum N f1 = (q-1)^2: True
+  sum N f3 = 2q^2-3q-1: True
+  sum N stab = (q-1)(q-2): True
+  cell (1, 0, 1): sum mult*N = size: True
+  cell (1, 1, 1): sum mult*N = size: True
+  cell (1, 0, 0): sum mult*N = size: True
+  cell (1, 1, 0): sum mult*N = size: True
+  cell (3, 1, 1): sum mult*N = size: True
+  cell (3, 0, 0): sum mult*N = size: True
+  cell (3, 1, 0): sum mult*N = size: True
+  cell (3, 0, 1): sum mult*N = size: True
+  slice Tr s = 0: (q-2)^2/2: True;  slice Tr s = 1: q(q-2)/2: True
+  solved N(1^6) = (q - 8)*(q - 2)/720  equals table: True
+  solved N(2 1^4) = (q - 8)*(q - 2)/48  equals table: True
+  solved N(2^2 1^2) = q*(q - 2)/16  equals table: True
+  solved N(2^3) = q*(q - 2)/48  equals table: True
+  solved N(3 1^3) = (q - 2)*(q + 1)/18  equals table: True
+  solved N(3^2) = (q - 2)*(q + 1)/18  equals table: True
+  solved N(3 2 1) = (q - 2)*(q + 1)/6  equals table: True
+  solved N(4 1^2) = q*(q - 2)/8  equals table: True
+  solved N(4 2) = q*(q - 2)/8  equals table: True
+  solved N(5 1) = (q**2 + 1)/5  equals table: True
+  solved N(6) = q*(q + 1)/6  equals table: True
+=== polynomial identities, even k (sympy) ===
+  sum N = q(q-1): True;  sum N f1 = (q-1)^2: True;  sum N f3 = 2q^2-3q+1: True;  sum N stab = (q-1)(q-2): True
+  cell (1, 0, 1): sum mult*N = size: True
+  cell (1, 1, 1): sum mult*N = size: True
+  cell (1, 0, 0): sum mult*N = size: True
+  cell (1, 1, 0): sum mult*N = size: True
+  cell (3, 1, 1): sum mult*N = size: True
+  cell (3, 0, 0): sum mult*N = size: True
+  cell (3, 1, 0): sum mult*N = size: True
+  cell (3, 0, 1): sum mult*N = size: True
+  solved N(1^6) = (q - 16)*(q - 4)/720  equals even table: True
+  solved N(2 1^4) = q*(q - 4)/48  equals even table: True
+  solved N(2^2 1^2) = q*(q - 4)/16  equals even table: True
+  solved N(2^3) = q*(q - 4)/48  equals even table: True
+  solved N(3 1^3) = (q - 4)*(q - 1)/18  equals even table: True
+  solved N(3^2) = (q - 1)*(q + 2)/18  equals even table: True
+  solved N(3 2 1) = q*(q - 1)/6  equals even table: True
+  solved N(4 1^2) = q**2/8  equals even table: True
+  solved N(4 2) = q**2/8  equals even table: True
+  solved N(5 1) = (q - 1)*(q + 1)/5  equals even table: True
+  solved N(6) = q*(q - 1)/6  equals even table: True
+  pure counts, k = 2 mod 4: sum = q-1: True; 6 n16 + 2 n2212 + n51 = q-2 (first moment on a = 0): True; total - pure = mixed column of Part III, Table 9: True
+    sum over the pure column of W'_C n_C / q^7 = 2 - q
+  pure counts, k = 0 mod 4: sum = q-1: True; 6 n16 + 2 n2212 + n51 = q-2 (first moment on a = 0): True; total - pure = mixed column of Part III, Table 9: True
+    sum over the pure column of W'_C n_C / q^7 = 2 - q
+  even k: sum_C n_C W'_C / q^7 = -(q - 1)**2; adding W'(0,0) + sum_{l3 != 0} W'(l3,0) = -q^7 - (q-2)q^7 gives q^3 X / q^7 = -q*(q - 1), i.e. X = -q^6 + q^5: True
+  odd k:  sum_C n_C W'_C / q^7 = (q - 1)*(q + 1); adding W'(0,0) + sum_{l3 != 0} W'(l3,0) = q^7 + q^8 gives q^3 X / q^7 = q*(q + 1), i.e. X = q^6 + q^5: True
+  odd k: pure column sum W'_C n_C / q^7 = 3*q - 2 (= 3q - 2)
+
+=== k = 8, q = 256 (even k) ===
+direct classification of all 65280 sextics: 1^6:84, 2 1^4:1344, 2^2 1^2:4032, 2^3:1344, 3 1^3:3570, 3^2:3655, 3 2 1:10880, 4 1^2:8192, 4 2:8192, 5 1:13107, 6:10880
+  equals Table (totals, mixed + pure) for every class: True   [56 s]
+  pure (lambda_3 = 0) counts: 1^6:4, 2^2 1^2:64, 3^2:85, 5 1:102; equal the formulas for k 0 mod 4: True
+  incidences (sextic, stable pair) from the classes: 64770; (q-1)(q-2) = 64770: True
+(y, s) plane: 64770 incidences, all distinct, quadratic divides and cofactor agrees with Lemma 3.14 in every case; type(Phi) = type(K) in 64770 cases
+  pure locus a = 0: 252 points (q-2 for odd k, q-4 for even k: True), it is exactly the curve a' = s/(s^2+1) (252 points); r = 1/(s+1) is a resolvent root with a'+r^2 = r, c' = r^2, s^2+s+1 != 0 in 252 cases
+  classes of the pure incidences: {'1^6': 60, '2^2 1^2': 192}
+  resolvent roots by type of Phi: 1111:3 roots x2604, 13:0 roots x21590, 211:1 roots x16128, 22:3 roots x8064, 4:1 roots x16384
+  cell (roots=1, Tr s=0, Tr((u+1)xi)=0): {'2 1^4': 8064}; size 8064 (predicted 8064) OK
+  cell (roots=1, Tr s=0, Tr((u+1)xi)=1): {'4 1^2': 8192}; size 8192 (predicted 8192) OK
+  cell (roots=1, Tr s=1, Tr((u+1)xi)=0): {'2^2 1^2': 8064}; size 8064 (predicted 8064) OK
+  cell (roots=1, Tr s=1, Tr((u+1)xi)=1): {'4 2': 8192}; size 8192 (predicted 8192) OK
+  cell (roots=3, Tr s=0, Tr((u+1)xi)=0): {'1^6': 3780, '2^2 1^2': 4032}; size 7812 (predicted 7812) OK
+  cell (roots=3, Tr s=0, Tr((u+1)xi)=1): {'2^2 1^2': 8064}; size 8064 (predicted 8064) OK
+  cell (roots=3, Tr s=1, Tr((u+1)xi)=0): {'2 1^4': 4032, '2^3': 4032}; size 8064 (predicted 8064) OK
+  cell (roots=3, Tr s=1, Tr((u+1)xi)=1): {'2^3': 8064}; size 8064 (predicted 8064) OK
+  all eight cells as predicted: True
+  (u, xi) bijection: 254 values of u occur (q-2 = 254), quadrant counts per u as predicted: True
+  first moment 65025 = (q-1)^2 = 65025: True;  third moment 130305 = 2q^2-3q+1 = 130305: True
+  sum_C n_C W'_C / q^7 = -65025 = -(q-1)^2: True
+  [118 s]
+
+=== k = 7, q = 128 (odd k) ===
+direct classification of all 16256 sextics: 1^6:21, 2 1^4:315, 2^2 1^2:1008, 2^3:336, 3 1^3:903, 3^2:903, 3 2 1:2709, 4 1^2:2016, 4 2:2016, 5 1:3277, 6:2752
+  equals Table (totals, mixed + pure) for every class: True   [11 s]
+  pure (lambda_3 = 0) counts: 2^3:21, 4 1^2:63, 6:43; equal the formulas for k odd: True
+  incidences (sextic, stable pair) from the classes: 16002; (q-1)(q-2) = 16002: True
+(y, s) plane: 16002 incidences, all distinct, quadratic divides and cofactor agrees with Lemma 3.14 in every case; type(Phi) = type(K) in 16002 cases
+  pure locus a = 0: 126 points (q-2 for odd k, q-4 for even k: True), it is exactly the curve a' = s/(s^2+1) (126 points); r = 1/(s+1) is a resolvent root with a'+r^2 = r, c' = r^2, s^2+s+1 != 0 in 126 cases
+  classes of the pure incidences: {'2^3': 63, '4 1^2': 63}
+  resolvent roots by type of Phi: 1111:3 roots x630, 13:0 roots x5418, 211:1 roots x3906, 22:3 roots x2016, 4:1 roots x4032
+  cell (roots=1, Tr s=0, Tr((u+1)xi)=0): {'2 1^4': 1890}; size 1890 (predicted 1890) OK
+  cell (roots=1, Tr s=0, Tr((u+1)xi)=1): {'4 1^2': 2016}; size 2016 (predicted 2016) OK
+  cell (roots=1, Tr s=1, Tr((u+1)xi)=0): {'2^2 1^2': 2016}; size 2016 (predicted 2016) OK
+  cell (roots=1, Tr s=1, Tr((u+1)xi)=1): {'4 2': 2016}; size 2016 (predicted 2016) OK
+  cell (roots=3, Tr s=0, Tr((u+1)xi)=0): {'1^6': 945, '2^2 1^2': 1008}; size 1953 (predicted 1953) OK
+  cell (roots=3, Tr s=0, Tr((u+1)xi)=1): {'2^2 1^2': 2016}; size 2016 (predicted 2016) OK
+  cell (roots=3, Tr s=1, Tr((u+1)xi)=0): {'2 1^4': 945, '2^3': 1008}; size 1953 (predicted 1953) OK
+  cell (roots=3, Tr s=1, Tr((u+1)xi)=1): {'2^3': 2016}; size 2016 (predicted 2016) OK
+  all eight cells as predicted: True
+  (u, xi) bijection: 126 values of u occur (q-2 = 126), quadrant counts per u as predicted: True
+  first moment 16129 = (q-1)^2 = 16129: True;  third moment 32383 = 2q^2-3q-1 = 32383: True
+  sum_C n_C W'_C / q^7 = 16383 = q^2-1: True
+  [23 s]
+
+=== k = 9, q = 512 (odd k) ===
+direct classification skipped (Part III, q <= 1024); table values used for the multiplicities
+  incidences (sextic, stable pair) from the classes: 260610; (q-1)(q-2) = 260610: True
+(y, s) plane: 260610 incidences, all distinct, quadratic divides and cofactor agrees with Lemma 3.14 in every case; type(Phi) = type(K) in 260610 cases
+  pure locus a = 0: 510 points (q-2 for odd k, q-4 for even k: True), it is exactly the curve a' = s/(s^2+1) (510 points); r = 1/(s+1) is a resolvent root with a'+r^2 = r, c' = r^2, s^2+s+1 != 0 in 510 cases
+  classes of the pure incidences: {'2^3': 255, '4 1^2': 255}
+  resolvent roots by type of Phi: 1111:3 roots x10710, 13:0 roots x87210, 211:1 roots x64770, 22:3 roots x32640, 4:1 roots x65280
+  cell (roots=1, Tr s=0, Tr((u+1)xi)=0): {'2 1^4': 32130}; size 32130 (predicted 32130) OK
+  cell (roots=1, Tr s=0, Tr((u+1)xi)=1): {'4 1^2': 32640}; size 32640 (predicted 32640) OK
+  cell (roots=1, Tr s=1, Tr((u+1)xi)=0): {'2^2 1^2': 32640}; size 32640 (predicted 32640) OK
+  cell (roots=1, Tr s=1, Tr((u+1)xi)=1): {'4 2': 32640}; size 32640 (predicted 32640) OK
+  cell (roots=3, Tr s=0, Tr((u+1)xi)=0): {'1^6': 16065, '2^2 1^2': 16320}; size 32385 (predicted 32385) OK
+  cell (roots=3, Tr s=0, Tr((u+1)xi)=1): {'2^2 1^2': 32640}; size 32640 (predicted 32640) OK
+  cell (roots=3, Tr s=1, Tr((u+1)xi)=0): {'2 1^4': 16065, '2^3': 16320}; size 32385 (predicted 32385) OK
+  cell (roots=3, Tr s=1, Tr((u+1)xi)=1): {'2^3': 32640}; size 32640 (predicted 32640) OK
+  all eight cells as predicted: True
+  (u, xi) bijection: 510 values of u occur (q-2 = 510), quadrant counts per u as predicted: True
+  first moment 261121 = (q-1)^2 = 261121: True;  third moment 522751 = 2q^2-3q-1 = 522751: True
+  sum_C n_C W'_C / q^7 = 262143 = q^2-1: True
+  [366 s]

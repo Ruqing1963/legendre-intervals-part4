@@ -1,4 +1,4 @@
-# Numerical facts behind Part IV (q = 2^k, k odd)
+# Numerical facts behind Part IV (q = 2^k; k odd unless a section says otherwise)
 
 All numbers below are produced by the scripts in `code/`; the raw outputs are in `data/`.
 
@@ -30,11 +30,11 @@ No exception in any case.
 * ½ q^{(2)}_0(r5) + κ0 = 1 in the class 4 2 (both derivations); Tr(r5) = 0 in the class 4 1².
 * Resolvent criterion of Lemma 3.14 (irreducible quartic cofactor ⇔ unique rational root r of Y³ + a'Y + b' with Tr(c'/(a'+r²)²) = 1, Tr(a'/r²) = 0) holds for all (y, s) at q = 8, 32, 128.
 
-## Sign rules for the other classes (Lemma 3.16, Theorems 3.17, 3.20), `part4_sign_rules.py`
+## Sign rules for the other classes (Lemma 3.21, Theorems 3.22, 3.25), `part4_sign_rules.py`
 
 All pairs at q = 8, all λ1, and three pairs per class with N0 | 2 at q = 32 (including the classes 1⁶ and 2 1⁴, absent at q = 8): the Witt values on the coset have the predicted parity (even for m = 2, odd for m = 3), Σφ_i = 0, rational roots have φ = f1 + 1, and s_{2m}/q^m equals +4·i^p if n1 ≡ 2 (mod 4) and −4·i^p otherwise, without exception. Hypothesis (H) (q^{(3)}_0 = 0 on K ∩ F_{q³}) holds for every pair of the classes 3 1³, 3², 6 at q = 8; at q = 32 s_3 ≠ 0 for all 128 sampled triples of the classes 3² and 6 (Part III data).
 
-## The classes 3 2 1 and 6 (Theorem 3.23), `part4_class321.py`
+## The classes 3 2 1 and 6 (Theorem 3.28), `part4_class321.py`
 
 S'' computed from the L-polynomial of the Witt sheaf (s_1..s_4), independently of the hexad formula. Class 3 2 1: S''(λ1)·(−1)^{Tr(λ1 t0)} is constant (t0 = r4 + r5, the nonzero element of ker T' ∩ F_q) for all 9 pairs at q = 8 (constant −4q⁶) and the first 12 pairs at q = 32 (−4q⁶ for 8 pairs, +4q⁶ for 4); exactly q/2 values of λ1 have S'' = +4q⁶ in every case. Class 6: S'' = +4q⁶ for every λ1 on all 12 mixed pairs at q = 8 and the first 12 at q = 32.
 
@@ -42,7 +42,24 @@ S'' computed from the L-polynomial of the Witt sheaf (s_1..s_4), independently o
 
 Rows m = 1..6 plus N1N2, N1N3, N2², N1²N2, N1N2N3: rank 10, det 0. Rows m = 1..6 plus N3², N2N3, N2², N1N3, N3³: rank 11, det 1433272320 = 2¹⁷·3⁷·5. Predicted mixed moments 8q²−12q−7, 5q²−11q+3, 7q²−18q+9, 3q²−7q+3, 38q²−54q−43; back-substitution returns Table 2 of Part III.
 
-## Even k (remark after Theorem 4.1), `part4_trace_parity.py 2 4 6`, `part4_order4_all.py 2`
+## Even k: class counts and the pure line (Theorems 3.16, 3.17, Proposition 3.18), `part4_counts_proof.py`
+
+* Every point (y, s) of the incidence plane at q = 4, 16, 64, 256 (and q = 8, 32, 128, 512): the eight cells (number of resolvent roots, Tr s, Tr((u+1)ξ)) have the predicted sizes and class contents; quadrant counts per u as predicted; one-root locus q/2 values of u, three-root locus (q−4)/2 for even k.
+* Direct factorisation of all sextics (q ≤ 256) equals the total tables. Even k totals: q = 16: 0, 4, 12, 4, 10, 15, 40, 32, 32, 51, 40; q = 64: 4, 80, 240, 80, 210, 231, 672, 512, 512, 819, 672; q = 256: 84, 1344, 4032, 1344, 3570, 3655, 10880, 8192, 8192, 13107, 10880 (order 1⁶ … 6).
+* Pure line λ3 = 0: exactly the curve a' = s/(s²+1) (q−2 points for odd k, q−4 for even k), with r = 1/(s+1), a'+r² = r, c' = r² at every point. Pure counts: q = 4: 3²:1, 5 1:2; q = 16: 2²1²:4, 3²:5, 5 1:6; q = 64: 1⁶:1, 2²1²:15, 3²:21, 5 1:26; q = 256: 1⁶:4, 2²1²:64, 3²:85, 5 1:102; odd k: q = 8: 2³:1, 4 1²:3, 6:3; q = 32: 5, 15, 11; q = 128: 21, 63, 43. No pure sextic of class 6 for even k, none of class 3² or 5 1 for odd k.
+* Σ_C n_C W'_C = q⁷(q²−1) for odd k and −q⁷(q−1)² for even k (SymPy and every q above). Even-k totals were also confirmed in Part III by factoring all sextics at q = 1024.
+
+## λ5 = 0: the tetrad formula (Proposition 3.32), `part4_pure_cubic.py`
+
+* s_{2m} = q^m Σ_{w ∈ T'^{-1}(1) ∩ F_{q^m}} ε(w) i^{q^{(m)}(w)} (ε = +1 at w0 = 1/λ3, −1 at the three other points) holds for every (λ3, λ1) by direct summation over F_{q^{2m}}: q = 2, m ≤ 6; q = 4, m = 1, 2, 3, 6; q = 8, m ≤ 4; q = 16, m ≤ 3 (2 + 12 + 56 + 240 pairs per m).
+* q = 2 and q = 4 (m = 6, direct): S'' = ±2q⁶ always; S'' = (−1)^{k+1} 2q⁶ for all λ1 when z³+z+λ3² has 0 or 3 roots, half/half when it has one; Σ_{λ3≠0} W'(λ3, 0) = q⁸ = 256 (q = 2) and −(q−2)q⁷ = −32768 (q = 4).
+* Roots of z³+z+c, c ≠ 0 (three / none / one): odd k (q−2)/6, (q+1)/3, (q−2)/2; even k (q−4)/6, (q−1)/3, q/2; checked q = 4 … 1024.
+
+## X for all k (Theorem 4.1)
+
+q³X = W'(0,0) + Σ_{λ3≠0} W'(λ3,0) + Σ_C n_C W'_C = q⁷ + q⁸ + q⁷(q²−1) = q⁹ + q⁸ (odd k); −q⁷ − (q−2)q⁷ − q⁷(q−1)² = −q⁹ + q⁸ (even k). Part III's direct values at q = 4, 16 (four parts −1, −2, −2, −7 and −1, −14, −14, −211 in units of q⁷) agree.
+
+## Even k: traces and order-4 signs (Remark 4.2), `part4_trace_parity.py 2 4 6`, `part4_order4_all.py 2`
 
 * Tr(r) ≡ f1 (mod 2) for every rational root at q = 4, 16, 64 (e.g. q=64: 1024 roots of class 4 1² all trace 1, 819 roots of class 5 1 all trace 0); no exception.
 * q = 4: the four order-4 pairs have s_4 ∈ {0, −4q²} (class 4 1², W' = −2q^7) and {0, +4q²} (class 4 2, W' = +2q^7), on the coset Tr(λ1 τ0) = κ0 (κ0 = 0 for all four); both κ0 formulas agree with the direct Witt value.
