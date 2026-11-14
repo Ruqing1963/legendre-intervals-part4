@@ -40,7 +40,7 @@ All inputs of X are now theorems, so **X = (−1)^{k+1} q⁶ + q⁵ holds for al
 ## Layout
 
 ```
-paper/    legendre_IV_hexad_moments_brown_X.tex / .pdf (36 pages), make_figures4.py, figures/
+paper/    legendre_IV_hexad_moments_brown_X.tex / .pdf (35 pages), make_figures4.py, figures/
 code/     self-contained Python (NumPy, SymPy, Numba): field tables, hexad search, Witt sums, all Part IV scripts
 data/     outputs of every script quoted in the paper (q = 8, 32, 128)
 figures/  the figures of the paper (vector PDF)
